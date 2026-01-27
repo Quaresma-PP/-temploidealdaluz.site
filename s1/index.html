@@ -7,31 +7,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/favicon-icon" href="images/favicon.ico" />
     <style>
-        .gold-gradient {
-            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            display: inline-block;
-            width: 100%;
-        }
+    /* Forçamos o fundo diretamente no HTML para não ter erro de prioridade */
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
 
-        .vsl-border {
-            border: 4px solid;
-            border-image: linear-gradient(to right, #BF953F, #FBF5B7, #AA771C) 1;
-            box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
-        }
+    .bg-custom {
+    /* Invertemos para garantir que a imagem seja renderizada por baixo do filtro preto */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                      url('images/a1.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-color: #000; 
+}
 
+    .gold-gradient {
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        display: block;
+        width: 100%;
+    }
+
+    .vsl-border {
+        border: 4px solid;
+        border-image: linear-gradient(to right, #BF953F, #FBF5B7, #AA771C) 1;
+    }
+
+    @media (max-width: 768px) {
         .bg-custom {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/bg-lp-sessao.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll !important;
         }
-    </style>
+    }
+
+</style>
 </head>
-<body class="bg-black bg-custom min-h-screen p-4">
+<body class="bg-custom min-h-screen">
+    <div class="flex flex-col items-center p-4">
 
     <div class="max-w-4xl mx-auto text-center space-y-8">
         
@@ -52,7 +70,7 @@
             <div class="vsl-border bg-black p-6 md:p-8 rounded-lg shadow-2xl">
                 
                 <div id="etapa1" class="text-center space-y-6">
-                    <p class="text-white text-[17px] md:text-1xl font-bold">Adicione seu CEP para encontrar o templo maçom mais próximo de Você:</p>
+                    <p class="text-white text-[17px] md:text-2xl font-bold">Adicione seu CEP para encontrar o templo maçom mais próximo de Você:</p>
                     
                     <div class="flex flex-col md:flex-row justify-center items-center gap-4">
                         <input type="text" id="cepInput" placeholder="00000-000" class="w-full md:w-64 p-4 bg-gray-900 border border-[#BF953F] text-white rounded-lg focus:outline-none text-center text-lg">
@@ -63,7 +81,7 @@
                 </div>
 
                 <div id="etapa2" class="hidden text-center space-y-8">
-                    <p class="text-white text-[14px] md:text-2xl font-bold">Escolha o templo que você deseja ser membro:</p>
+                    <p class="text-white text-[10px] md:text-2xl font-bold">Escolha o templo que você deseja ser membro:</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="border-2 border-gray-700 hover:border-[#BF953F] p-6 rounded-xl bg-gray-900 transition-colors group">
@@ -154,5 +172,4 @@
         }
     </script>
 </body>
-
 </html>

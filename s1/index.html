@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maçonaria - Prosperidade e Influência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/favicon-icon" href="images/favicon.ico" />
+    <style>
+        .gold-gradient {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .vsl-border {
+            border: 4px solid;
+            border-image: linear-gradient(to right, #BF953F, #FBF5B7, #AA771C) 1;
+            box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
+        }
+
+        .bg-custom {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/bg-lp-sessao.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-black bg-custom min-h-screen p-4">
+
+    <div class="max-w-4xl mx-auto text-center space-y-8">
+        
+        <h1 class="gold-gradient uppercase text-[17px] md:text-2xl lg:text-4xl font-black tracking-tighter leading-[1.1] md:leading-tight">
+            Descubra como receber um convite e fazer <br class="hidden md:block"> parte da maçonaria na sua região 
+        </h1>
+
+        <div class="p-0 bg-black overflow-hidden rounded-lg">
+            <vturb-smartplayer id="vid-69742aa89dfa74e6e54a2e2d" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> 
+            <script type="text/javascript"> 
+                var s=document.createElement("script"); 
+                s.src="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/69742aa89dfa74e6e54a2e2d/v4/player.js", 
+                s.async=!0,document.head.appendChild(s); 
+            </script>
+        </div>
+
+        <section class="max-w-4xl mx-auto mt-16 pb-20">
+            <div class="vsl-border bg-black p-6 md:p-8 rounded-lg shadow-2xl">
+                
+                <div id="etapa1" class="text-center space-y-6">
+                    <p class="text-white text-[17px] md:text-2xl font-bold">Adicione seu CEP para encontrar o templo maçom mais próximo de Você:</p>
+                    
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                        <input type="text" id="cepInput" placeholder="00000-000" class="w-full md:w-64 p-4 bg-gray-900 border border-[#BF953F] text-white rounded-lg focus:outline-none text-center text-lg">
+                        <button onclick="buscarTemplo()" class="w-full md:w-auto whitespace-nowrap bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] text-black font-black py-4 px-6 rounded-lg uppercase text-sm md:text-base hover:scale-105 transition-transform shadow-lg">
+                            Buscar o templo mais próximo
+                        </button>
+                    </div>
+                </div>
+
+                <div id="etapa2" class="hidden text-center space-y-8">
+                    <p class="text-white text-[10px] md:text-2xl font-bold">Escolha o templo que você deseja ser membro:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="border-2 border-gray-700 hover:border-[#BF953F] p-6 rounded-xl bg-gray-900 transition-colors group">
+                            <h3 class="text-white font-bold text-lg mb-4">Loja Maçônica Real Templária</h3>
+                            <div class="flex justify-around text-gray-300 mb-6">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-2xl">🚗</span>
+                                    <span class="text-xs mt-1">10 min de carro</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-2xl">🚶</span>
+                                    <span class="text-xs mt-1">15 min a pé</span>
+                                </div>
+                            </div>
+                            <button onclick="irParaCheckout()" class="w-full bg-[#BF953F] group-hover:bg-[#FCF6BA] text-black font-bold py-3 rounded-md uppercase text-xs md:text-sm transition-colors whitespace-nowrap">
+                                quero ser membro desse templo
+                            </button>
+                        </div>
+
+                        <div class="border-2 border-gray-700 hover:border-[#BF953F] p-6 rounded-xl bg-gray-900 transition-colors group">
+                            <h3 class="text-white font-bold text-lg mb-4">Loja Maçônica Real Estrela</h3>
+                            <div class="flex justify-around text-gray-300 mb-6">
+                                <div class="flex flex-col items-center">
+                                    <span class="text-2xl">🚗</span>
+                                    <span class="text-xs mt-1">20 min de carro</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <span class="text-2xl">🚶</span>
+                                    <span class="text-xs mt-1">27 min a pé</span>
+                                </div>
+                            </div>
+                            <button onclick="irParaCheckout()" class="w-full bg-[#BF953F] group-hover:bg-[#FCF6BA] text-black font-bold py-3 rounded-md uppercase text-xs md:text-sm transition-colors whitespace-nowrap">
+                                quero ser membro desse templo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto mt-16 px-4">
+            <h2 class="text-3xl md:text-5xl gold-gradient text-center uppercase mb-12 font-black tracking-tighter">
+                Porque ser Maçom
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="vsl-border bg-black p-8 flex flex-col items-start text-left">
+                    <span class="text-6xl font-bold text-[#BF953F] mb-4">1</span>
+                    <h3 class="text-[#BF953F] font-bold uppercase tracking-widest text-xl mb-4">Rede de Contatos</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        A Maçonaria oferece acesso a uma elite intelectual e profissional. É um ambiente onde líderes se ajudam mutuamente, criando oportunidades únicas de negócios e conexões influentes que aceleram seus resultados.
+                    </p>
+                </div>
+
+                <div class="vsl-border bg-black p-8 flex flex-col items-start text-left">
+                    <span class="text-6xl font-bold text-[#BF953F] mb-4">2</span>
+                    <h3 class="text-[#BF953F] font-bold uppercase tracking-widest text-xl mb-4">Crescimento</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Estar entre os melhores favorece sua evolução. Ao assumir cargos e responsabilidades, você desenvolve liderança e oratória, aprendendo a influenciar e motivar pessoas que já estão no topo da pirâmide social.
+                    </p>
+                </div>
+
+                <div class="vsl-border bg-black p-8 flex flex-col items-start text-left">
+                    <span class="text-6xl font-bold text-[#BF953F] mb-4">3</span>
+                    <h3 class="text-[#BF953F] font-bold uppercase tracking-widest text-xl mb-4">Prestígio</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        O reconhecimento como Maçom abre portas em todas as esferas. É um selo de integridade e sucesso, permitindo que você sirva à sociedade com impacto e receba o respeito devido por sua posição e sabedoria.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function buscarTemplo() {
+            const cep = document.getElementById('cepInput').value;
+            if(cep.length >= 8) {
+                document.getElementById('etapa1').classList.add('hidden');
+                document.getElementById('etapa2').classList.remove('hidden');
+                window.scrollTo({ top: document.getElementById('etapa2').offsetTop - 100, behavior: 'smooth' });
+            } else {
+                alert('Por favor, insira um CEP válido.');
+            }
+        }
+
+        function irParaCheckout() {
+            window.location.href = "https://checkout.ticto.app/OD3633A02"; 
+        }
+    </script>
+</body>
+</html>

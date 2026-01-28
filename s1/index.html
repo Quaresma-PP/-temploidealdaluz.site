@@ -47,6 +47,16 @@
     }
 
 </style>
+    
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/6976b35b626926f624b3599b/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/6976b30aa292f0536197cb09/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+    
 </head>
 <body class="bg-custom min-h-screen">
     <div class="flex flex-col items-center p-4">
@@ -58,13 +68,11 @@
         </h1>
 
         <div class="p-0 bg-black overflow-hidden rounded-lg">
-            <vturb-smartplayer id="vid-69742aa89dfa74e6e54a2e2d" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> 
-            <script type="text/javascript"> 
-                var s=document.createElement("script"); 
-                s.src="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/69742aa89dfa74e6e54a2e2d/v4/player.js", 
-                s.async=!0,document.head.appendChild(s); 
-            </script>
+            <vturb-smartplayer id="vid-6976b35b626926f624b3599b" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/6976b35b626926f624b3599b/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
         </div>
+<div id="secao-pitch" class="hidden">
+    <section class="max-w-4xl mx-auto mt-16 px-4 pb-20">
+        </section>
 
         <section class="max-w-4xl mx-auto mt-16 pb-20">
             <div class="vsl-border bg-black p-6 md:p-8 rounded-lg shadow-2xl">
@@ -121,7 +129,7 @@
                 </div>
             </div>
         </section>
-
+</div>
         <section class="max-w-6xl mx-auto mt-16 px-4">
             <h2 class="text-3xl md:text-5xl gold-gradient text-center uppercase mb-12 font-black tracking-tighter">
                 Porque ser Maçom
@@ -155,6 +163,19 @@
         </section>
     </div>
 
+        <script>
+    // Defina o tempo em segundos para a seção aparecer
+    // Exemplo: 900 segundos = 15 minutos
+    const SEGUNDOS_PARA_APARECER = 900; 
+
+    setTimeout(() => {
+        const elemento = document.getElementById('secao-pitch');
+        if (elemento) {
+            elemento.classList.remove('hidden');
+        }
+    }, SEGUNDOS_PARA_APARECER * 1000);
+</script>
+
     <script>
         function buscarTemplo() {
             const cep = document.getElementById('cepInput').value;
@@ -173,3 +194,4 @@
     </script>
 </body>
 </html>
+

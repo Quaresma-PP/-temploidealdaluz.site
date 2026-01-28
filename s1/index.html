@@ -169,29 +169,47 @@ src="https://www.facebook.com/tr?id=848437144039384&ev=PageView&noscript=1"
         </div>
     </div>
 
-    <script>
+   <script>
+    // 804 segundos = 13 minutos e 24 segundos
     const SEGUNDOS_PARA_APARECER = 804; 
-    setTimeout(() => {
-        const elemento = document.getElementById('secao-pitch');
-        if (elemento) {
-            elemento.classList.remove('hidden');
-            console.log("Pitch liberado!");
+
+    // Função que será executada após o tempo definido
+    setTimeout(function() {
+        // Tenta encontrar a div do pitch
+        const pitch = document.getElementById('secao-pitch');
+        
+        if (pitch) {
+            // 1. Remove a classe 'hidden' do Tailwind
+            pitch.classList.remove('hidden');
+            
+            // 2. Força o display como 'block' (Garante que apareça mesmo com erro de CSS)
+            pitch.style.setProperty('display', 'block', 'important');
+            
+            console.log("SUCESSO: O pitch foi liberado agora!");
+        } else {
+            // Se cair aqui, o ID no HTML está escrito errado
+            console.error("ERRO: Não encontrei nenhuma div com id='secao-pitch'");
         }
     }, SEGUNDOS_PARA_APARECER * 1000);
 
+    // Funções auxiliares para os botões
     function buscarTemplo() {
         const cep = document.getElementById('cepInput').value;
         if(cep.length >= 8) {
             document.getElementById('etapa1').classList.add('hidden');
             document.getElementById('etapa2').classList.remove('hidden');
-        } else { alert('Por favor, insira um CEP válido.'); }
+        } else {
+            alert('Por favor, insira um CEP válido.');
+        }
     }
 
     function irParaCheckout() {
+        // Seu link da Ticto configurado
         window.location.href = "https://checkout.ticto.app/OD3633A02"; 
     }
-    </script>
+</script>
 </body>
+
 
 
 

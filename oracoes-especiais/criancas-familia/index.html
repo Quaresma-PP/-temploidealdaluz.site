@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações pelo Bem-Estar de Crianças e Família</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais/" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações pelo Bem-Estar de Crianças e Família</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade familiar, leia com fé e compartilhe com quem precisa de proteção e harmonia no lar.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-child"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais/" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração pela Saúde dos Filhos',
+        texto: `<p>Senhor da Vida, coloco diante de Ti a saúde dos meus filhos.</p><p>Protege-os de todo mal, fortalece o corpo, a mente e o espírito de cada criança sob o Teu olhar.</p><p>Que a imunidade seja renovada, que as doenças sejam afastadas e que a alegria de viver seja constante em cada sorriso.</p><p>Que os médicos, professores e cuidadores sejam instrumentos do Teu amor e que a família seja refúgio de carinho e segurança.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Sabedoria para Pais',
+        texto: `<p>Deus de toda sabedoria, concede aos pais discernimento para educar, paciência para corrigir e amor para acolher.</p><p>Que cada decisão seja tomada com responsabilidade, cada palavra seja fonte de incentivo e cada gesto seja exemplo de bondade.</p><p>Que os pais sejam presença constante, apoio nos desafios e inspiração para o crescimento dos filhos.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Proteção Infantil',
+        texto: `<p>Senhor, protege as crianças de todo perigo, violência, abuso e injustiça.</p><p>Cobre-as com Teu manto de luz, afasta pessoas mal-intencionadas e guia os passos de cada pequeno no caminho do bem.</p><p>Que a inocência seja preservada, a alegria seja multiplicada e que cada criança cresça sentindo-se amada e protegida.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pela Harmonia entre Irmãos',
+        texto: `<p>Deus de união, derrama Tua paz sobre os irmãos desta família.</p><p>Que o respeito seja maior que a rivalidade, que o perdão seja mais forte que as brigas e que a amizade seja cultivada todos os dias.</p><p>Que cada irmão seja apoio, consolo e alegria na vida do outro.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Orientação no Crescimento',
+        texto: `<p>Senhor, guia o crescimento das crianças e adolescentes desta família.</p><p>Que cada fase seja vivida com responsabilidade, que os valores sejam firmes e que a fé seja o alicerce de cada escolha.</p><p>Que os adultos sejam exemplos de honestidade, respeito e amor ao próximo.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Bênçãos no Lar',
+        texto: `<p>Deus de toda bênção, visita este lar com Tua paz, prosperidade e alegria.</p><p>Que cada cômodo seja cheio de luz, que as refeições sejam momentos de união e que a gratidão seja constante em cada oração.</p><p>Que a casa seja refúgio de amor, esperança e fé.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Cura para Doenças Infantis',
+        texto: `<p>Senhor Jesus, médico das almas e dos corpos, peço-Te a cura das doenças que afligem as crianças.</p><p>Que a febre ceda, que a dor desapareça e que a saúde seja restaurada por completo.</p><p>Conforta os pais, fortalece os pequenos e faz com que a recuperação seja rápida e completa.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pela União e Amor Familiar',
+        texto: `<p>Deus de amor, une cada membro desta família com laços de respeito, carinho e compreensão.</p><p>Que as diferenças sejam superadas pelo diálogo, que o perdão seja praticado diariamente e que a alegria de estar juntos seja celebrada em cada encontro.</p><p>Que o lar seja sempre um porto seguro para todos.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Força Emocional para Crianças',
+        texto: `<p>Senhor, fortalece o emocional das crianças diante dos desafios da vida.</p><p>Que elas aprendam a lidar com frustrações, a superar medos e a confiar no Teu cuidado em todos os momentos.</p><p>Que a autoestima seja cultivada, que a esperança seja renovada e que a alegria de viver seja constante.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Gratidão e Cuidado Familiar',
+        texto: `<p>Deus bondoso, agradeço pela família que me deste.</p><p>Que o cuidado mútuo seja sempre prioridade, que a gratidão seja expressa em palavras e atitudes e que o amor seja o maior presente de todos os dias.</p><p>Que a família seja fonte de bênçãos, aprendizado e felicidade.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

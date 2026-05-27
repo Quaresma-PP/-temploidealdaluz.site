@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Day 3: Prayer for Prosperity - Novena de Nossa Senhora Desatadora de Nós</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            font-size: 18px;
+        }
+
+        /* Typography */
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .body-font {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .golden-text {
+            color: #d4af37;
+        }
+
+        /* Overlay Pattern */
+        .overlay-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 15px 0;
+            background-color: rgba(15, 32, 66, 0.95);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover, .back-link:focus {
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .back-link i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Prayer Section Styles */
+        .prayer-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .prayer-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(10, 22, 46, 0.8);
+            border: 4px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .prayer-icon {
+            font-size: 60px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .reflection-box {
+            background: rgba(10, 22, 46, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .quote-box {
+            background: rgba(15, 32, 66, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Day Badge */
+        .day-badge {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Audio CTA */
+        .audio-cta-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #d4af37, #f2d675);
+            color: #0f2042;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            border: 2px solid #f8e9b0;
+            margin: 15px 0;
+            width: 100%;
+            justify-content: center;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+            color: #0f2042;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: rgba(15, 32, 66, 0.95);
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Navigation Buttons */
+        .prayer-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(15, 32, 66, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover, .nav-btn:focus {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .nav-btn-prev i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .nav-btn-next i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+
+        /* Headings for Mobile */
+        h1 {
+            font-size: 30px !important;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 26px !important; 
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        /* Spacing for Mobile */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Tablets and Larger Screens */
+        @media (min-width: 768px) {
+            .prayer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+            
+            h1 {
+                font-size: 38px !important;
+            }
+            
+            .prayer-text {
+                font-size: 20px;
+            }
+            
+            .prayer-container {
+                padding: 30px;
+            }
+        }
+
+        /* Desktops and Larger Screens */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px !important;
+            }
+            
+            .reflection-box, .quote-box {
+                font-size: 18px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay-pattern"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </header>
+    
+    <main class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="day-badge">DAY 3</div>
+                <h1 class="title-font golden-text">Prayer for Prosperity</h1>
+            </div>
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="icon-container">
+                    <div class="prayer-icon">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center mb-4">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="fs-5 mt-2 fst-italic">"Do not worry about the things that cause concern... Only one thing is necessary: to elevate your spirit and love God."</p>
+                <p class="golden-text fw-bold mt-2">— Nossa Senhora Desatadora de Nós</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h2 class="golden-text mb-3">Reflection</h2>
+                <p>
+                    On this third day, we direct our prayers to prosperity and blessings for our material needs. The word "prosperity" does not refer only to riches or financial gains, but to the divine providence that supplies what we need to live with dignity, peace, and enough to help those in need.
+                </p>
+                <p>
+                    Jesus taught us to trust in Providence: just as God clothes the lilies of the field and feeds the birds of the air, He will not let His children lack their daily bread. However, He also warned us not to become slaves to money nor to worry excessively about material possessions, for our true wealth is in God.
+                </p>
+                <p>
+                    Nossa Senhora Desatadora de Nós, despite having chosen a religious life and voluntary poverty, knew the importance of trusting in God for all things. Let us ask the Lord to pour out His blessings on our professional, financial, and family life.
+                </p>
+            </div>
+            
+            <div class="prayer-container">
+                <h2 class="golden-text text-center mb-4">Full Prayer</h2>
+                
+                <div class="prayer-text text-white">
+                    <p>"Provident Father God, Creator of heaven and earth, in Your hands are all the gold and silver, and we lack nothing when we trust in You. On this day, I come to place my material life before Your Providence: my needs, financial worries, my work, and the projects for which I strive daily. I acknowledge, Lord, that without You we can do nothing—it is You who gives fertility to the land and makes the work of our hands prosper.</p>
+                    
+                    <p class="mt-4">Therefore, I humbly ask for Your help: bless my endeavors, enlighten my financial decisions, open the doors to good employment or honest business so that, through my effort, I may provide for my family's sustenance and live in tranquility. Lord, keep from me misery and extreme need, deliver me from unsustainable debts and from all injustice or dishonesty in financial matters. Give me strength and health to work and prosper by just means.</p>
+                    
+                    <p class="mt-4">Grant me also the wisdom to manage well the goods You entrust to me, using them responsibly and fraternally, without waste, without accumulating out of greed, and without placing money above the values of Your Kingdom. May I never forget to practice charity when I am in abundance, sharing with those who have less, for I recognize that all I have comes from You.</p>
+                    
+                    <p class="mt-4">Beloved Father, today I surrender all my financial worries to You: the bills to pay, the doubts about the future, the fears of loss. Instead of anxiety, I want to trust in Your Word, which assures me that it is worth more to seek Your Kingdom. Following the example of Nossa Senhora Desatadora de Nós, who never stopped trusting even in moments of material trial, I also say: I trust in Your providence, Lord! I know you are taking care of me and my loved ones, even when things seem difficult.</p>
+                    
+                    <p class="mt-4">I also ask, Lord, for the grace of true prosperity, which includes peace of mind and family unity. May I, with the improvement of my material life, also grow in gratitude and humility. Deliver me from greed and the disordered love of money, so that prosperity does not become a snare of perdition, but an instrument of blessings.</p>
+                    
+                    <p class="mt-4">Lord, may I never lack bread on my table, a roof over my head, and what is necessary to fulfill my mission in this life. And if it is Your will to grant me more than the basic needs, may I know how to use that extra to do good and sow love around me. I thank You in advance for caring for me as a beloved child. Divine Provident Father, bless my steps towards a prosperous life in every sense—material, emotional, and spiritual. May I prosper above all in virtues and in faith, for that is the greatest wealth that no one can steal. With Nossa Senhora Desatadora de Nós, I proclaim: I am in Your hands, and I shall not want. Amen."</p>
+                </div>
+            </div>
+            
+            
+    </main>
+    
+    <footer class="site-footer py-3">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 Novena de Nossa Senhora Desatadora de Nós</p>
+            <p>Contact: <a href="mailto:suportepadrelucaslima@gmail.com" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>

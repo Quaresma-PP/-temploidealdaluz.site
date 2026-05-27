@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Prayers for Physical and Spiritual Healing</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Prayers for Physical and Spiritual Healing</h1>
+    <p class="text-center mb-4">Choose the prayer for your need, read it with faith, and share it with those who need healing and hope.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-heartbeat"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Previous</button>
+      <button id="btnProximo" class="btn-nav">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Prayer for Alzheimer\'s',
+        texto: `<p>Lord of Eternal Wisdom, today I turn to You on behalf of the one who faces the challenge of Alzheimer's.</p><p>Illuminate every cell of their mind, rekindling cherished memories—the faces of friends, the faces of children, the stories that wove their life.</p><p>Grant me patience and tenderness to care for them in moments of confusion and uncertainty.</p><p>May the warmth of Your love penetrate every synapse, gradually restoring the clarity of their thoughts.</p><p>Protect their heart from frustrations and grant comfort to their soul whenever they feel lost.</p><p>Let the indestructible bond of our love and Your presence emanate around them, even in the webs of forgetfulness.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Diabetes',
+        texto: `<p>Lord of Life and Health, I plead with You for the healing of the one who lives with diabetes.</p><p>Pour Your grace upon their body, balancing their blood sugar levels and strengthening their pancreas.</p><p>May each meal become an act of gratitude, reminding us that all food comes from Your generous hands.</p><p>Grant me the discipline to support their treatment and the serenity to face each challenge with faith.</p><p>Renew their strength each morning and guide their steps toward healthy habits that glorify Your care.</p><p>May they, when measuring their glucose, feel the comforting presence of Your sustaining love.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Cancer',
+        texto: `<p>Merciful Father, You are the Physician of physicians and the source of all hope.</p><p>Today I entrust to You the one who is fighting against cancer, that Your mighty hand may pass over every cell, dissolving the illness and restoring health.</p><p>Grant courage to face the treatments, wisdom to the professionals who care for them, and unwavering faith in our hearts.</p><p>Renew the patient's inmost being with the certainty that, even in the valley of the shadow, Your light will never fail.</p><p>May each teardrop be transformed into a victorious prayer and each day of trial be sealed by Your miracle.</p><p>Upon seeing the sunrise, may they feel a new wave of encouragement, knowing that in You is true life.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Cataracts',
+        texto: `<p>O Lord of Infinite Light, creator of all colors and reflections, I ask You for the restoration of sight.</p><p>Dispel the clouds that blur the eyes and allow their gaze to once again behold the wonders of Your creation.</p><p>May each dawn be a spectacle of vivid colors, and every recovered smile be a testament to Your power.</p><p>Guide the skilled hands of the surgeon and inspire the medical team with Your wisdom.</p><p>Grant the patient confidence and serenity in the healing process, nourishing the hope of seeing anew.</p><p>May they, in contemplating the world, see not only the shape of objects but feel the beauty of Your love that surrounds us.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Arthritis',
+        texto: `<p>God, our Refuge and Strength, extend Your comforting hand over tired joints.</p><p>Soothe the swelling, relieve the pain, and grant mobility to the body that adores You.</p><p>May every movement be free from the weight of stiffness and every gesture be praised in thanksgiving.</p><p>Give comfort on difficult mornings, patience in moments of limitation, and renewed vigor with each new day.</p><p>Inspire the therapists and doctors who oversee the treatment with science and compassion.</p><p>May the heart, even in hours of rest, find peace in the certainty of Your constant mercy.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Depression',
+        texto: `<p>Light of the World, dispel the darkness that envelops the downcast soul.</p><p>Infuse in them the living flame of hope, igniting the desire to live each day with purpose.</p><p>Speak words of encouragement and love to their inmost being, replacing despair with the will to smile.</p><p>Place around them loving friends and caregivers, instruments of Your affection and support.</p><p>May every step taken, no matter how small, be a triumph over the shadows of sadness.</p><p>Renew the impulse to be grateful for small joys and cause the spirit to celebrate life once more.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Anxiety',
+        texto: `<p>God of Peace, enter my troubled heart and calm the whirlwind of thoughts.</p><p>Silence the fear that tightens my chest and replace it with firm trust in Your care.</p><p>Teach me to breathe Your breath of life, finding serenity in each inspiration.</p><p>May my worries be surrendered into Your loving hands, so I may rest in Your faithfulness.</p><p>Grant clarity to my mind and balance to my emotions, so that I may live each moment with confidence.</p><p>May the certainty of Your presence be my foundation in any inner storm.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Insomnia',
+        texto: `<p>Lord of True Rest, watch over my sleep on this wakeful night.</p><p>Calm my restless mind with Your peace and banish the doubts that steal my tranquility.</p><p>May every star that shines outside be a reminder of Your constant and guarding love.</p><p>Pour Your serenity over my body, preparing me to rest in Your protective embrace.</p><p>Grant peaceful dreams and a renewed awakening, ready to praise You with gratitude.</p><p>May I feel, even in sleep, the security that You are always by my side.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Hypertension',
+        texto: `<p>God of Perfect Balance, incline Yourself to my racing heart and bring calm to my pulse.</p><p>Soothe the flow of my blood, restoring harmony between body and spirit.</p><p>With each beat, may I recognize Your presence that sustains my life.</p><p>Give me the wisdom to care for my health and the discipline to adopt habits that honor my body as a temple.</p><p>May the peace that only You can give flood my veins, so I may face the days with serenity.</p><p>May the rhythm of my heart be a reflection of Your peace that surpasses all understanding.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Chronic Pain',
+        texto: `<p>Lord who carries our sorrows, I turn to You in search of relief and comfort.</p><p>Touch every point of suffering in my body and awaken the restorative power that flows from You.</p><p>Grant me days of comfort, even when the illness persists, so that I may know how to rest in Your grace.</p><p>Renew my courage to face each morning, embracing hope as a shield.</p><p>May I, upon feeling the balm of Your presence, recognize that I am not alone on this journey.</p><p>Transform my suffering into a testament of faith and strengthen my spirit to praise You, even in weakness.</p><p>Amen.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copy prayer" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

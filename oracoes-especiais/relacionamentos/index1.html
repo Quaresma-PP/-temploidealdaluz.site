@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Prayers to Restore Relationships</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Prayers to Restore Relationships</h1>
+    <p class="text-center mb-4">Choose the prayer for your romantic or family needs, read it with faith, and share it with those who need reconciliation and harmony.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-heart"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Previous</button>
+      <button id="btnProximo" class="btn-nav">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Prayer for Marriages in Crisis',
+        texto: `<p>Lord of Love and Union, I come to You to plead for the restoration of this marriage that is facing storms and disagreements.</p><p>Renew the dialogue, patience, and respect between the couple. Dissolve old grudges, heal deep wounds, and reignite the desire to start over together.</p><p>May forgiveness be stronger than pride, may tenderness overcome coldness, and may hope be greater than the fear of trying again.</p><p>Grant wisdom to seek help, humility to recognize mistakes, and courage to rebuild trust.</p><p>May the home once again be a refuge of peace, joy, and companionship, and may love be renewed with each new day.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Troubled Romantic Relationships',
+        texto: `<p>God who unites hearts, look upon this relationship that is going through doubts and insecurities.</p><p>Remove jealousy, distrust, and thoughtless words. Bring back respect, lightness, and the joy of being together.</p><p>May each encounter be an opportunity to grow, learn, and strengthen the bond. May dialogue be sincere and affection, constant.</p><p>If it is Your will, strengthen this relationship so that it may blossom into a mature and lasting love.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Family Harmony',
+        texto: `<p>Lord of the Family, pour out Your peace upon this home. Calm heated spirits, heal resentments, and bring distant hearts closer.</p><p>May respect be the foundation of all coexistence, may forgiveness be practiced daily, and may the joy of being together overcome any differences.</p><p>Protect each member of the family, bless the meals, the gatherings, and the farewells. May harmony reign, and may love be the strongest link among all.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Reconciliation with a Former Partner',
+        texto: `<p>God of mercy, I place before You the desire for reconciliation with the one who once shared my life.</p><p>If it is Your will, bring our paths together again, heal the wounds of the past, and renew mutual respect.</p><p>May longing not be a cause of suffering, but of learning. May the reunion, if it happens, be marked by maturity, understanding, and peace.</p><p>Above all, may I know how to accept Your will and move forward with serenity.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Restore Lost Friendships',
+        texto: `<p>Lord, source of all true friendship, I ask You to restore bonds broken by time, distance, or misunderstandings.</p><p>May pride not prevent forgiveness, may longing be a bridge to reunion, and may sincerity be the basis of all reconciliation.</p><p>May the good memories overcome the hurts, and may the rekindled friendship be even stronger and truer.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for the Parent-Child Bond',
+        texto: `<p>Father God, bless the relationship between parents and children. Restore dialogue, trust, and affection.</p><p>May respect be mutual, may love be shown in gestures and words, and may understanding be greater than generational differences.</p><p>May time together be valued, and may every embrace be a sign of Your love present in the family.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Community Relationships',
+        texto: `<p>Lord of Communion, strengthen the bonds between neighbors, colleagues, and members of groups and communities.</p><p>May solidarity, respect, and empathy be lived out day by day. May differences be overcome through dialogue, and may collaboration always be greater than competition.</p><p>May everyone feel welcomed, valued, and part of a greater whole.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Attract a Great Love',
+        texto: `<p>God of True Love, prepare my heart to receive and recognize a great love.</p><p>May I know how to wait with patience, mature with experience, and trust that the best is reserved for me.</p><p>May the meeting be blessed, may there be respect, companionship, and mutual growth.</p><p>May love be a source of joy, inspiration, and fulfillment.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Peaceful Communication',
+        texto: `<p>Lord, teach me to speak with gentleness, listen with attention, and respond with wisdom.</p><p>May my words be constructive, may silence be respected, and may dialogue always be a path to peace.</p><p>Keep impulsiveness, aggression, and resentment away from me. May communication be a bridge for reconciliation and not a wall of separation.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Heal from Betrayal',
+        texto: `<p>God of mercy, I surrender to You the pain of betrayal. Heal the open wounds, restore trust, and teach me the path of forgiveness.</p><p>May the hurt not turn into bitterness, but into a lesson. May time bring serenity, and may my self-worth be renewed.</p><p>Even in the face of disappointment, may I not lose the ability to love and trust again.</p><p>Amen.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copy prayer" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

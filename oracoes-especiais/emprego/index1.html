@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Prayers to Open Doors to Employment</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Prayers to Open Doors to Employment</h1>
+    <p class="text-center mb-4">Choose the prayer for your professional needs, read it with faith, and share it with those seeking new opportunities.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-briefcase"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Previous</button>
+      <button id="btnProximo" class="btn-nav">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Prayer for the Unemployed to Find a Job',
+        texto: `<p>Lord of Work and Providence, I come to You with an open heart, asking for a door of employment for those in search of dignity and sustenance.</p><p>Open paths where there are none, remove obstacles, and illuminate the right opportunities. May hope never be extinguished and may trust in You be greater than any fear.</p><p>Grant encouragement to face interviews, courage to persist in the face of rejection, and serenity to wait for the right time. May each resume sent be accompanied by Your blessing, and upon receiving news of a position, may there be gratitude and recognition of Your care.</p><p>Lord, strengthen self-esteem, renew faith, and do not allow discouragement to take over the heart. May family be a source of support and friends bring words of encouragement.</p><p>Even in the days of waiting, may there be learning, growth, and confidence that the best is yet to come. May the new job be an environment of respect, growth, and fulfillment.</p><p>May the work be a source of livelihood, but also of joy, friendship, and service to others. May each achievement be celebrated with humility and each challenge faced with hope.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Gaining Promotions',
+        texto: `<p>God of growth and justice, I ask You to recognize the effort and dedication of those seeking a promotion. May their merit be seen, their talent valued, and may doors open to new responsibilities.</p><p>Grant humility to serve and wisdom to lead, always with gratitude and ethics. May the promotion be an instrument of blessings for the family and an opportunity to better serve others.</p><p>Deliver from envy and injustice, and let recognition come at the right time, according to Your will. May the new position bring challenges that stimulate growth and opportunities to learn even more.</p><p>May the work environment be harmonious, may colleagues and leaders recognize the value of effort, and may prosperity be shared with generosity.</p><p>May each step achieved be a reason for gratitude and may success never lead away from the path of humility and service.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Entrepreneurs to Achieve Prosperity',
+        texto: `<p>Lord of Entrepreneurs, bless the businesses and projects of those who trust in You. Pour out prosperity, honesty, and creativity on every decision.</p><p>May their work bear fruit, create jobs, and be a source of blessings for many. Deliver from losses, injustices, and lead to victory. May each client be treated with respect, each employee with dignity, and each profit be shared with generosity.</p><p>May success be a reflection of Your goodness, and even in crises, may there be hope and resilience. Inspire new ideas, protect against fraud, and give discernment to invest wisely.</p><p>May the business environment be fair, ethical, and welcoming. May prosperity be an instrument of social transformation, and may there never be a lack of generosity to help those in need.</p><p>May each challenge be overcome with faith and each victory celebrated with gratitude. May the business name be synonymous with trust, respect, and service to others.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Career Guidance',
+        texto: `<p>God who guides our steps, I ask for clarity to discern the best professional path. Show me where I can serve best, grow, and fulfill my mission.</p><p>Banish doubt, strengthen my courage, and make me see the opportunities that come from You. May I not fear change, but trust that each stage is part of Your plan of love.</p><p>Lead me to healthy environments, fair colleagues, and inspiring leaders. May I know when it is time to stay and when it is time to seek new horizons.</p><p>May every decision be made with wisdom, listening to counsel and always seeking the greater good. May my work be a source of fulfillment, learning, and service.</p><p>May I never lose enthusiasm in the face of challenges, and may faith be my guide in all choices.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Success in Interviews',
+        texto: `<p>Lord, accompany me in every job interview. Give me serenity, confidence, and the right words to express my value.</p><p>May I be remembered not only for my skills but also for my honesty and willingness to contribute. May the right position be granted according to Your will, and even in the face of rejection, may I not become discouraged.</p><p>Prepare the hearts of the recruiters to see beyond the resume and recognize the potential you have planted in me. May each interview be an opportunity for learning and growth.</p><p>May I know how to listen, respond with clarity, and show respect for everyone involved. May anxiety not paralyze me, and may hope be greater than fear.</p><p>At the end of each process, may I be able to give thanks for the experience and trust that the best is reserved for me.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for a Salary Increase',
+        texto: `<p>God of Justice, recognize the effort and dedication of those who work hard. I ask that my salary be fair, sufficient, and blessed.</p><p>May every negotiation be conducted with respect and may prosperity reach my home. May I know how to wisely manage every resource received and never lack the generosity to share with those in need.</p><p>May the increase be a reflection of the recognition and trust placed in my work. May I continue to serve with joy, dedication, and ethics.</p><p>May this prosperity be an instrument of blessings for my family and for all those around me.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for New Opportunities',
+        texto: `<p>Lord of New Beginnings, open my eyes to see unexpected opportunities. May I not fear change, but embrace every chance to grow and learn.</p><p>May doors open, contacts arise, and may I be ready for the new things You have prepared for me. May each challenge be seen as a step towards success and each new start be celebrated with faith.</p><p>May I know when to act and when to wait, always trusting in Your providence. May hope be renewed each morning, and may courage never fail me.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Business Growth',
+        texto: `<p>God of abundance, I ask that my business grows with ethics, respect, and prosperity. May loyal customers come, may partnerships be solid, and may every challenge be overcome with wisdom.</p><p>May success be shared, and may I never forget to help those in need. May honesty be the foundation of every decision and gratitude the fuel for every achievement.</p><p>May the team work united, motivated, and in a spirit of collaboration. May prosperity be an instrument of transformation, and may the business name be synonymous with trust and service.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Break Through Professional Barriers',
+        texto: `<p>Lord, break every barrier that hinders my professional advancement. Remove blockages, envy, injustices, and open paths of recognition and growth.</p><p>May I have the courage to persist and the faith not to give up in the face of difficulties. May each victory be celebrated with humility and each overcome obstacle be a testament to Your faithfulness.</p><p>May I know how to ask for help when necessary and may solidarity always be present in the workplace.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Connect with Key People',
+        texto: `<p>God of Connections, place in my path people who can help me and whom I can also help. May professional relationships be honest, constructive, and blessed.</p><p>May I know how to value each contact and build a network of mutual support and growth. May generosity and respect be present in every partnership, and may success be shared with joy.</p><p>May I be an instrument of unity, collaboration, and inspiration for all who cross my professional path.</p><p>Amen.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copy prayer" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

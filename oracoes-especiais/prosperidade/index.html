@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações para Prosperidade Financeira</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações para Prosperidade Financeira</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade financeira, leia com fé e compartilhe com quem busca abundância e equilíbrio.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-coins"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração pela Libertação das Dívidas',
+        texto: `<p>Deus da Providência, venho a Ti com o coração aflito pelas dívidas que pesam sobre minha vida.</p><p>Peço que abras portas de solução, conceda sabedoria para negociar e disciplina para administrar cada recurso.</p><p>Que eu não me desespere diante dos boletos, mas confie que, com esforço e fé, a libertação financeira é possível.</p><p>Afasta o medo, renova minha esperança e faz com que cada compromisso seja honrado com dignidade.</p><p>Que a experiência das dívidas me ensine a valorizar o que tenho e a buscar sempre o equilíbrio.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração da Abundância Infinita',
+        texto: `<p>Senhor da Abundância, reconheço que tudo o que tenho vem de Ti.</p><p>Peço que a Tua generosidade se manifeste em minha vida, multiplicando as oportunidades, os recursos e as bênçãos.</p><p>Que eu saiba partilhar o que recebo, sem medo da escassez, e que a gratidão seja constante em meu coração.</p><p>Que a abundância não me torne egoísta, mas instrumento de auxílio ao próximo.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Receber Dinheiro Inesperado',
+        texto: `<p>Deus de Surpresas, peço que, segundo Tua vontade, eu receba recursos inesperados para suprir minhas necessidades.</p><p>Que o dinheiro chegue de fontes honestas, de forma abençoada e sem prejuízo a ninguém.</p><p>Que eu saiba reconhecer cada presente como sinal do Teu cuidado e que a prosperidade seja motivo de louvor.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Gestão Sábia dos Recursos',
+        texto: `<p>Senhor, ensina-me a administrar com sabedoria tudo o que chega às minhas mãos.</p><p>Que eu saiba poupar, investir e gastar com responsabilidade, evitando desperdícios e escolhas impulsivas.</p><p>Que cada centavo seja usado para o bem, para o crescimento e para a realização dos meus sonhos.</p><p>Que eu nunca me esqueça de partilhar com quem precisa.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Abertura de Novas Fontes de Renda',
+        texto: `<p>Deus Criador, peço que abras portas para novas fontes de renda em minha vida.</p><p>Que ideias criativas surjam, que parcerias sejam abençoadas e que oportunidades de trabalho e negócio floresçam.</p><p>Que eu tenha coragem para empreender, disposição para aprender e humildade para recomeçar sempre que necessário.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pelo Sucesso nos Investimentos',
+        texto: `<p>Senhor, guia minhas decisões financeiras e protege meus investimentos.</p><p>Que eu saiba analisar riscos, buscar conselhos e agir com prudência.</p><p>Que o retorno seja justo, abençoado e fruto do trabalho honesto.</p><p>Que eu não me deixe levar pela ganância, mas busque sempre o equilíbrio e a paz.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Multiplicação dos Bens',
+        texto: `<p>Deus de milagres, multiplica os bens que já possuo, não apenas para meu conforto, mas para que eu possa ajudar mais pessoas.</p><p>Que a prosperidade seja instrumento de partilha, solidariedade e transformação.</p><p>Que eu saiba reconhecer cada conquista como fruto da Tua graça e do meu esforço.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pela Sabedoria no Trabalho',
+        texto: `<p>Senhor, concede-me sabedoria para tomar decisões no trabalho, para lidar com desafios e para crescer profissionalmente.</p><p>Que eu seja exemplo de honestidade, dedicação e respeito.</p><p>Que o ambiente de trabalho seja saudável, produtivo e abençoado.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Proteção ao Patrimônio',
+        texto: `<p>Deus protetor, peço que guardes meu patrimônio, minha casa, meus bens e minha família.</p><p>Livra-me de perdas, roubos, acidentes e injustiças.</p><p>Que tudo o que conquistei seja preservado e usado para o bem.</p><p>Que eu nunca coloque os bens acima das pessoas e que a generosidade seja sempre maior que o apego.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Gratidão e Prosperidade',
+        texto: `<p>Senhor, agradeço por cada bênção recebida, por cada conquista e por cada lição aprendida nas dificuldades.</p><p>Que a gratidão seja a base da minha prosperidade e que eu nunca me esqueça de louvar-Te em todas as circunstâncias.</p><p>Que a prosperidade seja completa: financeira, emocional, espiritual e familiar.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

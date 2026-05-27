@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Day 4: Protection of the Family - Novena de Nossa Senhora Desatadora de Nós</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            font-size: 18px;
+        }
+
+        /* Typography */
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .body-font {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .golden-text {
+            color: #d4af37;
+        }
+
+        /* Overlay Pattern */
+        .overlay-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 15px 0;
+            background-color: rgba(15, 32, 66, 0.95);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover, .back-link:focus {
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .back-link i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Prayer Section Styles */
+        .prayer-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .prayer-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(10, 22, 46, 0.8);
+            border: 4px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .prayer-icon {
+            font-size: 60px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .reflection-box {
+            background: rgba(10, 22, 46, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .quote-box {
+            background: rgba(15, 32, 66, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Day Badge */
+        .day-badge {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Audio CTA */
+        .audio-cta-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #d4af37, #f2d675);
+            color: #0f2042;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            border: 2px solid #f8e9b0;
+            margin: 15px 0;
+            width: 100%;
+            justify-content: center;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+            color: #0f2042;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: rgba(15, 32, 66, 0.95);
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Navigation Buttons */
+        .prayer-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(15, 32, 66, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover, .nav-btn:focus {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .nav-btn-prev i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .nav-btn-next i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+
+        /* Headings for Mobile */
+        h1 {
+            font-size: 30px !important;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 26px !important; 
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        /* Spacing for Mobile */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Tablets and Larger Screens */
+        @media (min-width: 768px) {
+            .prayer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+            
+            h1 {
+                font-size: 38px !important;
+            }
+            
+            .prayer-text {
+                font-size: 20px;
+            }
+            
+            .prayer-container {
+                padding: 30px;
+            }
+        }
+
+        /* Desktops and Larger Screens */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px !important;
+            }
+            
+            .reflection-box, .quote-box {
+                font-size: 18px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay-pattern"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </header>
+    
+    <main class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="day-badge">DAY 4</div>
+                <h1 class="title-font golden-text">Protection of the Family</h1>
+            </div>
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="icon-container">
+                    <div class="prayer-icon">
+                        <i class="fas fa-house-chimney-user"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center mb-4">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="fs-5 mt-2 fst-italic">"Remember that you have in Heaven not only a Father, but also a Mother. Turn to Mary; she is all sweetness, mercy, goodness, and love for us, because she is our mother."</p>
+                <p class="golden-text fw-bold mt-2">— Nossa Senhora Desatadora de Nós</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h2 class="golden-text mb-3">Reflection</h2>
+                <p>
+                    On the fourth day, our prayers are directed to an irreplaceable treasure: the family. The family is a gift from God and, at the same time, a field of many struggles and challenges. It is within the family that we find love and support, but also face worries—be it the illnesses of loved ones, financial difficulties, disagreements, or negative external influences.
+                </p>
+                <p>
+                    As Christians, we believe that the family is sacred, instituted by the Lord from the beginning and elevated by Jesus in the Holy Family of Nazareth (Jesus, Mary, and Joseph) as a model for us. Therefore, praying for the protection and unity of our family is fundamental.
+                </p>
+                <p>
+                    NOSSA SENHORA understood well the value of the spiritual family—he called all those he guided "spiritual children" and cared for them with prayers and counsel. Today, we will place each family member under the protective mantle of the Blessed Virgin Mary and ask Saint Joseph to also protect ours.
+                </p>
+            </div>
+            
+            <div class="prayer-container">
+                <h2 class="golden-text text-center mb-4">Full Prayer</h2>
+                
+                <div class="prayer-text text-white">
+                    <p>"Heavenly Father, Source of all family, I thank you for the family you have given me. Each member is a precious gift and a mission to me. Today I come to beseech you to guard and protect my family from all evil. Please, Lord, be the guardian of our home, warding off all division, illness, evil influence, or danger that may threaten us. Send your holy angels to encamp around us, blocking the enemy's attacks against us. May our home be strengthened in faith, united in love, and preserved in health and peace.</p>
+                    
+                    <p class="mt-4">Bless, Lord, my home. Remove from our conversations every offensive word, all resentment, and lack of understanding. May respect, forgiveness, and mutual affection reign between parents and children, between spouses, and between siblings. Do not allow resentment to linger among us: give us the grace to always forgive, to always start anew, just as You forgive our faults daily. I ask especially for the members of my family who are most in need at this moment: (mention the names and needs of each one). Help them, Lord, in their tribulations. Grant healing to the sick family member, give comfort to the one who is depressed or anxious, bring back the one who is distant or in danger, and convert the hearts of those who have strayed from You.</p>
+                    
+                    <p class="mt-4">I entrust each of them to your Sacred Heart, Jesus, for I know that you love them infinitely more than I love them. I consecrate my family to the protection of the Holy Family of Nazareth. Jesus, Mary, and Joseph, come and dwell spiritually in our home and be our light. Most Holy Mother Mary, I place my home under your maternal mantle. You who are the mother of us all, go before us and resolve what I, humanly, cannot resolve in my family. Intercede with your Son so that we may have the wine of joy, as at the wedding at Cana, and so that every necessary miracle may happen in our home.</p>
+                    
+                    <p class="mt-4">Saint Joseph, chaste spouse of Mary and guardian of the Child Jesus, be also the guardian of my family: give us honest work, sustenance, security, and guide us in raising our children in the path of God. I also invoke, Lord, the Holy Guardian Angels of each of my family members: may they be ever vigilant, enlightening, guarding, ruling, and protecting us all.</p>
+                    
+                    <p class="mt-4">May our house be truly a domestic sanctuary, where your Name is honored, your word is respected, and where whoever enters may feel your loving presence. Dear Father, I entrust my family to You. It belongs to You. May no force of evil be able to separate us from You. Be our shield and refuge at all times. And may one day, when it is your will, we all be reunited in the great family of Heaven, with none of ours missing. Amen."</p>
+                </div>
+            </div>
+            
+            
+    </main>
+    
+    <footer class="site-footer py-3">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 Novena de Nossa Senhora Desatadora de Nós</p>
+            <p>Contact: <a href="mailto:suportepadrelucaslima@gmail.com" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>

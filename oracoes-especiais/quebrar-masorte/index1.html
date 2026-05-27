@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Prayers to Break Bad Luck and Spiritual Blockages</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Prayers to Break Bad Luck and Spiritual Blockages</h1>
+    <p class="text-center mb-4">Choose the prayer for your need for deliverance, read it with faith, and share it with those who need protection and spiritual renewal.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-bolt"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Previous</button>
+      <button id="btnProximo" class="btn-nav">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Prayer to Reverse a Tide of Bad Luck',
+        texto: `<p>Lord God, source of all fortune and protection, I come to You to ask for the reversal of every tide of bad luck that has plagued my life.</p><p>Break every chain of negativity, undo every contrary word, and remove from me all energy that does not come from Your love.</p><p>May the light of Your Spirit illuminate my paths, bringing opportunities, blessed encounters, and open doors where there were only blockages.</p><p>Renew my hope, strengthen my faith, and make me recognize Your hand acting in every detail of my day.</p><p>May divine fortune accompany me, and may I be a witness to Your power of transformation.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Cut Off Negative Influences',
+        texto: `<p>God of light, cut off now every negative influence that hovers over my life, my home, and my family.</p><p>May all envy, evil eye, slander, and dense energy be dissipated by the power of Your name.</p><p>Clothe me with Your protective shield, fortify my mind and my heart against all evil.</p><p>May peace reign in my home and may joy be constant in my routine.</p><p>May I be a channel of blessings, and may no opposing force prevail against me.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Freedom from Repetitive Cycles',
+        texto: `<p>Lord, free me from all repetitive cycles of failure, sadness, and discouragement.</p><p>Break old patterns, renew my mind, and make me see new possibilities.</p><p>May every failed attempt be transformed into a lesson learned and every new step be guided by Your hand.</p><p>May I not be bound to the past, but move forward confidently toward the future You have prepared for me.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Break Curses and Spells',
+        texto: `<p>Almighty God, in the name of Jesus, I ask that every curse, spell, or spiritual work sent against me be undone now.</p><p>May Your precious blood cover me, purify me, and free me from all malignant influence.</p><p>May no weapon forged against me prosper, and may every word of cursing be transformed into a blessing.</p><p>May I live under Your protection, and may Your light dispel every shadow.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Dissolve Envy and the Evil Eye',
+        texto: `<p>Lord, dissolve all envy and the evil eye directed at my life, my projects, and my relationships.</p><p>May the brightness of Your love be greater than any look of greed or evil desire.</p><p>May I be protected by Your grace, and may prosperity, health, and joy be constant on my journey.</p><p>May I also learn not to envy, but to celebrate the achievements of others with a pure heart.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Untie Spiritual Knots',
+        texto: `<p>God of mercy, untie all the spiritual knots that hinder my progress, my peace, and my happiness.</p><p>May every bond, every doubt, and every fear be undone by the power of Your love.</p><p>May I walk free, light, and confident, knowing that nothing can bind me when I am under Your protection.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Cleansing Energetic Blockages',
+        texto: `<p>Lord, cleanse now every energetic blockage that impedes the flow of Your blessings in my life.</p><p>Purify my mind, my body, and my spirit, removing all dense energy, negative thoughts, and feelings of guilt.</p><p>May the light of Your Holy Spirit envelop me and renew me completely.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for a Shield Against Negativity',
+        texto: `<p>Protector God, place upon me a shield of light against all negativity, pessimism, and destructive words.</p><p>May I be strong in the face of criticism, resilient in the face of adversity, and optimistic in the face of challenges.</p><p>May Your presence be my safe shelter and my source of joy.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Break Patterns of Self-Sabotage',
+        texto: `<p>Lord, break now every pattern of self-sabotage that prevents me from growing, prospering, and being happy.</p><p>Free me from limiting thoughts, negative beliefs, and destructive behaviors.</p><p>May I see myself through Your eyes, recognizing my worth and my potential.</p><p>May I have the courage to change and the faith to persist on the path of good.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Open the Flow of Blessings',
+        texto: `<p>God of all abundance, I ask that the flow of blessings be opened upon my life.</p><p>May nothing prevent the arrival of Your favor, Your prosperity, and Your joy.</p><p>May I be a channel of blessings for my family, my friends, and everyone around me.</p><p>May gratitude be constant in my heart, and may I know how to share everything I receive.</p><p>Amen.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copy prayer" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

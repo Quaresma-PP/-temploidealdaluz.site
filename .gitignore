@@ -1,0 +1,7 @@
+.env
+node_modules/
+*.mp4
+*.wav
+/package-lock.json
+
+.vercel

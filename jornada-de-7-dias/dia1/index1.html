@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Day 1: Connection with the Guardian Angel - Novena de Nossa Senhora Desatadora de Nós</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            font-size: 18px;
+        }
+
+        /* Typography */
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .body-font {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .golden-text {
+            color: #d4af37;
+        }
+
+        /* Overlay Pattern */
+        .overlay-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 15px 0;
+            background-color: rgba(15, 32, 66, 0.95);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover, .back-link:focus {
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .back-link i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Prayer Section Styles */
+        .prayer-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .prayer-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(10, 22, 46, 0.8);
+            border: 4px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .prayer-icon {
+            font-size: 60px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .reflection-box {
+            background: rgba(10, 22, 46, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .quote-box {
+            background: rgba(15, 32, 66, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Day Badge */
+        .day-badge {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Audio CTA */
+        .audio-cta-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #d4af37, #f2d675);
+            color: #0f2042;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            border: 2px solid #f8e9b0;
+            margin: 15px 0;
+            width: 100%;
+            justify-content: center;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+            color: #0f2042;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: rgba(15, 32, 66, 0.95);
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Navigation Buttons */
+        .prayer-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(15, 32, 66, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover, .nav-btn:focus {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .nav-btn-prev i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .nav-btn-next i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+
+        /* Headings for Mobile */
+        h1 {
+            font-size: 30px !important;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 26px !important; 
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        /* Spacing for Mobile */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Tablets and Larger Screens */
+        @media (min-width: 768px) {
+            .prayer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+            
+            h1 {
+                font-size: 38px !important;
+            }
+            
+            .prayer-text {
+                font-size: 20px;
+            }
+            
+            .prayer-container {
+                padding: 30px;
+            }
+        }
+
+        /* Desktops and Larger Screens */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px !important;
+            }
+            
+            .reflection-box, .quote-box {
+                font-size: 18px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay-pattern"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </header>
+    
+    <main class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="day-badge">DAY 1</div>
+                <h1 class="title-font golden-text">Connection with the Guardian Angel</h1>
+            </div>
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="icon-container">
+                    <div class="prayer-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center mb-4">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="fs-5 mt-2 fst-italic">"Never say you are alone in the battle... It would be a great offense to this celestial messenger."</p>
+                <p class="golden-text fw-bold mt-2">— Nossa Senhora Desatadora de Nós</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h2 class="golden-text mb-3">Reflection</h2>
+                <p>
+                    On the first day of our journey, we turn our hearts to the friendly and protective presence of the Guardian Angel. God, in His infinite goodness, has assigned each of us a celestial angel to guide and protect us on all our paths.
+                </p>
+                <p>
+                    NOSSA SENHORA had a deep trust in this invisible companion. We are never alone: our guardian angel is by our side in daily struggles, inspiring us to do good and protecting us from dangers, both physical and spiritual.
+                </p>
+                <p>
+                    In this prayer of connection, we will draw closer to our Guardian Angel, ask for forgiveness for the times we have ignored his presence, and implore him to lead us more firmly to God. Open your heart to feel the faithful companionship of your angel in this moment of prayer.
+                </p>
+            </div>
+            
+            <div class="prayer-container">
+                <h2 class="golden-text text-center mb-4">Full Prayer</h2>
+                
+                <div class="prayer-text text-white">
+                    <p>"Holy Guardian Angel, my protector appointed by God from the beginning of my life, I thank you for never having abandoned me. You, who are a reflection of the divine light at my side, enlighten me in moments of darkness and guide me on the path of righteousness. Angel of God, spiritual friend and brother, I ask for forgiveness for all the times I have forgotten you or ignored your inspirations. I know that you watch over me unceasingly, even when I sleep or when my heart is afflicted.</p>
+                    
+                    <p class="mt-4">In this moment, I want to renew my friendship and devotion to you, my guardian. Stay by my side as I pray, join my prayer, and present it to the Throne of the Most High with your pure love. Divine guardian of my soul, strengthen my faith and protect me from the snares of the evil one and the dangers of the world. When I falter, sustain me; when I stray, bring me back to the path of God.</p>
+                    
+                    <p class="mt-4">Embrace my spirit in hope—just as you did with NOSSA SENHORA in his nights of trial—and awaken me each day to praise the Lord with fervor. Holy Angel of the Lord, teach me to listen to your silent voice, the inspirations you place in my heart in God's name. May I be docile to your warnings and counsels, so that I may always live in divine grace.</p>
+                    
+                    <p class="mt-4">Remain with me, my guardian, today and always. Bring my intentions and needs before God the Father and do not allow me to despair in difficulties. With your heavenly help, I want to walk with confidence, knowing that heaven is with me at all times in life. Angel of my guard, take care of me as you took care of NOSSA SENHORA, and help me to grow in holiness. The two of us, together in prayer, praise God who created us and loves us. Amen."</p>
+                </div>
+            </div>
+            
+            
+    </main>
+    
+    <footer class="site-footer py-3">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 Novena de Nossa Senhora Desatadora de Nós</p>
+            <p>Contact: <a href="mailto:suportepadrelucaslima@gmail.com" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>

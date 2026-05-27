@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Novena de Nossa Senhora Desatadora de Nos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      font-family: 'Lato', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .center-wrapper {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 0;
+    }
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 18px;
+      box-shadow: 0 8px 40px rgba(218, 187, 15, 0.527);
+      padding: 36px 16px 0 16px;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .main-title-quad {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .main-title-quad .qsm {
+      color: #d4af37;
+      font-size: 3.7rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      display: block;
+      line-height: 1.1;
+    }
+    .main-title-quad .de {
+      color: #d4af37;
+      font-size: 2.5rem;
+      font-weight: 400;
+      display: block;
+      margin: -8px 0 -4px 0;
+      letter-spacing: 1px;
+    }
+    .main-title-quad .ppio {
+      color: #d4af37;
+      font-size: 3.7rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      display: block;
+      line-height: 1.1;
+    }
+    .main-desc {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 26px;
+      font-size: 0.5rem;
+      white-space: normal;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+    }
+    .center-img {
+      margin: 0 0 26px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .circle-img {
+      width: 240px;
+      height: 240px;
+      border-radius: 70%;
+      border: 3px solid #d4af37;
+      object-fit: cover;
+      background: #19294a;
+      box-shadow: 0 0 20px 0 #d4af3755;
+      display: block;
+      transition: width .25s, height .25s;
+    }
+    .quote-box {
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 13px 11px 7px 11px;
+      color: #fff;
+      font-size: 1.09rem;
+      font-style: italic;
+      text-align: center;
+      width: 92%;
+      background: none;
+      margin-top: 5px;
+      margin-bottom: 18px;
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 170px;
+      max-width: 350px;
+    }
+    .quote-box::before {
+      content: "❝";
+      color: #a87e7e00;
+      font-size: 1.1em;
+      position: absolute;
+      left: 11px;
+      top: 7px;
+      font-style: normal;
+    }
+    .quote-author {
+      color: #d4af37;
+      font-size: 1rem;
+      font-style: normal;
+      margin-top: 8px;
+      display: block;
+    }
+    .divider-section {
+      margin: 18px 0 7px 0;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+    }
+    .divider-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #d4af37, transparent);
+      border: none;
+      min-width: 24px;
+    }
+    .divider-icon {
+      color: #d4af37;
+      font-size: 1.15rem;
+      flex: none;
+    }
+    .footer {
+      width: 100vw;
+      min-height: 34px;
+      font-size: 1.01rem;
+      background: #102044;
+      color: #fff;
+      border-top: 2px solid #d4af37;
+      text-align: center;
+      padding: 18px 0 12px 0;
+      font-family: 'Lato', sans-serif;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+    @media (max-width: 700px) {
+      .main-content { max-width: 98vw; padding: 13px 3vw 0 3vw; }
+      .main-title-quad .qsm { font-size: 1.4rem; }
+      .main-title-quad .de { font-size: .95rem; }
+      .main-title-quad .ppio { font-size: 1.3rem; }
+      .main-desc { font-size: .92rem; margin-bottom: 17px; }
+      .center-img { margin-bottom: 15px; }
+      .circle-img { width: 70vw; height: 70vw; max-width: 300px; max-height: 300px; min-width: 128px; min-height: 128px;}
+      .quote-box { font-size: .98rem; padding: 6px 3px 2px 9px; }
+    }
+    @media (max-width: 400px) {
+      .main-title-quad .qsm { font-size: .96rem; }
+      .main-title-quad .de { font-size: .71rem; }
+      .main-title-quad .ppio { font-size: .91rem; }
+      .circle-img { width: 90vw; height: 90vw; min-width: 96px; min-height: 96px;}
+    }
+    @media (max-height: 700px) {
+      .main-content { padding: 5vw 5vw 0 5vw; }
+      .footer { min-height: 21px; padding: 8px 0 6px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="center-wrapper">
+    <div class="main-content">
+      <div class="main-title-quad">
+        <span class="qsm">NOVENA</span>
+        <span class="de">de</span>
+        <span class="ppio">PADRE PIO</span>
+      </div>
+      <div class="main-desc">Uma novena de 9 dias De Oração Com Seu Anjo Da Guarda</div>
+      <div class="center-img">
+        <img src="images/nossa-senhora-desatadora.jpg" alt="Nossa Senhora" class="circle-img">
+      </div>
+      <div class="quote-box">
+        <span style="font-style: italic;">"Reze, tenha fé e não se preocupe"</span>
+        <span class="quote-author">— Nossa Senhora Desatadora de Nos</span>
+      </div>
+      <div class="divider-section">
+        <div class="divider-line"></div>
+        <span class="divider-icon">&#10013;</span>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    © 2025 Novena de Nossa Senhora Desatadora de Nos. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

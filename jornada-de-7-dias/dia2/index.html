@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dia 2: Oração para a Cura - Novena de Nossa Senhora Desatadora de Nos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #0d1f50 0%,#0a1640 50%,#0e1e4a 100%);
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            font-size: 18px;
+        }
+
+        /* Typography */
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .body-font {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .golden-text {
+            color: #d4af37;
+        }
+
+        /* Overlay Pattern */
+        .overlay-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 15px 0;
+            background-color: rgba(15, 32, 66, 0.95);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover, .back-link:focus {
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .back-link i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Prayer Section Styles */
+        .prayer-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .prayer-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(10, 22, 46, 0.8);
+            border: 4px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .prayer-icon {
+            font-size: 60px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .reflection-box {
+            background: rgba(10, 22, 46, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .quote-box {
+            background: rgba(15, 32, 66, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Day Badge */
+        .day-badge {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Audio CTA */
+        .audio-cta-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #d4af37, #f2d675);
+            color: #0f2042;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            border: 2px solid #f8e9b0;
+            margin: 15px 0;
+            width: 100%;
+            justify-content: center;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+            color: #0f2042;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: rgba(15, 32, 66, 0.95);
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Navigation Buttons */
+        .prayer-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(15, 32, 66, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover, .nav-btn:focus {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .nav-btn-prev i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .nav-btn-next i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+
+        /* Headings for Mobile */
+        h1 {
+            font-size: 30px !important;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 26px !important; 
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        /* Spacing for Mobile */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Tablets and Larger Screens */
+        @media (min-width: 768px) {
+            .prayer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+            
+            h1 {
+                font-size: 38px !important;
+            }
+            
+            .prayer-text {
+                font-size: 20px;
+            }
+            
+            .prayer-container {
+                padding: 30px;
+            }
+        }
+
+        /* Desktops and Larger Screens */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px !important;
+            }
+            
+            .reflection-box, .quote-box {
+                font-size: 18px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+        }
+
+        .audio-nav-button {
+            color: #d4af37 !important;
+            font-weight: bold;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 20px;
+            padding: 5px 10px !important;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 11px;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        .audio-nav-button i {
+            margin-right: 3px;
+        }
+    </style>
+</head>
+<!-- ds -->
+<body>
+    <!-- Overlay Pattern -->
+    <div class="overlay-pattern"></div>
+    
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="back-link">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="day-badge">DIA 2</div>
+                <h1 class="title-font golden-text">Oração para a Cura</h1>
+            </div>
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="icon-container">
+                    <div class="prayer-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center mb-4">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="fs-5 mt-2 fst-italic">"A preocupação é inútil. Nosso Senhor misericordioso ouvirá sua oração."</p>
+                <p class="golden-text fw-bold mt-2">— Nossa Senhora Desatadora de Nos</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h2 class="golden-text mb-3">Reflexão</h2>
+                <p>
+                    Este segundo dia é dedicado às orações por cura — seja a cura física de doenças do corpo, ou a cura interior de nossas feridas da alma. Nossa Senhora foi agraciado com dons místicos e milagres de cura foram atribuídos à sua intercessão; mas ele mesmo carregou durante muitos anos dores intensas (como os estigmas e doenças) que oferecia a Deus pela salvação de outras almas.
+                </p>
+                <p>
+                    Inspirados por seu exemplo de fé na dor, apresentemos ao Senhor nossas doenças e fraquezas. Jesus Cristo é o divino médico das almas e dos corpos: durante sua vida pública, curou cegos, leprosos, paralíticos e até ressuscitou mortos, sempre movido por compaixão.
+                </p>
+                <p>
+                    Ao rezar por cura, lembre-se que nem sempre os planos de Deus coincidem com nossos desejos imediatos. Às vezes, Ele concede a cura física; em outras, dá força e paz para suportar a doença e tira um bem maior do sofrimento.
+                </p>
+            </div>
+            
+            <div class="prayer-container">
+                <h2 class="golden-text text-center mb-4">Oração Completa</h2>
+                
+                <div class="prayer-text text-white">
+                    <p>"Senhor Jesus, Médico divino, creio que para Ti nada é impossível. Neste dia, venho à tua presença implorar a graça da cura. Tu, que curaste tantos doentes ao toque de tuas mãos santas, toca também as feridas do meu corpo e da minha alma. Se for tua santa vontade, afasta de mim as doenças, as dores e todos os males físicos que me afligem. Dá-me, Senhor, saúde e força para te servir com alegria e para retomar meu caminho sem desfalecer.</p>
+                    
+                    <p class="mt-4">Senhor, Tu conheces cada célula do meu corpo, pois és meu Criador. Tem compaixão de mim, como tiveste compaixão daqueles que sofriam e te pediam ajuda nos caminhos da Galileia. Assim como a hemorroíssa foi curada ao tocar com fé a barra do teu manto, eu também digo: Jesus, Filho de Davi, tem misericórdia de mim! Cura-me no corpo e na alma.</p>
+                    
+                    <p class="mt-4">Mas se acaso a cura que peço não for o melhor para minha salvação, concede-me então coragem e perseverança para carregar esta cruz em união contigo. Acompanha-me nos momentos de dor, não permitas que eu sucumba ao desânimo ou à rebeldia. Que eu possa repetir, a exemplo de Nossa Senhora Desatadora de Nos, "Faça-se a tua vontade", aceitando com amor os desígnios divinos, confiando que estás agindo para meu maior bem, mesmo quando não entendo.</p>
+                    
+                    <p class="mt-4">Cura também, Senhor, as feridas do meu coração. Muitas vezes carrego ressentimentos, traumas, ansiedades e tristezas profundas que ninguém vê, mas que Tu bem conheces. Passa, ó Jesus, com tua mão ferida e curadora, em cada lembrança dolorosa, em cada ressentimento escondido, em cada ferida emocional. Derrama em minha alma o bálsamo do teu Espírito Santo, que alivia e restaura o que está ferido. Onde há ódio, põe amor; onde há depressão, põe alegria; onde há inquietação, põe tua paz.</p>
+                    
+                    <p class="mt-4">Senhor, te louvo e agradeço porque sei que já estás agindo em mim. Minha fé está só em Ti, que tudo podes. Fortalece minha confiança para não deixar de rezar, mesmo que a resposta demore. "Reza, tenha fé e não se preocupe", nos ensinou Nossa Senhora — então rezo, tenho fé e agora deixo toda preocupação em tuas mãos. Obrigado, Jesus, por ouvir minha súplica. Já te bendigo pela minha cura, seja ela visível aos olhos humanos ou apenas aos olhos da fé. Jesus misericordioso, confio em Ti! Amém."</p>
+                </div>
+            </div>
+            
+            
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer py-3">
+        <div class="container text-center">
+            <p class="mb-1">� 2025 Novena de Nossa Senhora Desatadora de Nos</p>
+            <p>Contato: <a href="/cdn-cgi/l/email-protection#a5d4d0c4d7c0d6c8c4d5c4c1d7c0d5cccae5c2c8c4ccc98bc6cac8" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>

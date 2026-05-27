@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações para Abrir Portas de Emprego</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais-pp" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações para Abrir Portas de Emprego</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade profissional, leia com fé e compartilhe com quem busca novas oportunidades.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-briefcase"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais-pp" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração para o Desempregado Encontrar Vaga',
+        texto: `<p>Senhor do Trabalho e da Providência, venho a Ti com o coração aberto, pedindo uma porta de emprego para quem está em busca de dignidade e sustento.</p><p>Abre caminhos onde não há, remove os obstáculos e ilumina as oportunidades certas. Que a esperança nunca se apague e que a confiança em Ti seja maior do que qualquer medo.</p><p>Concede ânimo para enfrentar entrevistas, coragem para persistir diante das recusas e serenidade para esperar o tempo certo. Que cada currículo enviado seja acompanhado da Tua bênção e que, ao receber a notícia da vaga, haja gratidão e reconhecimento do Teu cuidado.</p><p>Senhor, fortalece a autoestima, renova a fé e não permitas que o desânimo tome conta do coração. Que a família seja fonte de apoio e que amigos tragam palavras de incentivo.</p><p>Que, mesmo nos dias de espera, haja aprendizado, crescimento e confiança de que o melhor está por vir. Que o novo emprego seja ambiente de respeito, crescimento e realização.</p><p>Que o trabalho seja fonte de sustento, mas também de alegria, amizade e serviço ao próximo. Que cada conquista seja celebrada com humildade e cada desafio enfrentado com esperança.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Conseguir Promoções',
+        texto: `<p>Deus de crescimento e justiça, peço-Te que reconheças o esforço e a dedicação de quem busca uma promoção. Que o mérito seja visto, o talento valorizado e as portas se abram para novas responsabilidades.</p><p>Concede humildade para servir e sabedoria para liderar, sempre com gratidão e ética. Que a promoção seja instrumento de bênçãos para a família e oportunidade de servir melhor ao próximo.</p><p>Livra de invejas e injustiças, e faz com que o reconhecimento venha no tempo certo, segundo Tua vontade. Que o novo cargo traga desafios que estimulem o crescimento e oportunidades de aprender ainda mais.</p><p>Que o ambiente de trabalho seja harmonioso, que colegas e líderes reconheçam o valor do esforço e que a prosperidade seja partilhada com generosidade.</p><p>Que cada degrau alcançado seja motivo de gratidão e que o sucesso nunca afaste do caminho da humildade e do serviço.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Empresários Alcançarem Prosperidade',
+        texto: `<p>Senhor dos Empreendedores, abençoa os negócios e projetos daqueles que confiam em Ti. Derrama prosperidade, honestidade e criatividade sobre cada decisão.</p><p>Que o trabalho gere frutos, empregos e seja fonte de bênçãos para muitos. Livra de prejuízos, injustiças e conduz à vitória. Que cada cliente seja tratado com respeito, cada funcionário com dignidade e cada lucro seja partilhado com generosidade.</p><p>Que o sucesso seja reflexo da Tua bondade e que, mesmo nas crises, haja esperança e superação. Inspira novas ideias, protege contra fraudes e dá discernimento para investir com sabedoria.</p><p>Que o ambiente empresarial seja justo, ético e acolhedor. Que a prosperidade seja instrumento de transformação social e que nunca falte generosidade para ajudar quem precisa.</p><p>Que cada desafio seja superado com fé e cada vitória celebrada com gratidão. Que o nome do negócio seja sinônimo de confiança, respeito e serviço ao próximo.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Direção de Carreira',
+        texto: `<p>Deus que guia nossos passos, peço clareza para discernir o melhor caminho profissional. Mostra onde posso servir melhor, crescer e realizar minha missão.</p><p>Afasta a dúvida, fortalece minha coragem e faz com que eu enxergue as oportunidades que vêm de Ti. Que eu não tema mudanças, mas confie que cada etapa é parte do Teu plano de amor.</p><p>Conduz-me para ambientes saudáveis, colegas justos e líderes inspiradores. Que eu saiba reconhecer o tempo de permanecer e o tempo de buscar novos horizontes.</p><p>Que cada decisão seja tomada com sabedoria, ouvindo conselhos e buscando sempre o bem maior. Que o trabalho seja fonte de realização, aprendizado e serviço.</p><p>Que eu nunca perca o entusiasmo diante dos desafios e que a fé seja meu guia em todas as escolhas.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Sucesso em Entrevistas',
+        texto: `<p>Senhor, acompanha-me em cada entrevista de emprego. Dá-me serenidade, confiança e as palavras certas para expressar meu valor.</p><p>Que eu seja lembrado não só pelas minhas habilidades, mas também pela honestidade e vontade de contribuir. Que a vaga certa seja concedida segundo Tua vontade e que, mesmo diante de negativas, eu não desanime.</p><p>Prepara o coração dos recrutadores para enxergar além do currículo e reconhecer o potencial que plantaste em mim. Que cada entrevista seja oportunidade de aprendizado e crescimento.</p><p>Que eu saiba ouvir, responder com clareza e demonstrar respeito por todos os envolvidos. Que a ansiedade não me paralise e que a esperança seja maior do que o medo.</p><p>Que, ao final de cada processo, eu possa agradecer pela experiência e confiar que o melhor está reservado para mim.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Aumento de Salário',
+        texto: `<p>Deus da Justiça, reconhece o esforço e a dedicação de quem trabalha com afinco. Peço que o salário seja justo, suficiente e abençoado.</p><p>Que toda negociação seja conduzida com respeito e que a prosperidade alcance minha casa. Que eu saiba administrar com sabedoria cada recurso recebido e nunca falte generosidade para partilhar com quem precisa.</p><p>Que o aumento seja reflexo do reconhecimento e da confiança depositada no meu trabalho. Que eu continue servindo com alegria, dedicação e ética.</p><p>Que a prosperidade seja instrumento de bênçãos para minha família e para todos ao meu redor.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Novas Oportunidades',
+        texto: `<p>Senhor das Novidades, abre meus olhos para enxergar oportunidades inesperadas. Que eu não tema mudanças, mas abrace cada chance de crescer e aprender.</p><p>Que portas se abram, contatos surjam e que eu esteja pronto para o novo que preparaste para mim. Que cada desafio seja visto como degrau para o sucesso e cada recomeço seja celebrado com fé.</p><p>Que eu saiba reconhecer o tempo de agir e o tempo de esperar, confiando sempre na Tua providência. Que a esperança seja renovada a cada manhã e que a coragem nunca me falte.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Crescimento de Negócios',
+        texto: `<p>Deus de abundância, peço que o meu negócio cresça com ética, respeito e prosperidade. Que clientes fiéis cheguem, que parcerias sejam sólidas e que cada desafio seja superado com sabedoria.</p><p>Que o sucesso seja partilhado e que eu nunca esqueça de ajudar quem precisa. Que a honestidade seja o alicerce de cada decisão e a gratidão, o combustível de cada conquista.</p><p>Que a equipe trabalhe unida, motivada e com espírito de colaboração. Que a prosperidade seja instrumento de transformação e que o nome do negócio seja sinônimo de confiança e serviço.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Romper Barreiras Profissionais',
+        texto: `<p>Senhor, quebra toda barreira que impede meu avanço profissional. Remove bloqueios, invejas, injustiças e abre caminhos de reconhecimento e crescimento.</p><p>Que eu tenha coragem para persistir e fé para não desistir diante das dificuldades. Que cada vitória seja celebrada com humildade e cada obstáculo vencido seja testemunho da Tua fidelidade.</p><p>Que eu saiba pedir ajuda quando necessário e que a solidariedade seja sempre presente no ambiente de trabalho.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Conectar-se com Pessoas-Chave',
+        texto: `<p>Deus das Conexões, coloca em meu caminho pessoas que possam me ajudar e que eu também possa ajudar. Que as relações profissionais sejam honestas, construtivas e abençoadas.</p><p>Que eu saiba valorizar cada contato e construir uma rede de apoio e crescimento mútuo. Que a generosidade e o respeito estejam presentes em cada parceria e que o sucesso seja partilhado com alegria.</p><p>Que eu seja instrumento de união, colaboração e inspiração para todos que cruzarem meu caminho profissional.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

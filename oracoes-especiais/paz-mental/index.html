@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações por Paz Mental e Clareza Espiritual</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações por Paz Mental e Clareza Espiritual</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade de paz interior, leia com fé e compartilhe com quem busca serenidade e equilíbrio.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-brain"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração para Alívio da Ansiedade',
+        texto: `<p>Senhor da Paz, acalma o turbilhão de pensamentos que invade minha mente.</p><p>Que cada respiração seja um convite à serenidade e cada batida do coração, um lembrete do Teu cuidado constante.</p><p>Afasta o medo do futuro, dissolve as preocupações e ensina-me a viver o presente com confiança.</p><p>Que a ansiedade não me paralise, mas me aproxime ainda mais de Ti.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pela Calma Interior',
+        texto: `<p>Deus de mansidão, derrama sobre mim a calma que só vem do Teu Espírito.</p><p>Que as tempestades externas não abalem a paz que habita em meu interior.</p><p>Ensina-me a silenciar diante das provocações, a responder com gentileza e a esperar com paciência.</p><p>Que a tranquilidade seja meu escudo e minha força.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Tomada de Decisões',
+        texto: `<p>Senhor, diante das escolhas importantes, peço Tua luz e discernimento.</p><p>Que eu saiba ouvir conselhos, analisar com sabedoria e agir com coragem.</p><p>Que cada decisão seja guiada pelo Teu amor e que o resultado traga paz ao meu coração.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Silêncio e Escuta Divina',
+        texto: `<p>Deus do Silêncio, ensina-me a calar o barulho do mundo para ouvir Tua voz suave.</p><p>Que eu encontre tempo para a oração silenciosa, para a meditação e para a escuta atenta do Teu querer.</p><p>Que o silêncio seja espaço de encontro, cura e renovação.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Fortalecer a Fé',
+        texto: `<p>Senhor, fortalece minha fé diante das dúvidas e dos desafios.</p><p>Que eu nunca perca a esperança, mesmo quando tudo parecer difícil.</p><p>Que a confiança em Ti seja meu alicerce e que a fé me impulsione a seguir em frente com coragem.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pela Paz Profunda',
+        texto: `<p>Deus de paz, concede-me uma paz que vai além do entendimento humano.</p><p>Que eu sinta Tua presença em cada momento, mesmo nos dias de tribulação.</p><p>Que a serenidade seja constante e que a inquietação não encontre morada em meu coração.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Clareza Mental',
+        texto: `<p>Senhor, clareia meus pensamentos, afasta a confusão e ilumina minhas ideias.</p><p>Que eu saiba organizar prioridades, focar no que é essencial e tomar decisões acertadas.</p><p>Que a mente seja leve, lúcida e aberta ao novo.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Libertação de Pensamentos Negativos',
+        texto: `<p>Deus libertador, quebra as correntes dos pensamentos negativos que me aprisionam.</p><p>Que eu aprenda a substituir a crítica pela gratidão, o pessimismo pela esperança e o medo pela confiança.</p><p>Que a mente seja jardim de ideias positivas e construtivas.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Renovação Espiritual',
+        texto: `<p>Senhor, renova meu espírito cansado, restaura minha alegria e fortalece minha vontade de viver.</p><p>Que cada manhã seja oportunidade de recomeço, de aprendizado e de crescimento interior.</p><p>Que a fé seja renovada e que a esperança floresça em meu coração.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Foco e Discernimento',
+        texto: `<p>Deus de sabedoria, ajuda-me a manter o foco em meus objetivos e a discernir o que realmente importa.</p><p>Que eu não me distraia com preocupações inúteis, mas concentre minha energia no que é bom, justo e verdadeiro.</p><p>Que o discernimento seja meu guia em todas as escolhas.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

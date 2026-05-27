@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dia 6: Oração de Gratidão Final - Novena de Nossa Senhora Desatadora de Nos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #0d1f50 0%,#0a1640 50%,#0e1e4a 100%);
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            font-size: 18px;
+        }
+
+        /* Typography */
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .body-font {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .golden-text {
+            color: #d4af37;
+        }
+
+        /* Overlay Pattern */
+        .overlay-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 15px 0;
+            background-color: rgba(15, 32, 66, 0.95);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover, .back-link:focus {
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .back-link i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Prayer Section Styles */
+        .prayer-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .prayer-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(10, 22, 46, 0.8);
+            border: 4px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .prayer-icon {
+            font-size: 60px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .reflection-box {
+            background: rgba(10, 22, 46, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .quote-box {
+            background: rgba(15, 32, 66, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Day Badge */
+        .day-badge {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Audio CTA */
+        .audio-cta-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #d4af37, #f2d675);
+            color: #0f2042;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            border: 2px solid #f8e9b0;
+            margin: 15px 0;
+            width: 100%;
+            justify-content: center;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+            color: #0f2042;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: rgba(15, 32, 66, 0.95);
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Navigation Buttons */
+        .prayer-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(15, 32, 66, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover, .nav-btn:focus {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .nav-btn-prev i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .nav-btn-next i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+
+        /* Headings for Mobile */
+        h1 {
+            font-size: 30px !important;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 26px !important; 
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        /* Spacing for Mobile */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Tablets and Larger Screens */
+        @media (min-width: 768px) {
+            .prayer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+            
+            h1 {
+                font-size: 38px !important;
+            }
+            
+            .prayer-text {
+                font-size: 20px;
+            }
+            
+            .prayer-container {
+                padding: 30px;
+            }
+        }
+
+        /* Desktops and Larger Screens */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px !important;
+            }
+            
+            .reflection-box, .quote-box {
+                font-size: 18px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+        }
+
+        .audio-nav-button {
+            color: #d4af37 !important;
+            font-weight: bold;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 20px;
+            padding: 5px 10px !important;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 11px;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        .audio-nav-button i {
+            margin-right: 3px;
+        }
+    </style>
+</head>
+<!-- ds -->
+<body>
+    <!-- Overlay Pattern -->
+    <div class="overlay-pattern"></div>
+    
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="back-link">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="day-badge">DIA 6</div>
+                <h1 class="title-font golden-text">Oração de Gratidão Final</h1>
+            </div>
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="icon-container">
+                    <div class="prayer-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center mb-4">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="fs-5 mt-2 fst-italic">"A gratidão é uma virtude que abre as portas do céu; quando agradecemos, mesmo antes de ver as graças concretizadas, demonstramos fé e humildade."</p>
+                <p class="golden-text fw-bold mt-2">— Inspirado nos ensinamentos de Nossa Senhora Desatadora de Nos</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h2 class="golden-text mb-3">Reflexão</h2>
+                <p>
+                    No sexto e último dia da nossa jornada (que coroa esta novena de orações), nos dedicamos à gratidão — uma oração final de louvor e agradecimento a Deus. Após dias apresentando súplicas, pedidos e anseios, é justo e saudável voltar o olhar para tudo o que o Senhor já fez e faz em nossas vidas, e dizer de coração: muito obrigado, meu Deus!
+                </p>
+                <p>
+                    Nossa Senhora vivia em constante ação de graças, mesmo em meio às dificuldades. Tinha consciência de que tudo é graça e que nunca estamos sozinhos em nossas lutas.
+                </p>
+                <p>
+                    Ao longo destes dias, você confiou na ajuda do seu anjo da guarda, suplicou por cura, prosperidade, proteção e paz. Independentemente de já ter percebido mudanças visíveis ou não, creia que Deus ouviu cada oração e, no momento oportuno, responderá da maneira mais sábia e amorosa.
+                </p>
+            </div>
+            
+            <div class="prayer-container">
+                <h2 class="golden-text text-center mb-4">Oração Completa</h2>
+                
+                <div class="prayer-text text-white">
+                    <p>"Deus de amor e bondade, chego ao final desta novena de nove dias com o coração transbordando de gratidão. Como não te agradecer por todas as graças que me concedeste ao longo desta novena espiritual? Obrigado, Senhor, por teres estado comigo em cada oração, por teres ouvido cada súplica — mesmo aquelas que não soube expressar bem em palavras, mas que o Espírito Santo levou a Ti com gemidos inefáveis.</p>
+                    
+                    <p class="mt-4">Agradeço-te, Pai Celestial, pelo dom da vida, pela minha família, pelo meu Anjo da Guarda fiel, pela fé que semeaste em mim e por todas as vezes que me amparaste sem que eu percebesse. Obrigado pelas curas que realizaste — sejam visíveis ou ocultas. Se minha saúde melhorou, te louvo jubilosamente; se ainda espero a cura completa, te louvo também, pois confio que estás agindo e me dando forças a cada dia.</p>
+                    
+                    <p class="mt-4">Agradeço pela providência que não me deixou faltar o necessário; reconheço que tudo de bom que tenho veio de tuas mãos generosas. Obrigado pelos livramentos e proteção concedidos à minha família, muitas vezes por intercessão dos Santos e Anjos. Senhor, muito obrigado pela paz que sinto agora em meu peito. Talvez ainda haja batalhas a travar, mas hoje percebo que não estou só — Tu caminhas comigo, segurando minha mão. Bendito sejas porque Tu és fiel e cumpres tuas promessas!</p>
+                    
+                    <p class="mt-4">Assim como Maria Santíssima cantou em seu Magnificat "Minha alma engrandece o Senhor, e meu espírito se alegra em Deus, meu Salvador", eu também quero te engrandecer com minhas palavras simples: Bendito sejas, ó Deus da minha vida, hoje e sempre!</p>
+                    
+                    <p class="mt-4">Obrigado, Jesus, por ter inspirado Nossa Senhora Desatadora de Nos a ser um instrumento em minha vida espiritual. Agradeço por cada ensinamento dele que me tocou neste caminho: suas palavras ressoaram em meu coração dando-me ânimo para orar e perseverar. "Reza, tenha fé e não se preocupe" — levarei comigo esse lema precioso de Nossa Senhora, confiando sempre mais em Ti.</p>
+                    
+                    <p class="mt-4">Agradeço também, Senhor, por me dar Maria como mãe amorosa — quantas vezes senti seu carinho ao longo destes dias! Obrigado, Mãezinha do Céu, por interceder por mim e me cobrir com teu manto de proteção. Agradeço aos santos anjos, especialmente ao meu anjo da guarda, por sua constante assistência. Quantos perigos evitados, quantas inspirações recebidas! Te bendigo, Pai, por criar esses seres de luz para nos guardar.</p>
+                    
+                    <p class="mt-4">Neste momento de gratidão final, te entrego todo o meu ser. Tudo o que tenho e sou vem de Ti e a Ti retorna. Se tenho algum talento, algum trabalho frutífero, se alcancei alguma vitória nestes dias, atribuo tudo à tua graça. Toda honra e toda glória sejam dadas a Ti, Senhor! Quero também te agradecer pelo futuro que preparas para mim. Não sei o que virá, mas sei que estará cheio da tua presença. Desde já te louvo pelas bênçãos que ainda derramarás e até pelas cruzes que permitires, pois creio que em tudo estarás comigo para o meu bem.</p>
+                    
+                    <p class="mt-4">Por fim, peço que recebas este meu humilde agradecimento como um perfume de gratidão que sobe ao teu altar. Que se una ao agradecimento eterno que Jesus, teu Filho, oferece no céu por nós, e assim seja agradável a Ti. Muito obrigado, meu Deus, por tudo. Eu te amo e confio em Ti. Que eu possa testemunhar tuas maravilhas e continuar sempre em oração, não só nestes sete dias, mas todos os dias da minha vida. Amém!"</p>
+                </div>
+            </div>
+            
+            
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer py-3">
+        <div class="container text-center">
+            <p class="mb-1">� 2025 Novena de Nossa Senhora Desatadora de Nos</p>
+            <p>Contato: <a href="/cdn-cgi/l/email-protection#1465617566716779756475706671647d7b547379757d783a777b79" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>

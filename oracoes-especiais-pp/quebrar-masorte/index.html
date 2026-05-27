@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações para Quebrar Má Sorte e Bloqueios Espirituais</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais-pp" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações para Quebrar Má Sorte e Bloqueios Espirituais</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade de libertação, leia com fé e compartilhe com quem precisa de proteção e renovação espiritual.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-bolt"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais-pp" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração de Reversão de Maré de Azar',
+        texto: `<p>Senhor Deus, fonte de toda sorte e proteção, venho a Ti para pedir a reversão de toda maré de azar que tem assolado minha vida.</p><p>Quebra toda corrente de negatividade, desfaz toda palavra contrária e afasta de mim toda energia que não vem do Teu amor.</p><p>Que a luz do Teu Espírito ilumine meus caminhos, trazendo oportunidades, encontros abençoados e portas abertas onde só havia bloqueios.</p><p>Renova minha esperança, fortalece minha fé e faz com que eu reconheça Tua mão agindo em cada detalhe do meu dia.</p><p>Que a sorte divina me acompanhe e que eu seja testemunho do Teu poder de transformação.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Corte de Influências Negativas',
+        texto: `<p>Deus de luz, corta agora toda influência negativa que paira sobre minha vida, minha casa e minha família.</p><p>Que toda inveja, olho gordo, maledicência e energia densa sejam dissipados pelo poder do Teu nome.</p><p>Reveste-me com Teu escudo protetor, blinda minha mente e meu coração contra todo mal.</p><p>Que a paz reine em meu lar e que a alegria seja constante em minha rotina.</p><p>Que eu seja canal de bênçãos e que nenhuma força contrária prevaleça sobre mim.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Libertação de Ciclos Repetitivos',
+        texto: `<p>Senhor, liberta-me de todos os ciclos repetitivos de fracasso, tristeza e desânimo.</p><p>Quebra padrões antigos, renova minha mente e faz com que eu enxergue novas possibilidades.</p><p>Que cada tentativa frustrada seja transformada em aprendizado e cada novo passo seja guiado pela Tua mão.</p><p>Que eu não me prenda ao passado, mas avance confiante para o futuro que preparaste para mim.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Quebrar Maldições e Feitiços',
+        texto: `<p>Deus Todo-Poderoso, em nome de Jesus, peço que toda maldição, feitiço ou trabalho espiritual lançado contra mim seja desfeito agora.</p><p>Que o Teu sangue precioso me cubra, me purifique e me liberte de toda influência maligna.</p><p>Que nenhuma arma forjada contra mim prospere e que toda palavra de maldição seja transformada em bênção.</p><p>Que eu viva sob a Tua proteção e que a Tua luz dissipe toda sombra.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Dissolver Inveja e Olho-Gordo',
+        texto: `<p>Senhor, dissolve toda inveja e olho-gordo lançados sobre minha vida, meus projetos e meus relacionamentos.</p><p>Que o brilho do Teu amor seja maior do que qualquer olhar de cobiça ou desejo de mal.</p><p>Que eu seja protegido por Tua graça e que a prosperidade, a saúde e a alegria sejam constantes em minha jornada.</p><p>Que eu também aprenda a não invejar, mas a celebrar as conquistas dos outros com um coração puro.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Desatar Nós Espirituais',
+        texto: `<p>Deus de misericórdia, desata todos os nós espirituais que impedem meu progresso, minha paz e minha felicidade.</p><p>Que toda amarra, toda dúvida e todo medo sejam desfeitos pelo poder do Teu amor.</p><p>Que eu caminhe livre, leve e confiante, sabendo que nada pode me prender quando estou sob Tua proteção.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Limpeza de Bloqueios Energéticos',
+        texto: `<p>Senhor, limpa agora todo bloqueio energético que impede o fluir das Tuas bênçãos em minha vida.</p><p>Purifica minha mente, meu corpo e meu espírito, afastando toda energia densa, pensamentos negativos e sentimentos de culpa.</p><p>Que a luz do Teu Espírito Santo me envolva e me renove por completo.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Escudo contra Negatividade',
+        texto: `<p>Deus protetor, coloca sobre mim um escudo de luz contra toda negatividade, pessimismo e palavras destrutivas.</p><p>Que eu seja forte diante das críticas, resiliente diante das adversidades e otimista diante dos desafios.</p><p>Que a Tua presença seja meu abrigo seguro e minha fonte de alegria.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Romper Padrões de Autossabotagem',
+        texto: `<p>Senhor, rompe agora todo padrão de autossabotagem que me impede de crescer, prosperar e ser feliz.</p><p>Liberta-me de pensamentos limitantes, de crenças negativas e de comportamentos destrutivos.</p><p>Que eu me veja com Teus olhos, reconhecendo meu valor e meu potencial.</p><p>Que eu tenha coragem para mudar e fé para persistir no caminho do bem.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Abrir o Fluxo de Bênçãos',
+        texto: `<p>Deus de toda abundância, peço que o fluxo de bênçãos seja aberto sobre minha vida.</p><p>Que nada impeça a chegada do Teu favor, da Tua prosperidade e da Tua alegria.</p><p>Que eu seja canal de bênçãos para minha família, meus amigos e todos ao meu redor.</p><p>Que a gratidão seja constante em meu coração e que eu saiba partilhar tudo o que receber.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

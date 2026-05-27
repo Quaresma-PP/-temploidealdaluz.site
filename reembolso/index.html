@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="pt"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Solicitar Reembolso</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #fdfaf7;
+            font-family: 'Lato', sans-serif;
+            color: #222;
+            min-height: 100vh;
+        }
+        .refund-container {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(229,57,53,0.10), 0 1.5px 8px rgba(229,57,53,0.08);
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+            padding: 0 0 32px 0;
+            border: none;
+        }
+        .refund-header {
+            background: #fff6f6;
+            border-radius: 16px 16px 0 0;
+            padding: 36px 30px 18px 30px;
+            text-align: center;
+        }
+        .refund-icon {
+            color: #e53935;
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+        }
+        .refund-title {
+            font-family: 'Cinzel', serif;
+            color: #222;
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .refund-desc {
+            color: #222;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+        .refund-badges {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 10px;
+        }
+        .refund-badge {
+            background: #fff;
+            border: 1.5px solid #ececec;
+            border-radius: 12px;
+            padding: 16px 18px 10px 18px;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .refund-badge i {
+            font-size: 1.3rem;
+            color: #43a047;
+            margin-bottom: 4px;
+        }
+        .refund-badge.blue i { color: #1976d2; }
+        .refund-badge.red i { color: #e53935; }
+        .refund-badge .badge-title {
+            font-weight: bold;
+            color: #222;
+            font-size: 1.05rem;
+        }
+        .refund-badge .badge-desc {
+            color: #666;
+            font-size: 0.98rem;
+        }
+        .refund-form-section {
+            background: #fffbe9;
+            border: 1.5px solid #ffe0b2;
+            border-radius: 10px;
+            margin: 24px 24px 0 24px;
+            padding: 24px 18px 18px 18px;
+        }
+        .refund-form-section h5 {
+            font-family: 'Cinzel', serif;
+            color: #b71c1c;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .refund-form-section .section-desc {
+            color: #444;
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+        .form-label {
+            color: #b71c1c;
+            font-weight: 600;
+        }
+        .form-control {
+            border-radius: 8px;
+            border: 1.5px solid #ffd6d6;
+            font-size: 1.05rem;
+        }
+        .form-control:focus {
+            border-color: #e53935;
+            box-shadow: 0 0 0 2px #ffeaea;
+        }
+        .btn-refund {
+            background: #e53935;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 12px 0;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(229,57,53,0.10);
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        .btn-refund:hover, .btn-refund:focus {
+            background: #b71c1c;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .btn-back {
+            background: #fff;
+            color: #e53935;
+            border: 1.5px solid #e53935;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 8px;
+            transition: all 0.3s;
+        }
+        .btn-back:hover, .btn-back:focus {
+            background: #ffeaea;
+            color: #b71c1c;
+        }
+        .refund-info-box {
+            background: #e3f0ff;
+            border: 1.5px solid #90caf9;
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin-top: 18px;
+            color: #1976d2;
+        }
+        .refund-info-box strong {
+            color: #1976d2;
+        }
+        .refund-footer {
+            margin: 0 24px;
+            margin-top: 18px;
+            text-align: center;
+        }
+        .refund-footer .footer-box {
+            background: #e8f5e9;
+            border: 1.5px solid #43a047;
+            color: #256029;
+            border-radius: 8px;
+            padding: 10px 0;
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+        .success-message {
+            background: #e8f5e9;
+            border: 1.5px solid #43a047;
+            color: #256029;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            margin: 32px 24px 0 24px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<!-- ds -->
+<body>
+    <div class="refund-container">
+        <div class="refund-header">
+            <div class="refund-icon">
+                <i class="fas fa-undo-alt"></i>
+            </div>
+            <h1 class="refund-title">Solicitar Reembolso</h1>
+            <div class="refund-desc">Garantia de 100% de satisfação – Processo rápido e seguro</div>
+            <div class="refund-badges mb-3">
+                <div class="refund-badge">
+                    <i class="fas fa-shield-alt"></i><br>
+                    <span class="badge-title">100% Seguro</span>
+                </div>
+                <div class="refund-badge blue">
+                    <i class="fas fa-clock"></i><br>
+                    <span class="badge-title">Até 5 dias úteis</span>
+                </div>
+                <div class="refund-badge red">
+                    <i class="fas fa-check-circle"></i><br>
+                    <span class="badge-title">Garantia Total</span>
+                </div>
+            </div>
+        </div>
+        <div class="refund-form-section mt-2">
+            <h5><i class="fas fa-exclamation-circle me-2"></i>Informações para Reembolso</h5>
+            <div class="section-desc">Preencha os dados abaixo para processar sua solicitação</div>
+            <form id="refundForm">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome completo *</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required="">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail *</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required="">
+                </div>
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF *</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF" required="" maxlength="14">
+                </div>
+                <div class="mb-3">
+                    <label for="motivo" class="form-label">Motivo do reembolso *</label>
+                    <textarea class="form-control" id="motivo" name="motivo" rows="3" placeholder="Descreva o motivo da sua solicitação de reembolso..." required=""></textarea>
+                </div>
+                <div class="refund-info-box">
+                    <strong>Importante</strong><br>
+                    • O reembolso será processado em até 5 dias úteis<br>
+                    • O valor será creditado no mesmo método de pagamento utilizado<br>
+                    • Você receberá uma confirmação por e-mail
+                </div>
+                <button type="submit" class="btn btn-refund mt-4">
+                    <i class="fas fa-undo-alt me-2"></i> Confirmar Solicitação de Reembolso
+                </button>
+                <button type="button" class="btn btn-back" onclick="window.history.back()">
+                    <i class="fas fa-arrow-left me-2"></i> Voltar
+                </button>
+            </form>
+        </div>
+        <div id="successMessage" class="success-message" style="display:none;">
+            <i class="fas fa-check-circle fa-2x mb-3" style="color:#43a047;"></i><br>
+            Sua solicitação de reembolso foi aprovada com sucesso!<br><br>
+            O valor será reembolsado em até <b>5 dias úteis</b> diretamente no método de pagamento utilizado.<br><br>
+            Se tiver dúvidas, entre em contato pelo e-mail <a href="/cdn-cgi/l/email-protection#fd8c889c8f988e909c8d9c998f988d9492bd9a909c9491d39e9290">suportepadrelucaslima@gmail.com</a>.
+        </div>
+        <div class="refund-footer">
+            <div class="footer-box mt-3">
+                <i class="fas fa-shield-alt me-2"></i> Seus dados estão protegidos e seguros
+            </div>
+            <div class="mt-3" style="color:#888; font-size:0.98rem;">© 2025 Novena de Nossa Senhora Desatadora de Nos</div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="js/email-decode.min.js"></script><script>
+        document.getElementById('refundForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('refundForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        // Máscara automática para CPF
+        function cpfMask(v) {
+            v = v.replace(/\D/g,"");
+            v = v.replace(/(\d{3})(\d)/,"$1.$2");
+            v = v.replace(/(\d{3})(\d)/,"$1.$2");
+            v = v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+            return v;
+        }
+        document.getElementById('cpf').addEventListener('input', function(e) {
+            this.value = cpfMask(this.value);
+        });
+    </script>
+
+ </body></html>

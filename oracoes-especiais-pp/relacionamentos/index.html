@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações para Restaurar Relacionamentos</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais-pp" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações para Restaurar Relacionamentos</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade afetiva ou familiar, leia com fé e compartilhe com quem precisa de reconciliação e harmonia.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-heart"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais-pp" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração para Casamentos em Crise',
+        texto: `<p>Senhor do Amor e da União, venho a Ti suplicar pela restauração deste casamento que enfrenta tempestades e desencontros.</p><p>Renova o diálogo, a paciência e o respeito entre o casal. Dissolve mágoas antigas, cura feridas profundas e faz renascer o desejo de recomeçar juntos.</p><p>Que o perdão seja mais forte que o orgulho, que a ternura supere a frieza e que a esperança seja maior do que o medo de tentar de novo.</p><p>Concede sabedoria para buscar ajuda, humildade para reconhecer erros e coragem para reconstruir a confiança.</p><p>Que o lar volte a ser refúgio de paz, alegria e cumplicidade, e que o amor seja renovado a cada novo dia.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Namoros Abalados',
+        texto: `<p>Deus que une corações, olha para este namoro que passa por dúvidas e inseguranças.</p><p>Afasta o ciúme, a desconfiança e as palavras impensadas. Traz de volta o respeito, a leveza e a alegria de estar junto.</p><p>Que cada encontro seja oportunidade de crescer, aprender e fortalecer o vínculo. Que o diálogo seja sincero e o carinho, constante.</p><p>Se for da Tua vontade, fortalece esse relacionamento para que floresça em amor maduro e duradouro.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Harmonia Familiar',
+        texto: `<p>Senhor da Família, derrama Tua paz sobre este lar. Acalma os ânimos exaltados, cura ressentimentos e aproxima os corações distantes.</p><p>Que o respeito seja a base de toda convivência, que o perdão seja praticado diariamente e que a alegria de estar juntos supere qualquer diferença.</p><p>Protege cada membro da família, abençoa as refeições, os encontros e as despedidas. Que a harmonia reine e que o amor seja o elo mais forte entre todos.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração de Reconciliação com Ex-parceiro',
+        texto: `<p>Deus de misericórdia, coloco diante de Ti o desejo de reconciliação com quem um dia compartilhou minha vida.</p><p>Se for da Tua vontade, reaproxima nossos caminhos, cura as feridas do passado e renova o respeito mútuo.</p><p>Que a saudade não seja motivo de sofrimento, mas de aprendizado. Que o reencontro, se acontecer, seja marcado por maturidade, compreensão e paz.</p><p>Que, acima de tudo, eu saiba aceitar Tua vontade e seguir em frente com serenidade.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Restaurar Amizades Perdidas',
+        texto: `<p>Senhor, fonte de toda amizade verdadeira, peço-Te que restaures laços rompidos pelo tempo, pela distância ou por desentendimentos.</p><p>Que o orgulho não impeça o perdão, que a saudade seja ponte para o reencontro e que a sinceridade seja a base de toda reconciliação.</p><p>Que as lembranças boas superem as mágoas e que a amizade renascida seja ainda mais forte e verdadeira.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração pelo Vínculo Pai-Filho',
+        texto: `<p>Deus Pai, abençoa a relação entre pais e filhos. Restaura o diálogo, a confiança e o carinho.</p><p>Que o respeito seja mútuo, que o amor seja demonstrado em gestos e palavras, e que a compreensão seja maior do que as diferenças de gerações.</p><p>Que o tempo juntos seja valorizado e que cada abraço seja sinal do Teu amor presente na família.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Relações em Comunidade',
+        texto: `<p>Senhor da Comunhão, fortalece os laços entre vizinhos, colegas, membros de grupos e comunidades.</p><p>Que a solidariedade, o respeito e a empatia sejam vividos no dia a dia. Que as diferenças sejam superadas pelo diálogo e que a colaboração seja sempre maior que a competição.</p><p>Que cada um se sinta acolhido, valorizado e parte de um todo maior.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Atrair Um Grande Amor',
+        texto: `<p>Deus do Amor Verdadeiro, prepara meu coração para receber e reconhecer um grande amor.</p><p>Que eu saiba esperar com paciência, amadurecer com as experiências e confiar que o melhor está reservado para mim.</p><p>Que o encontro seja abençoado, que haja respeito, cumplicidade e crescimento mútuo.</p><p>Que o amor seja fonte de alegria, inspiração e realização.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Comunicação Pacífica',
+        texto: `<p>Senhor, ensina-me a falar com mansidão, ouvir com atenção e responder com sabedoria.</p><p>Que minhas palavras sejam construtivas, que o silêncio seja respeitado e que o diálogo seja sempre caminho para a paz.</p><p>Afasta de mim a impulsividade, a agressividade e a mágoa. Que a comunicação seja ponte para a reconciliação e não muro de separação.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Curar Traições',
+        texto: `<p>Deus de misericórdia, entrego-Te a dor da traição. Cura as feridas abertas, restaura a confiança e ensina o caminho do perdão.</p><p>Que a mágoa não se transforme em amargura, mas em aprendizado. Que o tempo traga serenidade e que o amor próprio seja renovado.</p><p>Que, mesmo diante da decepção, eu não perca a capacidade de amar e confiar novamente.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

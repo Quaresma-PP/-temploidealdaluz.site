@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Novena de Nossa Senhora Desatadora de Nós - Music of the Angels</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato', sans-serif;
+        background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+        background-attachment: fixed;
+        color: white;
+        min-height: 100vh;
+        position: relative;
+        font-size: 18px;
+    }
+
+    /* Typography */
+    .title-font {
+        font-family: 'Cinzel', serif;
+    }
+
+    .body-font {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .golden-text {
+        color: #d4af37;
+    }
+
+    /* Overlay Pattern */
+    .overlay-pattern {
+        background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+        opacity: 0.1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .day-card {
+        background: rgba(10, 22, 46, 0.9);
+        border: 3px solid rgba(212, 175, 55, 0.7);
+        border-radius: 15px;
+        padding: 25px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        height: 100%;
+    }
+
+    .day-card:hover, .day-card:focus {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        border-color: rgba(212, 175, 55, 0.9);
+    }
+
+    .day-title {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+    
+    .btn-outline-light {
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+        font-size: 18px;
+        border-radius: 25px;
+    }
+
+    .btn-outline-light:hover, .btn-outline-light:focus {
+        background-color: rgba(212, 175, 55, 0.3);
+        border-color: #d4af37;
+        color: #d4af37;
+    }
+
+    /* Section Divider */
+    .section-divider {
+        display: flex;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .divider-line {
+        flex-grow: 1;
+        height: 2px;
+        background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.7), transparent);
+    }
+
+    .divider-icon {
+        font-size: 30px;
+        color: #d4af37;
+        margin: 0 20px;
+    }
+    
+    /* Footer */
+    .site-footer {
+        background-color: rgba(15, 32, 66, 0.95);
+        border-top: 2px solid rgba(212, 175, 55, 0.5);
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+
+    .site-footer p {
+        font-size: 18px;
+    }
+
+    .video-js {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    button.vjs-big-play-button {
+      background-color: rgb(15 32 66 / 97%) !important;
+      color: #d4af36;
+      border-color: #d4af36 !important;
+    }
+
+    .vjs-control-bar {
+      background-color: #162c51 !important;
+    }
+
+    button.vjs-fullscreen-control,
+    button.vjs-picture-in-picture-control {
+      display: none !important;
+    }
+
+    iframe {
+        pointer-events: none !important;
+    }
+  </style>
+
+  <link href="css/video-js.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container py-4">
+        <div class="text-center mb-3">
+            <a href="https://conexaoprosperidade.site/inicio-oracoes-principal" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+        </div>
+        <h1 class="title-font golden-text mb-2 text-center">🎵 Music of the Angels</h1>
+        <p class="text-center mb-4">Choose an inspiring song to elevate your prayer and create an atmosphere of peace and spiritual connection.</p>
+        <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-music"></i></div><div class="divider-line"></div></div>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=DT74qXx-SoA"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Presence of Mary</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=75VdGT1aQFc"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Light of Christ</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=QIb8rJK9LAI"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Peace in God</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=6NK0nwSKc34"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Strength of Faith</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=5e2RDm1C-Po"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Divine Flame</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=QbAZcAP2k6M"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Uplifted Soul</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=l_qZrMoAVmk"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Heavenly Grace</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=Sk69uP-WQnk"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Heart in Prayer</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=VeQOLXR4fsw"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Holy Spirit, Come</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=YifWTpwT2l8"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Path of Light</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=0dAUJFE5QBA"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Love That Heals</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="day-card h-100">
+                    <div class="video-music">
+                        <video class="video-js vjs-default-skin" controls preload="none" data-setup='{"techOrder":["youtube"],"sources":[{"type":"video/youtube","src":"https://www.youtube.com/watch?v=B3j73FYHF5o"}],"youtube":{"iv_load_policy":3,"rel":0,"modestbranding":1,"fs":0,"controls":0}}'></video>
+                    </div>
+                    <h3 class="day-title">Breath of Life</h3>
+                </div>
+            </div>
+            </div>
+        <div class="text-center mt-4 mb-2">
+            <a href="https://conexaoprosperidade.site/inicio-oracoes-principal" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-1">© 2025 Novena de Nossa Senhora Desatadora de Nós. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p>Contact: <a href="mailto:suportepadrelucaslima@gmail.com" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/video.min.js"></script>
+    <script src="js/youtube.js"></script>
+
+
+</body></html>

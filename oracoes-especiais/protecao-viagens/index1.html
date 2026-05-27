@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Prayers for Protection on Trips and Journeys</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Prayers for Protection on Trips and Journeys</h1>
+    <p class="text-center mb-4">Choose the prayer for your travel needs, read it with faith, and share it with those who are about to embark on a new journey.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-plane"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Previous</button>
+      <button id="btnProximo" class="btn-nav">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Prayer for a Safe Trip',
+        texto: `<p>Lord of the Paths, I ask for Your protection on this journey that is beginning.</p><p>Guide every step, every mile, every decision along the way.</p><p>Deliver us from accidents, unforeseen events, dangers, and all evil influences.</p><p>May angels accompany the vehicle, the drivers, and all the passengers, bringing peace and serenity to our hearts.</p><p>May our arrival be peaceful, our return blessed, and may gratitude be constant at every stop.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer Against Dangers on the Road',
+        texto: `<p>Protector God, I place in Your hands every stretch of the road that will be traveled.</p><p>Keep away reckless drivers, animals, potholes, storms, and all kinds of risks.</p><p>May our attention be heightened, may fatigue not overcome us, and may prudence be a faithful companion.</p><p>May the journey be calm, without haste, and may the destination be reached under Your blessing.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Air Travel Protection',
+        texto: `<p>Lord of the Skies, I ask for Your protection on this flight.</p><p>Guide the pilots, bless the crew, and calm the hearts of all passengers.</p><p>May the airplane be enveloped in Your light, may turbulence be overcome, and may the landing be safe.</p><p>May the trip be a cause for joy and happy reunions.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Maritime Protection',
+        texto: `<p>God of the Waters, protect every vessel, every crew member, and every passenger who sails the seas, rivers, or lakes.</p><p>Ward off storms, shipwrecks, hidden dangers, and all kinds of threats.</p><p>May the crossing be calm, may the wind be favorable, and may the arrival be celebrated with joy.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for a Blessed Return',
+        texto: `<p>Lord, I thank you for the journey taken and ask for a blessed return.</p><p>May longing be a relief, may the reunion be a cause for celebration, and may our luggage bring not only souvenirs but also lessons learned.</p><p>May our home be a refuge of peace and may gratitude be the first prayer upon arrival.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Guidance from the Guardian Angel',
+        texto: `<p>Angel of the Lord, I ask you to guide the vehicle, the steps, and the decisions throughout the entire trip.</p><p>May my intuition be sharp, may the path be illuminated, and may protection be constant.</p><p>May the angel's presence be felt at every turn, every stop, and every arrival.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer Against Storms and Obstacles',
+        texto: `<p>God of Weather and Nature, I ask You to calm the storms, divert obstacles, and protect against all kinds of adverse weather.</p><p>May the journey not be interrupted by rain, wind, or unforeseen events, and may serenity reign at every moment.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Peace in Foreign Lands',
+        texto: `<p>Lord, upon arriving in unknown lands, I ask for Your peace, welcome, and protection.</p><p>May I meet kind-hearted people, may communication be eased, and may homesickness be softened by the joy of new experiences.</p><p>May I feel safe, respected, and blessed in every place I go.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Health While Traveling',
+        texto: `<p>God of Life, protect my health and that of all who travel with me.</p><p>Keep away illnesses, discomforts, accidents, and any situation that could compromise our well-being.</p><p>May our food be healthy, our rest be sufficient, and our energy be renewed each day.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer of Gratitude for the Journey',
+        texto: `<p>Lord, I thank you for every mile traveled, for every landscape contemplated, and for every person met along the way.</p><p>May the journey be remembered with joy, may the lessons learned be carried through life, and may gratitude be the final prayer at the end of every trip.</p><p>Amen.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copy prayer" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

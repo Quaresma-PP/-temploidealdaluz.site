@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Orações para Curas Físicas e Espirituais</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<!-- ds -->
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar para o Início</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Orações para Curas Físicas e Espirituais</h1>
+    <p class="text-center mb-4">Escolha a oração para sua necessidade, leia com fé e compartilhe com quem precisa de cura e esperança.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-heartbeat"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button id="btnProximo" class="btn-nav">Próxima <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Voltar ao Início</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Oração para Alzheimer',
+        texto: `<p>Senhor da Sabedoria Eterna, hoje me volto a Ti em favor de você que enfrenta o desafio do Alzheimer.</p><p>Ilumina cada célula da sua mente, reacendendo lembranças queridas — rostos de amigos, rostos de filhos, histórias que teceram sua vida.</p><p>Concede-me paciência e ternura para cuidar de você nos momentos de confusão e incerteza.</p><p>Que o calor do Teu amor penetre em cada sinapse, restaurando gradualmente a clareza dos seus pensamentos.</p><p>Protege seu coração das frustrações e concede conforto à sua alma sempre que se sentir perdido.</p><p>Faz com que, mesmo nas teias do esquecimento, emane em torno de você o vínculo indestrutível do nosso amor e da Tua presença.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Diabetes',
+        texto: `<p>Senhor da Vida e da Saúde, suplico-Te pela cura de você que convive com a diabetes.</p><p>Derrama Tua graça sobre seu corpo, equilibrando o nível de açúcar no sangue e fortalecendo o pâncreas.</p><p>Que cada refeição se torne um ato de gratidão, lembrando-nos de que todo alimento vem das Tuas mãos generosas.</p><p>Concede-me disciplina para acompanhar seu tratamento e serenidade para enfrentar cada desafio com fé.</p><p>Renova suas forças em cada manhã e guia seus passos para hábitos saudáveis que glorifiquem o Teu cuidado.</p><p>Que, ao medir sua glicose, sinta a presença reconfortante do Teu amor sustentador.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Câncer',
+        texto: `<p>Pai Misericordioso, Tu és o Médico dos médicos e a fonte de toda esperança.</p><p>Hoje entrego-Te quem luta contra o câncer, para que Tua mão poderosa percorra cada célula, dissolvendo o mal e restaurando a saúde.</p><p>Concede coragem para enfrentar os tratamentos, sabedoria aos profissionais que o acompanham e fé inabalável em nossos corações.</p><p>Renova o íntimo do paciente com a certeza de que, mesmo no vale da sombra, Tua luz jamais faltará.</p><p>Que cada gota de lágrima se transforme em oração vitoriosa e cada dia de provação seja selado pelo Teu milagre.</p><p>Ao ver o sol nascer, que ele(a) sinta nova onda de ânimo, sabendo que em Ti está a vida verdadeira.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Catarata',
+        texto: `<p>Ó Senhor da Luz Infinita, criador de todas as cores e reflexos, peço-Te pela restauração da visão.</p><p>Dissipa as nuvens que turvam os olhos e permite que o olhar volte a contemplar as maravilhas da Tua criação.</p><p>Que cada amanhecer seja um espetáculo de cores vivas, cada sorriso resgatado seja testemunho do Teu poder.</p><p>Guia as mãos habilidosas do(a) cirurgião(ã) e inspira a equipe médica com Tua sabedoria.</p><p>Concede ao paciente confiança e serenidade no processo de cura, alimentando a esperança de enxergar de novo.</p><p>Que, ao contemplar o mundo, ele(a) veja não apenas a forma dos objetos, mas sinta a beleza do Teu amor que nos rodeia.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Artrite',
+        texto: `<p>Deus, nosso Refúgio e Fortaleza, estende Tua mão consoladora sobre as articulações cansadas.</p><p>Suaviza o inchaço, alivia a dor e concede mobilidade ao corpo que te adora.</p><p>Que cada movimento seja livre do peso da rigidez e cada gesto seja louvado em ação de graças.</p><p>Dá conforto nas manhãs difíceis, paciência nos momentos de limitação e vigor renovado a cada novo dia.</p><p>Inspira os terapeutas e médicos que acompanham o tratamento com ciência e compaixão.</p><p>Que, mesmo nas horas de repouso, o coração encontre descanso na certeza de Tua misericórdia constante.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Depressão',
+        texto: `<p>Luz do Mundo, dissipa a escuridão que envolve a alma abatida.</p><p>Infunde em você a chama viva da esperança, acendendo o desejo de viver cada dia com propósito.</p><p>Fala ao seu íntimo palavras de encorajamento e amor, substituindo o desânimo por vontade de sorrir.</p><p>Coloca ao seu redor pessoas amigas e cuidadoras, instrumentos do Teu carinho e do Teu sustento.</p><p>Que cada passo dado, por menor que seja, seja um triunfo sobre as sombras da tristeza.</p><p>Renova o ímpeto de agradecer pelas pequenas alegrias e faz brotar novamente o ânimo de celebrar a vida.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Ansiedade',
+        texto: `<p>Deus da Paz, entra em meu coração atribulado e acalma o turbilhão de pensamentos.</p><p>Silencia o medo que aperta o peito e substitui-o pela confiança firme em Teu cuidado.</p><p>Ensina-me a respirar o Teu sopro de vida, encontrando serenidade em cada inspiração.</p><p>Que minhas preocupações sejam entregues em Tuas mãos amorosas, e eu possa descansar na Tua fidelidade.</p><p>Concede clareza à mente e equilíbrio às emoções, para que eu viva cada momento com confiança.</p><p>Que a certeza da Tua presença seja meu alicerce em qualquer tempestade interior.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Insônia',
+        texto: `<p>Senhor do Descanso Verdadeiro, vela pelo meu sono nesta noite de vigília.</p><p>Acalma a mente inquieta com a Tua paz e afasta as dúvidas que roubam minha tranquilidade.</p><p>Que cada estrela que brilha lá fora seja um lembrete do Teu amor constante e guardião.</p><p>Derrama Tua serenidade sobre o meu corpo, preparando-me para repousar em Teu abraço protetor.</p><p>Concede sonhos tranquilos e um despertar renovado, pronto para louvar-Te com gratidão.</p><p>Que eu sinta, mesmo no sono, a segurança de que Tu estás sempre ao meu lado.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Hipertensão',
+        texto: `<p>Deus do Equilíbrio Perfeito, inclina-Te ao meu coração acelerado e traz calma ao meu pulso.</p><p>Suaviza o fluxo do meu sangue, restaurando a harmonia entre corpo e espírito.</p><p>Que, a cada batida, eu reconheça Tua presença que sustenta minha vida.</p><p>Dá-me sabedoria para cuidar da saúde e disciplina para adotar hábitos que honrem meu templo corporal.</p><p>Que a paz que só Tu podes dar inunde minhas veias, e eu possa enfrentar os dias com serenidade.</p><p>Que o ritmo do meu coração seja reflexo da Tua paz que excede todo entendimento.</p><p>Amém.</p>`
+      },
+      {
+        titulo: 'Oração para Dores Crônicas',
+        texto: `<p>Senhor que carregas nossas dores, volto-me a Ti em busca de alívio e consolo.</p><p>Toca cada ponto de sofrimento em meu corpo e desperta o poder restaurador que flui de Ti.</p><p>Concede-me dias de conforto, mesmo quando a enfermidade persiste, para que eu saiba repousar em Tua graça.</p><p>Renova minha coragem para enfrentar cada manhã, abraçando a esperança como escudo.</p><p>Que, ao sentir o bálsamo da Tua presença, eu reconheça que não estou só na jornada.</p><p>Transforma meu sofrimento em testemunho de fé e fortalece meu espírito para louvar-Te, mesmo na fraqueza.</p><p>Amém.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copiar oração" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>10 Prayers for Mental Peace and Spiritual Clarity</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      font-size: 18px;
+    }
+    .title-font { font-family: 'Cinzel', serif; }
+    .golden-text { color: #d4af37; }
+    .section-divider { display: flex; align-items: center; margin: 30px 0; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .back-btn:hover { color: #fff; text-decoration: underline; }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
+    .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
+    .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav:disabled { background: #666; color: #ccc; }
+    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar:hover { color: #fff; }
+    .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    @media (max-width: 600px) {
+      .container { padding: 0 5px; }
+      .card-header, .card-body { padding-left: 10px; padding-right: 10px; }
+      .btn-nav { width: 100%; margin: 8px 0; }
+      .oracao-menu { flex-direction: column; gap: 6px; }
+      .oracao-btn { width: 100%; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <a href="https://conexaoprosperidade.site/oracoes-especiais" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1 class="title-font golden-text mb-2 text-center">10 Prayers for Mental Peace and Spiritual Clarity</h1>
+    <p class="text-center mb-4">Choose the prayer for your need for inner peace, read it with faith, and share it with those seeking serenity and balance.</p>
+    <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-brain"></i></div><div class="divider-line"></div></div>
+    <div class="oracao-menu" id="oracaoMenu"></div>
+    <div id="oracoes-lista"></div>
+    <div class="text-center mt-4">
+      <button id="btnAnterior" class="btn-nav" disabled=""><i class="fas fa-arrow-left"></i> Previous</button>
+      <button id="btnProximo" class="btn-nav">Next <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="text-center mt-3 mb-4">
+      <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-outline-light"><i class="fas fa-home me-2"></i> Back to Home</a>
+    </div>
+  </div>
+  <script>
+    const oracoes = [
+      {
+        titulo: 'Prayer for Relief from Anxiety',
+        texto: `<p>Lord of Peace, calm the whirlwind of thoughts that invades my mind.</p><p>May each breath be an invitation to serenity and each heartbeat a reminder of Your constant care.</p><p>Take away the fear of the future, dissolve worries, and teach me to live in the present with confidence.</p><p>May anxiety not paralyze me, but draw me ever closer to You.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Inner Calm',
+        texto: `<p>God of gentleness, pour upon me the calm that only comes from Your Spirit.</p><p>May external storms not shake the peace that dwells within me.</p><p>Teach me to be silent in the face of provocations, to respond with kindness, and to wait with patience.</p><p>May tranquility be my shield and my strength.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Decision-Making',
+        texto: `<p>Lord, as I face important choices, I ask for Your light and discernment.</p><p>May I know how to listen to counsel, analyze with wisdom, and act with courage.</p><p>May every decision be guided by Your love, and may the outcome bring peace to my heart.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Silence and Divine Listening',
+        texto: `<p>God of Silence, teach me to quiet the noise of the world to hear Your gentle voice.</p><p>May I find time for silent prayer, for meditation, and for attentive listening to Your will.</p><p>May silence be a space for encounter, healing, and renewal.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer to Strengthen Faith',
+        texto: `<p>Lord, strengthen my faith in the face of doubts and challenges.</p><p>May I never lose hope, even when everything seems difficult.</p><p>May trust in You be my foundation, and may faith impel me to move forward with courage.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Deep Peace',
+        texto: `<p>God of peace, grant me a peace that surpasses all human understanding.</p><p>May I feel Your presence in every moment, even on days of tribulation.</p><p>May serenity be constant, and may restlessness find no home in my heart.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Mental Clarity',
+        texto: `<p>Lord, clear my thoughts, banish confusion, and illuminate my ideas.</p><p>May I know how to organize priorities, focus on what is essential, and make sound decisions.</p><p>May my mind be light, lucid, and open to the new.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Freedom from Negative Thoughts',
+        texto: `<p>Liberating God, break the chains of negative thoughts that imprison me.</p><p>May I learn to replace criticism with gratitude, pessimism with hope, and fear with trust.</p><p>May my mind be a garden of positive and constructive ideas.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Spiritual Renewal',
+        texto: `<p>Lord, renew my tired spirit, restore my joy, and strengthen my will to live.</p><p>May each morning be an opportunity for a new beginning, for learning, and for inner growth.</p><p>May my faith be renewed and may hope blossom in my heart.</p><p>Amen.</p>`
+      },
+      {
+        titulo: 'Prayer for Focus and Discernment',
+        texto: `<p>God of wisdom, help me to stay focused on my goals and to discern what truly matters.</p><p>May I not be distracted by useless worries, but concentrate my energy on what is good, just, and true.</p><p>May discernment be my guide in all choices.</p><p>Amen.</p>`
+      }
+    ];
+    let current = 0;
+    function renderOracao(idx) {
+      const lista = document.getElementById('oracoes-lista');
+      lista.innerHTML = '';
+      const ora = oracoes[idx];
+      const card = document.createElement('div');
+      card.className = 'card-ora active';
+      card.id = 'card-oracao';
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${ora.titulo}</h3>
+          <button class="btn-copiar" title="Copy prayer" onclick="navigator.clipboard.writeText(document.getElementById('texto-ora').innerText)"><i class="fas fa-copy"></i></button>
+        </div>
+        <div class="card-body"><span id="texto-ora">${ora.texto}</span></div>
+      `;
+      lista.appendChild(card);
+      document.getElementById('btnAnterior').disabled = idx === 0;
+      document.getElementById('btnProximo').disabled = idx === oracoes.length - 1;
+      document.querySelectorAll('.oracao-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+      setTimeout(() => {
+        document.getElementById('card-oracao').scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }
+    document.getElementById('btnAnterior').onclick = function() { if(current>0){ current--; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    document.getElementById('btnProximo').onclick = function() { if(current<oracoes.length-1){ current++; renderOracao(current); document.getElementById('oracaoMenu').scrollIntoView({behavior:'smooth'}); } };
+    const menu = document.getElementById('oracaoMenu');
+    oracoes.forEach((ora, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'oracao-btn' + (i===0?' active':'');
+      btn.innerText = ora.titulo;
+      btn.onclick = () => { current = i; renderOracao(i); };
+      menu.appendChild(btn);
+    });
+    renderOracao(current);
+  </script>
+
+ </body></html>

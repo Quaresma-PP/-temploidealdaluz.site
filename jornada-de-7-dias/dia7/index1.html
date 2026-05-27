@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Day 7: Commitment and Perseverance - Novena de Nossa Senhora Desatadora de Nós</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            font-size: 18px;
+        }
+
+        /* Typography */
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .body-font {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .golden-text {
+            color: #d4af37;
+        }
+
+        /* Overlay Pattern */
+        .overlay-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 15px 0;
+            background-color: rgba(15, 32, 66, 0.95);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover, .back-link:focus {
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .back-link i {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        /* Prayer Section Styles */
+        .prayer-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .prayer-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(10, 22, 46, 0.8);
+            border: 4px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .prayer-icon {
+            font-size: 60px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .reflection-box {
+            background: rgba(10, 22, 46, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .quote-box {
+            background: rgba(15, 32, 66, 0.7);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .quote-icon {
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Day Badge */
+        .day-badge {
+            background: #d4af37;
+            color: #0f2042;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Audio CTA */
+        .audio-cta-container {
+            background: rgba(10, 22, 46, 0.9);
+            border: 3px solid rgba(212, 175, 55, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #d4af37, #f2d675);
+            color: #0f2042;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            border: 2px solid #f8e9b0;
+            margin: 15px 0;
+            width: 100%;
+            justify-content: center;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+            color: #0f2042;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: rgba(15, 32, 66, 0.95);
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Navigation Buttons */
+        .prayer-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(15, 32, 66, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn:hover, .nav-btn:focus {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+            color: #f2d675;
+            text-decoration: none;
+        }
+
+        .nav-btn-prev i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .nav-btn-next i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+        
+        /* Final Day Celebration */
+        .celebration-badge {
+            background: linear-gradient(to right, #d4af37, #f8e9b0, #d4af37);
+            color: #0f2042;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 22px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            animation: gentle-pulse 3s infinite;
+        }
+        
+        @keyframes gentle-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Headings for Mobile */
+        h1 {
+            font-size: 30px !important;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 26px !important; 
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        /* Spacing for Mobile */
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Tablets and Larger Screens */
+        @media (min-width: 768px) {
+            .prayer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+            
+            h1 {
+                font-size: 38px !important;
+            }
+            
+            .prayer-text {
+                font-size: 20px;
+            }
+            
+            .prayer-container {
+                padding: 30px;
+            }
+        }
+
+        /* Desktops and Larger Screens */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 42px !important;
+            }
+            
+            .reflection-box, .quote-box {
+                font-size: 18px;
+            }
+            
+            .container {
+                max-width: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay-pattern"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </header>
+    
+    <main class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="celebration-badge">DAY 7 - COMPLETION OF THE JOURNEY</div>
+                <h1 class="title-font golden-text">Prayer of Commitment and Perseverance</h1>
+            </div>
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="icon-container">
+                    <div class="prayer-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center mb-4">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="fs-5 mt-2 fst-italic">"In the spiritual life, one who does not advance, goes backward. We must always have courage, and if any spiritual apathy comes upon us, let us run to the feet of Jesus in the Blessed Sacrament... and without a doubt, we will recover our strength."</p>
+                <p class="golden-text fw-bold mt-2">— Nossa Senhora Desatadora de Nós</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h2 class="golden-text mb-3">Reflection</h2>
+                <p>
+                    As we conclude our seven-day journey, we arrive at the moment to make a commitment to God and to ourselves. NOSSA SENHORA always emphasized the importance of perseverance in the spiritual life. This final day does not mark an end, but a beginning: the start of a more conscious and constant life of prayer.
+                </p>
+                <p>
+                    May the graces received in these seven days not be lost in the whirlwind of daily life, but instead form the foundation for a lasting spiritual renewal. Keep the flame of prayer alive, as well as intimacy with God and constant dialogue with your Guardian Angel.
+                </p>
+                <p>
+                    Let us ask for the virtue of perseverance, so that even in moments of discouragement or spiritual dryness, we may continue on the path of prayer and trust in God.
+                </p>
+            </div>
+            
+            <div class="prayer-container">
+                <h2 class="golden-text text-center mb-4">Full Prayer</h2>
+                
+                <div class="prayer-text text-white">
+                    <p>"My Lord and my God, as I conclude this seven-day journey of prayer guided by the teachings of Nossa Senhora Desatadora de Nós, I come before You to seal a commitment of perseverance in faith. I recognize that this period of prayer is not an end, but a beginning: the start of a deeper and more conscious spiritual life. As NOSSA SENHORA himself taught, 'in the spiritual life, one who does not advance, goes backward.' Therefore, I now commit myself not to let the graces received in these days be lost in the whirlwind of daily life.</p>
+                    
+                    <p class="mt-4">My Lord and my God, help me to keep alive the flame of prayer that was rekindled during this week. May the intimacy with You that I experienced in moments of silence and contemplation not be extinguished, but grow and strengthen with each passing day. Grant me the grace of constancy, so that just as Nossa Senhora Desatadora de Nós spent long hours in prayer, I too may set aside a sacred time daily to be in Your presence.</p>
+                    
+                    <p class="mt-4">Holy Spirit, I ask of You the virtue of perseverance. When discouragement comes, when spiritual dryness knocks at my door, when laziness or distractions try to pull me away from a life of prayer, remind me of NOSSA SENHORA's words: 'Pray, have faith, and don't worry.' Help me not to neglect my relationship with God, even when I feel no consolations or when life becomes especially challenging.</p>
+                    
+                    <p class="mt-4">Jesus, I commit to continuing my dialogue with my Guardian Angel, acknowledging his constant presence at my side. I promise to return frequently to these prayers I have learned, especially in moments when I need healing, prosperity, protection for my family, or inner peace. May they not be just words spoken once, but a spiritual path that I will continue to walk.</p>
+                    
+                    <p class="mt-4">Mary, Mother of Perseverance, who remained steadfast at the foot of the Cross when all others fled, teach me to be constant in faith even in hours of trial. May I, like you, know how to keep and ponder all things in my heart. Intercede for me, so that my commitment today does not fade tomorrow, but is strengthened with each new day.</p>
+                    
+                    <p class="mt-4">Heavenly Father, on this seventh day, just as You rested after creation, I also want to rest in You, not with laziness, but with the serene trust of one who knows they can count on their God at all times. I commit to making my life a continuous prayer, as Saint Paul taught, 'praying without ceasing.' May my daily actions, my work, my relationships, my joys, and even my crosses be offered to You as a living prayer.</p>
+                    
+                    <p class="mt-4">Nossa Senhora Desatadora de Nós, who interceded for me during these seven days, continue to accompany me on the path to holiness. Teach me to repeat with you: 'I go forward, as God wills, for as long as God wills, to wherever God wills.' May I embrace each day as an opportunity to grow in faith, hope, and charity.</p>
+                    
+                    <p class="mt-4">Lord, seal this commitment in my heart. May this week of prayer not be just an isolated experience, but the beginning of a new life, marked by intimacy with You, docility to the Spirit, and trust in Your providence. I give You thanks for bringing me this far and I trust that You will give me the strength to persevere to the end. With Nossa Senhora Desatadora de Nós, I want to proclaim: prayer is the best weapon we have, the key that opens the heart of God. Help me never to abandon this powerful weapon. Amen!"</p>
+                </div>
+            </div>
+            
+            
+    </main>
+    
+    <footer class="site-footer py-3">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 Novena de Nossa Senhora Desatadora de Nós</p>
+            <p>Contact: <a href="mailto:suportepadrelucaslima@gmail.com" class="text-white">suportepadrelucaslima@gmail.com</a></p>
+        </div>
+    </footer>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>

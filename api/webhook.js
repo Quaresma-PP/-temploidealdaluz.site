@@ -11,7 +11,9 @@ const PRODUTO_MAP = {
   'WeAcNLV7HhI9S4NRIUV6': 'poder-dos-arcanjos',
   'i8LXH2dOBuL6wEZIz5v5': '30-oracoes-sao-francisco',
   'CFdJHqyqxBjY98hvXjC2': 'musicas-dos-anjos-premium',
+  'NHS7pPLumtEtB4SG3iAA': 'musicas-dos-anjos-premium', // cópia
   'NtNiitqo1uV2XbQQEtgI': 'grimorio-dos-arcanjos',
+  'ji7HQCwQADUSC7DhuRst': 'grimorio-dos-arcanjos',     // cópia
 };
 
 const PRODUTO_NOME = {

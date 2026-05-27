@@ -105,6 +105,8 @@ module.exports = async (req, res) => {
 
   // Hubla envia diferentes formatos — tentamos extrair email e produto das formas mais comuns
   const email =
+    body?.data?.customer?.email ||
+    body?.data?.buyer?.email ||
     body?.purchase?.client?.email ||
     body?.purchase?.buyer?.email ||
     body?.customer?.email ||
@@ -114,15 +116,17 @@ module.exports = async (req, res) => {
     null;
 
   const produtoHubla =
+    body?.data?.product?.id ||
+    body?.data?.purchase?.product?.id ||
     body?.purchase?.product?.id ||
     body?.product?.id ||
-    body?.data?.purchase?.product?.id ||
+    body?.data?.product?.id ||
     body?.purchase?.offer?.id ||
     null;
 
   // Ignora eventos que não são de pagamento confirmado
   const evento = body?.event || body?.purchase?.status || body?.status || '';
-  if (evento && !['purchase_approved', 'purchase.approved', 'order.paid', 'payment.approved', 'approved', 'paid', 'APPROVED', 'authorized'].includes(evento)) {
+  if (evento && !['purchase_approved', 'purchase.approved', 'invoice.payment_succeeded', 'customer.member_added', 'order.paid', 'payment.approved', 'approved', 'paid', 'APPROVED', 'authorized'].includes(evento)) {
     return res.status(200).json({ ok: true, ignorado: true });
   }
 

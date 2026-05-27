@@ -8,6 +8,7 @@ const supabase = createClient(
 // Mapeamento: ID do produto na Hubla → ID interno do sistema
 const PRODUTO_MAP = {
   'pmiKfK6Lz5YcmqkBVhsz': 'novena-principal',
+  'ssAM2zyuwU6SK0Fo1U6u': 'novena-principal',          // cópia
   'WeAcNLV7HhI9S4NRIUV6': 'poder-dos-arcanjos',
   'i8LXH2dOBuL6wEZIz5v5': '30-oracoes-sao-francisco',
   'CFdJHqyqxBjY98hvXjC2': 'musicas-dos-anjos-premium',

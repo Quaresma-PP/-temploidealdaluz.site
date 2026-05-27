@@ -9,11 +9,13 @@ const supabase = createClient(
 const PRODUTO_MAP = {
   'pmiKfK6Lz5YcmqkBVhsz': 'novena-principal',
   'ssAM2zyuwU6SK0Fo1U6u': 'novena-principal',          // cópia
-  'WeAcNLV7HhI9S4NRIUV6': 'poder-dos-arcanjos',
+  'WeAcNLV7Hhl9S4NRIUV6': 'poder-dos-arcanjos',
+  'WeAcNLV7HhI9S4NRIUV6': 'poder-dos-arcanjos',        // variação I/l
   'i8LXH2dOBuL6wEZIz5v5': '30-oracoes-sao-francisco',
   'CFdJHqyqxBjY98hvXjC2': 'musicas-dos-anjos-premium',
   'NHS7pPLumtEtB4SG3iAA': 'musicas-dos-anjos-premium', // cópia
-  'NtNiitqo1uV2XbQQEtgI': 'grimorio-dos-arcanjos',
+  'NtNiitqo1uV2XbQQEtgl': 'grimorio-dos-arcanjos',
+  'NtNiitqo1uV2XbQQEtgI': 'grimorio-dos-arcanjos',     // variação I/l
   'ji7HQCwQADUSC7DhuRst': 'grimorio-dos-arcanjos',     // cópia
 };
 
@@ -101,35 +103,26 @@ module.exports = async (req, res) => {
 
   const body = req.body || {};
 
-  // Loga payload para diagnóstico
-  console.log('Webhook recebido:', JSON.stringify(body));
+  // Ignora eventos que não são de pagamento confirmado
+  const evento = body?.type || body?.event_type || body?.status || '';
+  if (evento && !['invoice.payment_succeeded', 'purchase_approved', 'purchase.approved', 'customer.member_added', 'order.paid', 'payment.approved', 'approved', 'paid', 'APPROVED', 'authorized'].includes(evento)) {
+    return res.status(200).json({ ok: true, ignorado: true });
+  }
 
-  // Hubla envia diferentes formatos — tentamos extrair email e produto das formas mais comuns
+  // Hubla v2.0: dados estão dentro de body.event
   const email =
-    body?.data?.customer?.email ||
-    body?.data?.buyer?.email ||
-    body?.purchase?.client?.email ||
-    body?.purchase?.buyer?.email ||
+    body?.event?.user?.email ||
+    body?.event?.invoice?.payer?.email ||
+    body?.event?.customer?.email ||
     body?.customer?.email ||
-    body?.buyer?.email ||
-    body?.data?.purchase?.client?.email ||
     body?.email ||
     null;
 
   const produtoHubla =
-    body?.data?.product?.id ||
-    body?.data?.purchase?.product?.id ||
-    body?.purchase?.product?.id ||
+    body?.event?.product?.id ||
+    body?.event?.products?.[0]?.id ||
     body?.product?.id ||
-    body?.data?.product?.id ||
-    body?.purchase?.offer?.id ||
     null;
-
-  // Ignora eventos que não são de pagamento confirmado
-  const evento = body?.event || body?.purchase?.status || body?.status || '';
-  if (evento && !['purchase_approved', 'purchase.approved', 'invoice.payment_succeeded', 'customer.member_added', 'order.paid', 'payment.approved', 'approved', 'paid', 'APPROVED', 'authorized'].includes(evento)) {
-    return res.status(200).json({ ok: true, ignorado: true });
-  }
 
   if (!email) {
     console.error('Webhook sem email:', JSON.stringify(body));

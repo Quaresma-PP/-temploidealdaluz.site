@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado – Desatadora de Nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at center, #d6b35b 0%, #e6bc62 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 32px 16px 48px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      background: #fff;
+    }
+
+    .hero {
+      width: 65%;
+      max-width: 240px;
+      height: auto;
+      display: block;
+      margin: 28px auto 10px;
+      border-radius: 12px;
+    }
+
+    .badge {
+      background: linear-gradient(90deg, #d1a149, #c59b41, #be903b);
+      color: #f5d98a;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .content {
+      background: #fffef7;
+      padding: 28px 24px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .check-circle {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #cea53d, #eec05e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(180,120,0,0.45);
+      animation: pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+      flex-shrink: 0;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .check-circle svg { width: 34px; height: 34px; }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 6vw, 28px);
+      font-weight: 900;
+      color: #1a1008;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    .headline em {
+      font-style: italic;
+      color: #8b6000;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #d1a149, #eec05e);
+    }
+
+    .instrucoes {
+      width: 100%;
+      background: #fdf8ed;
+      border: 1.5px solid #e8d08a;
+      border-radius: 14px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .instrucoes-titulo {
+      font-size: 13px;
+      font-weight: 700;
+      color: #8b6000;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .passo {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .passo-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #cea53d, #eec05e);
+      color: #1a1008;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .passo-texto {
+      font-size: 14px;
+      color: #3a2a00;
+      line-height: 1.55;
+    }
+
+    .passo-texto strong {
+      color: #1a1008;
+    }
+
+    .email-destaque {
+      background: #fff7e0;
+      border: 1.5px dashed #d4a830;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #6b4900;
+      text-align: center;
+      line-height: 1.6;
+      width: 100%;
+    }
+
+    .email-destaque strong {
+      color: #1a1008;
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #cea53d, #c7ad4f, #eec05e);
+      color: #1a1008;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 5px 18px rgba(180,120,0,0.5);
+      transition: transform 0.15s, box-shadow 0.15s;
+      animation: glow 2.4s ease-in-out infinite;
+    }
+
+    .cta-btn:hover  { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(180,120,0,0.7); }
+    .cta-btn:active { transform: translateY(0); }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 5px 18px rgba(180,120,0,0.45); }
+      50%       { box-shadow: 0 5px 30px rgba(180,120,0,0.80); }
+    }
+
+    .cta-sub {
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      margin-top: -8px;
+    }
+
+    .bencao {
+      font-size: 13px;
+      color: #8b6000;
+      text-align: center;
+      font-style: italic;
+      line-height: 1.7;
+      padding: 0 4px;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: rgba(255,255,255,0.65);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <img
+      class="hero"
+      src="desatadora.jpg"
+      alt="Nossa Senhora Desatadora de Nós"
+      onerror="this.outerHTML='<div style=\'width:100%;padding:32px 0;text-align:center;font-size:72px\'>🙏</div>'"
+    />
+
+    <div class="badge">
+      <span>✨</span>
+      NOSSA SENHORA DESATADORA DE NÓS
+      <span>✨</span>
+    </div>
+
+    <div class="content">
+
+      <div class="check-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1a1008" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <h1 class="headline">
+        Compra Confirmada!<br />
+        <em>Seu acesso está a caminho</em>
+      </h1>
+
+      <div class="divider"></div>
+
+      <div class="instrucoes">
+
+        <p class="instrucoes-titulo">📧 Como acessar</p>
+
+        <div class="passo">
+          <div class="passo-num">1</div>
+          <p class="passo-texto">
+            <strong>Verifique seu e-mail</strong> — o link de acesso foi enviado para o endereço que você usou na compra.
+          </p>
+        </div>
+
+        <div class="passo">
+          <div class="passo-num">2</div>
+          <p class="passo-texto">
+            <strong>Use o mesmo e-mail da compra</strong> para entrar na plataforma. O login está vinculado a esse endereço.
+          </p>
+        </div>
+
+        <div class="passo">
+          <div class="passo-num">3</div>
+          <p class="passo-texto">
+            <strong>Copie o link</strong> que chegou no e-mail e <strong>cole diretamente no navegador</strong> para acessar.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="email-destaque">
+        <strong>Não encontrou o e-mail?</strong>
+        Verifique a caixa de <em>Spam</em> ou <em>Promoções</em>. O envio é automático e pode demorar alguns minutos.
+      </div>
+
+      <a href="https://temploidealdaluz.site/login/" class="cta-btn" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+        </svg>
+        Acessar Meu Conteúdo
+      </a>
+
+      <p class="cta-sub">Clique no botão acima ou cole o link do e-mail no navegador</p>
+
+      <p class="bencao">
+        "Que Nossa Senhora Desatadora de Nós<br />
+        interceda por você e desfaça todos<br />
+        os laços que impedem a sua graça." 🕊️
+      </p>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Desatadora de Nós. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

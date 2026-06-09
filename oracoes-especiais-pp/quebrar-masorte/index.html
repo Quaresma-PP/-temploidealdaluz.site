@@ -9,35 +9,35 @@
     body, html {
       margin: 0;
       padding: 0;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Merriweather', sans-serif;
       background: linear-gradient(135deg, #1a365d 0%, #0f2042 100%);
       background-attachment: fixed;
       color: white;
       min-height: 100vh;
       font-size: 18px;
     }
-    .title-font { font-family: 'Cinzel', serif; }
-    .golden-text { color: #d4af37; }
+    .title-font { font-family: 'Cormorant Garamond', serif; }
+    .golden-text { color: #B77A35; }
     .section-divider { display: flex; align-items: center; margin: 30px 0; }
-    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
-    .divider-icon { font-size: 28px; color: #d4af37; margin: 0 18px; }
-    .back-btn { background: none; border: none; color: #d4af37; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #B77A35, transparent); }
+    .divider-icon { font-size: 28px; color: #B77A35; margin: 0 18px; }
+    .back-btn { background: none; border: none; color: #B77A35; font-size: 1.1rem; font-weight: bold; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
     .back-btn:hover { color: #fff; text-decoration: underline; }
-    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #d4af37; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+    .card-ora { background: rgba(10,22,46,0.92); border: 2px solid #B77A35; border-radius: 18px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
     .card-header { cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
-    .card-header h3 { font-size: 1.1rem; margin: 0; color: #d4af37; font-family: 'Cinzel', serif; }
+    .card-header h3 { font-size: 1.1rem; margin: 0; color: #B77A35; font-family: 'Cormorant Garamond', serif; }
     .card-body { display: none; padding: 0 22px 18px 22px; font-size: 1.05rem; }
     .card-ora.active .card-body { display: block; animation: fadeIn 0.4s; }
     .card-ora.active .fa-chevron-down { transform: rotate(180deg); }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .btn-nav { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
+    .btn-nav { background: linear-gradient(45deg, #B77A35, #f5e290); color: #0f2042; border: none; font-weight: bold; padding: 10px 22px; border-radius: 30px; margin: 0 8px; font-size: 1rem; }
     .btn-nav:disabled { background: #666; color: #ccc; }
-    .btn-copiar { background: none; border: none; color: #d4af37; font-size: 1.1rem; margin-left: 8px; }
+    .btn-copiar { background: none; border: none; color: #B77A35; font-size: 1.1rem; margin-left: 8px; }
     .btn-copiar:hover { color: #fff; }
     .oracao-menu { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
-    .oracao-btn { background: rgba(212,175,55,0.13); border: 2px solid #d4af37; color: #d4af37; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cinzel', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
-    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #d4af37, #f5e290); color: #0f2042; border-color: #fff; }
-    .oracao-btn:hover { background: #d4af37; color: #0f2042; }
+    .oracao-btn { background: rgba(183,122,53,0.13); border: 2px solid #B77A35; color: #B77A35; border-radius: 30px; padding: 8px 18px; font-size: 1rem; font-family: 'Cormorant Garamond', serif; font-weight: bold; cursor: pointer; transition: all 0.2s; margin-bottom: 4px; }
+    .oracao-btn.active, .oracao-btn:focus { background: linear-gradient(45deg, #B77A35, #f5e290); color: #0f2042; border-color: #fff; }
+    .oracao-btn:hover { background: #B77A35; color: #0f2042; }
     @media (max-width: 600px) {
       .container { padding: 0 5px; }
       .card-header, .card-body { padding-left: 10px; padding-right: 10px; }

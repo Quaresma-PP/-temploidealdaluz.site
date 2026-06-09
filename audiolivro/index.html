@@ -9,22 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box}
-    body,html{margin:0;padding:0;font-family:'Lato',sans-serif;background:linear-gradient(160deg,#0d1f50 0%,#0a1640 50%,#0e1e4a 100%);background-attachment:fixed;color:white;min-height:100vh;font-size:17px}
-    .title-font{font-family:'Cinzel',serif}
-    .golden-text{color:#d4af37}
+    body,html{margin:0;padding:0;font-family:'Merriweather',sans-serif;background:linear-gradient(160deg,#0d1f50 0%,#0a1640 50%,#0e1e4a 100%);background-attachment:fixed;color:white;min-height:100vh;font-size:17px}
+    .title-font{font-family:'Cormorant Garamond',serif}
+    .golden-text{color:#B77A35}
     .overlay-pattern{background-image:url('https://www.transparenttextures.com/patterns/crosses.png');opacity:.06;position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1}
 
-    .back-btn{background:none;border:none;color:#d4af37;font-size:1rem;font-weight:bold;display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:0}
+    .back-btn{background:none;border:none;color:#B77A35;font-size:1rem;font-weight:bold;display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:0}
     .back-btn:hover{color:#fff;text-decoration:underline}
 
     .section-divider{display:flex;align-items:center;margin:22px 0}
-    .divider-line{flex-grow:1;height:2px;background:linear-gradient(to right,transparent,#d4af37,transparent)}
-    .divider-icon{font-size:24px;color:#d4af37;margin:0 16px}
+    .divider-line{flex-grow:1;height:2px;background:linear-gradient(to right,transparent,#B77A35,transparent)}
+    .divider-icon{font-size:24px;color:#B77A35;margin:0 16px}
 
     /* Cards */
     .day-card{
       background:rgba(8,18,50,.92);
-      border:2px solid rgba(212,175,55,.55);
+      border:2px solid rgba(183,122,53,.55);
       border-radius:18px;
       padding:22px 16px 18px;
       text-align:center;
@@ -33,26 +33,26 @@
       height:100%;
       display:flex;flex-direction:column;align-items:center;
     }
-    .day-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(212,175,55,.28);border-color:rgba(212,175,55,.9)}
-    .day-card.playing{border-color:#d4af37;box-shadow:0 0 28px rgba(212,175,55,.40)}
+    .day-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(183,122,53,.28);border-color:rgba(183,122,53,.9)}
+    .day-card.playing{border-color:#B77A35;box-shadow:0 0 28px rgba(183,122,53,.40)}
 
-    .day-badge{background:#d4af37;color:#06103a;padding:6px 16px;border-radius:20px;font-weight:bold;font-size:16px;display:inline-block;margin-bottom:10px}
-    .day-icon{font-size:28px;color:#d4af37;margin-bottom:10px;opacity:.80}
-    .day-title{font-family:'Cinzel',serif;color:#d4af37;font-size:17px;font-weight:bold;margin-bottom:8px}
+    .day-badge{background:#B77A35;color:#FFF8F0;padding:6px 16px;border-radius:20px;font-weight:bold;font-size:16px;display:inline-block;margin-bottom:10px}
+    .day-icon{font-size:28px;color:#B77A35;margin-bottom:10px;opacity:.80}
+    .day-title{font-family:'Cormorant Garamond',serif;color:#B77A35;font-size:17px;font-weight:bold;margin-bottom:8px}
     .day-verse{color:rgba(255,255,255,.55);font-size:13px;font-style:italic;margin-bottom:14px;line-height:1.5;flex:1}
 
     /* Player */
     .audio-player{
       width:100%;
       background:rgba(6,16,58,.70);
-      border:1.5px solid rgba(212,175,55,.30);
+      border:1.5px solid rgba(183,122,53,.30);
       border-radius:12px;
       padding:12px 14px;
       display:flex;align-items:center;gap:10px;
       margin-top:auto;
     }
     .play-btn{
-      background:#d4af37;border:none;color:#06103a;
+      background:#B77A35;border:none;color:#FFF8F0;
       border-radius:50%;width:42px;height:42px;font-size:16px;
       display:flex;align-items:center;justify-content:center;
       flex-shrink:0;cursor:pointer;transition:background .2s,transform .15s;
@@ -62,11 +62,11 @@
 
     .progress-wrap{flex:1;display:flex;flex-direction:column;gap:5px}
     .progress-bar-bg{height:4px;background:rgba(255,255,255,.15);border-radius:3px;cursor:pointer;overflow:hidden}
-    .progress-bar-fill{height:100%;background:#d4af37;border-radius:3px;width:0%;transition:width .3s linear}
+    .progress-bar-fill{height:100%;background:#B77A35;border-radius:3px;width:0%;transition:width .3s linear}
     .time-label{font-size:.68rem;color:rgba(255,255,255,.40);text-align:right}
 
     .btn-voltar{border:2px solid rgba(255,255,255,.55);padding:10px 22px;border-radius:25px;color:#fff;font-size:.95rem;text-decoration:none;display:inline-block;transition:all .3s}
-    .btn-voltar:hover{background:rgba(212,175,55,.2);border-color:#d4af37;color:#d4af37}
+    .btn-voltar:hover{background:rgba(183,122,53,.2);border-color:#B77A35;color:#B77A35}
 
     @media(max-width:575px){
       .day-card{padding:16px 12px 14px}
@@ -84,7 +84,7 @@
     </a>
 
     <div class="text-center mb-2">
-      <p style="color:rgba(212,175,55,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cinzel',serif;">— ✦ DEVOÇÃO MARIANA ✦ —</p>
+      <p style="color:rgba(183,122,53,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cormorant Garamond',serif;">— ✦ DEVOÇÃO MARIANA ✦ —</p>
       <h1 class="title-font golden-text mb-1" style="font-size:1.9rem">
         <i class="fas fa-headphones me-2"></i>Audiolivro — Novena Completa
       </h1>
@@ -249,8 +249,8 @@
 
       <!-- DIA 9 -->
       <div class="col-md-6 col-lg-4">
-        <div class="day-card" id="card8" style="border-color:rgba(212,175,55,.9);box-shadow:0 6px 22px rgba(212,175,55,.22)">
-          <div class="day-badge" style="background:linear-gradient(135deg,#b8870b,#f7de6a,#b8870b)">Dia 9 ✦</div>
+        <div class="day-card" id="card8" style="border-color:rgba(183,122,53,.9);box-shadow:0 6px 22px rgba(183,122,53,.22)">
+          <div class="day-badge" style="background:linear-gradient(135deg,#b8870b,#D4A55A,#b8870b)">Dia 9 ✦</div>
           <div class="day-icon"><i class="fas fa-crown"></i></div>
           <h3 class="day-title">9º Dia — Novena Completa</h3>
           <p class="day-verse">No último dia, encerre a novena entregando-se completamente a Nossa Senhora. Receba a graça de uma vida renovada, com todos os nós desatados pelo amor de Maria.</p>

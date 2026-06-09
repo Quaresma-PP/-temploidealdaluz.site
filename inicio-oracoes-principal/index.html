@@ -4,19 +4,19 @@
     <title>Novena de Nossa Senhora Desatadora de Nós</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Merriweather:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0; padding: 0;
-            font-family: 'Lato', sans-serif;
+            font-family: 'Merriweather', sans-serif;
             background: linear-gradient(160deg, #0d1f50 0%, #0a1640 50%, #0e1e4a 100%);
             background-attachment: fixed;
             color: white;
             min-height: 100vh;
             font-size: 18px;
         }
-        .title-font { font-family: 'Cinzel', serif; }
-        .golden-text { color: #d4af37; }
+        .title-font { font-family: 'Cormorant Garamond', serif; }
+        .golden-text { color: #B77A35; }
 
         .overlay-pattern {
             background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
@@ -33,7 +33,7 @@
         }
         .navbar-brand { font-size: 17px; font-weight: bold; }
         .nav-link { font-size: 15px; margin: 0 2px; transition: all 0.3s ease; padding: 8px 10px; }
-        .nav-link:hover { color: #d4af37 !important; }
+        .nav-link:hover { color: #B77A35 !important; }
 
         .navbar-collapse {
             background-color: rgba(8, 18, 55, 0.99);
@@ -49,14 +49,14 @@
             width: 260px; height: 260px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid #d4af37;
-            box-shadow: 0 0 40px rgba(212,175,55,0.45), 0 0 80px rgba(212,175,55,0.15);
+            border: 4px solid #B77A35;
+            box-shadow: 0 0 40px rgba(183,122,53,0.45), 0 0 80px rgba(183,122,53,0.15);
             margin: 0 auto 30px;
             animation: glow-saint 4s ease-in-out infinite;
         }
         @keyframes glow-saint {
-            0%,100% { box-shadow: 0 0 30px rgba(212,175,55,0.40), 0 0 60px rgba(212,175,55,0.12); }
-            50% { box-shadow: 0 0 50px rgba(212,175,55,0.65), 0 0 100px rgba(212,175,55,0.22); }
+            0%,100% { box-shadow: 0 0 30px rgba(183,122,53,0.40), 0 0 60px rgba(183,122,53,0.12); }
+            50% { box-shadow: 0 0 50px rgba(183,122,53,0.65), 0 0 100px rgba(183,122,53,0.22); }
         }
         .hero-image-container img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
@@ -73,46 +73,46 @@
         .quote-box::before {
             content: '"';
             position: absolute; top: 2px; left: 10px;
-            font-size: 72px; color: rgba(212,175,55,0.18);
+            font-size: 72px; color: rgba(183,122,53,0.18);
             font-family: Georgia, serif; line-height: 1;
         }
 
         /* Buttons */
         .btn-primary {
-            background: linear-gradient(135deg, #b8870b 0%, #f7de6a 50%, #b8870b 100%);
+            background: linear-gradient(135deg, #b8870b 0%, #D4A55A 50%, #b8870b 100%);
             background-size: 200% auto;
-            color: #06103a; border: none; font-weight: bold;
-            box-shadow: 0 4px 18px rgba(212,175,55,0.35);
+            color: #FFF8F0; border: none; font-weight: bold;
+            box-shadow: 0 4px 18px rgba(183,122,53,0.35);
             transition: all 0.35s; padding: 15px 28px;
-            font-size: 19px; border-radius: 30px; font-family: 'Cinzel', serif;
+            font-size: 19px; border-radius: 30px; font-family: 'Cormorant Garamond', serif;
         }
         .btn-primary:hover, .btn-primary:focus {
             background-position: right center;
-            box-shadow: 0 7px 28px rgba(212,175,55,0.55);
-            transform: translateY(-3px); color: #06103a;
+            box-shadow: 0 7px 28px rgba(183,122,53,0.55);
+            transform: translateY(-3px); color: #FFF8F0;
         }
         .btn-outline-light {
             border: 2px solid rgba(255,255,255,0.65);
             padding: 10px 20px; transition: all 0.3s; font-size: 17px; border-radius: 25px;
         }
-        .btn-outline-light:hover { background: rgba(212,175,55,0.25); border-color: #d4af37; color: #d4af37; }
+        .btn-outline-light:hover { background: rgba(183,122,53,0.25); border-color: #B77A35; color: #B77A35; }
 
         /* Day Cards */
         .day-card {
             background: rgba(8, 18, 50, 0.90);
-            border: 2.5px solid rgba(212,175,55,0.65);
+            border: 2.5px solid rgba(183,122,53,0.65);
             border-radius: 16px; padding: 25px;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 16px rgba(0,0,0,0.30); height: 100%; margin-bottom: 20px;
         }
-        .day-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(212,175,55,0.28); border-color: rgba(212,175,55,0.9); }
+        .day-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(183,122,53,0.28); border-color: rgba(183,122,53,0.9); }
         .day-badge {
-            background: #d4af37; color: #06103a;
+            background: #B77A35; color: #FFF8F0;
             padding: 7px 16px; border-radius: 20px; font-weight: bold;
             font-size: 19px; display: inline-block; margin-bottom: 14px;
         }
-        .day-icon { font-size: 56px; color: #d4af37; text-shadow: 0 0 12px rgba(212,175,55,0.5); margin-bottom: 14px; }
-        .day-title { font-family: 'Cinzel', serif; color: #d4af37; font-size: 22px; font-weight: bold; margin-bottom: 14px; }
+        .day-icon { font-size: 56px; color: #B77A35; text-shadow: 0 0 12px rgba(183,122,53,0.5); margin-bottom: 14px; }
+        .day-title { font-family: 'Cormorant Garamond', serif; color: #B77A35; font-size: 22px; font-weight: bold; margin-bottom: 14px; }
         .day-description {
             color: #e6e6e6; font-size: 17px; line-height: 1.55;
             background: rgba(8,18,50,0.65); padding: 14px; border-radius: 10px; margin-bottom: 18px;
@@ -121,7 +121,7 @@
         /* Fact Boxes */
         .fact-box {
             background: rgba(12, 26, 70, 0.80);
-            border-left: 4px solid #d4af37;
+            border-left: 4px solid #B77A35;
             padding: 20px; margin-bottom: 20px;
             border-radius: 0 12px 12px 0;
         }
@@ -131,39 +131,39 @@
         /* Instruction Cards */
         .instruction-card {
             background: rgba(12, 26, 70, 0.70);
-            border: 1px solid rgba(212,175,55,0.45);
+            border: 1px solid rgba(183,122,53,0.45);
             border-radius: 16px; padding: 24px; height: 100%;
             transition: transform 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.20);
         }
-        .instruction-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(212,175,55,0.20); border-color: rgba(212,175,55,0.70); }
-        .instruction-icon { font-size: 38px; color: #d4af37; margin-bottom: 18px; }
-        .benefit-icon { font-size: 38px; color: #d4af37; margin-bottom: 18px; text-shadow: 0 0 12px rgba(212,175,55,0.5); }
+        .instruction-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(183,122,53,0.20); border-color: rgba(183,122,53,0.70); }
+        .instruction-icon { font-size: 38px; color: #B77A35; margin-bottom: 18px; }
+        .benefit-icon { font-size: 38px; color: #B77A35; margin-bottom: 18px; text-shadow: 0 0 12px rgba(183,122,53,0.5); }
 
         /* Audio CTA */
         .audio-cta-container {
             background: rgba(8, 18, 50, 0.90);
-            border: 2.5px solid rgba(212,175,55,0.65);
+            border: 2.5px solid rgba(183,122,53,0.65);
             border-radius: 16px; box-shadow: 0 5px 18px rgba(0,0,0,0.28);
             padding: 30px; margin: 40px auto; max-width: 900px;
         }
 
         /* Dividers */
         .section-divider { display: flex; align-items: center; margin: 45px 0; }
-        .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, rgba(212,175,55,0.65), transparent); }
-        .divider-icon { font-size: 26px; color: #d4af37; margin: 0 18px; }
+        .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, rgba(183,122,53,0.65), transparent); }
+        .divider-icon { font-size: 26px; color: #B77A35; margin: 0 18px; }
 
         section { padding: 55px 0; }
         .section-heading { position: relative; display: inline-block; margin-bottom: 38px; }
         .section-heading::after {
             content: ""; position: absolute; bottom: -14px; left: 50%;
             transform: translateX(-50%); width: 90px; height: 3px;
-            background: #d4af37; border-radius: 3px;
+            background: #B77A35; border-radius: 3px;
         }
 
         /* Footer */
         .site-footer {
             background-color: rgba(8, 18, 55, 0.97);
-            border-top: 2px solid rgba(212,175,55,0.45);
+            border-top: 2px solid rgba(183,122,53,0.45);
             padding: 28px 0; margin-top: 48px;
         }
         .site-footer p { font-size: 16px; }
@@ -171,16 +171,16 @@
         /* Back to top */
         .back-to-top {
             position: fixed; bottom: 20px; right: 20px;
-            background: rgba(212,175,55,0.92); color: #06103a;
+            background: rgba(183,122,53,0.92); color: #FFF8F0;
             width: 56px; height: 56px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 26px; box-shadow: 0 2px 12px rgba(0,0,0,0.30);
             z-index: 1000; cursor: pointer; transition: all 0.3s; opacity: 0;
         }
-        .back-to-top:hover { background: #d4af37; transform: translateY(-3px); }
+        .back-to-top:hover { background: #B77A35; transform: translateY(-3px); }
 
-        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,0.4); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212,175,55,0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,0); } }
-        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 #d4af37; } 70% { box-shadow: 0 0 0 6px rgba(212,175,55,0.25); } 100% { box-shadow: 0 0 0 0 #d4af37; } }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(183,122,53,0.4); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(183,122,53,0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(183,122,53,0); } }
+        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 #B77A35; } 70% { box-shadow: 0 0 0 6px rgba(183,122,53,0.25); } 100% { box-shadow: 0 0 0 0 #B77A35; } }
         .pulse-border { animation: pulse-border 1.8s infinite; }
 
         .temas-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 10px; margin-bottom: 18px; max-width: 420px; margin-left: auto; margin-right: auto; }
@@ -203,13 +203,13 @@
         }
 
         /* Knot ribbon decorative */
-        .knot-ornament { color: rgba(212,175,55,0.55); letter-spacing: 6px; font-size: 0.85rem; }
+        .knot-ornament { color: rgba(183,122,53,0.55); letter-spacing: 6px; font-size: 0.85rem; }
 
         /* Premium Section */
         #biblioteca-premium { position: relative; }
         #biblioteca-premium::before, #biblioteca-premium::after {
           content: ''; position: absolute; left: 0; right: 0; height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(212,175,55,.55), transparent);
+          background: linear-gradient(90deg, transparent, rgba(183,122,53,.55), transparent);
         }
         #biblioteca-premium::before { top: 0; }
         #biblioteca-premium::after  { bottom: 0; }
@@ -217,7 +217,7 @@
         /* Premium Cards */
         .premium-card {
           background: rgba(6,14,44,.97);
-          border: 1px solid rgba(212,175,55,.28);
+          border: 1px solid rgba(183,122,53,.28);
           border-radius: 18px; overflow: hidden;
           transition: transform .35s, box-shadow .35s, border-color .35s;
           box-shadow: 0 6px 24px rgba(0,0,0,.45);
@@ -226,10 +226,10 @@
         }
         .premium-card::before {
           content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-          background: linear-gradient(90deg, transparent, #d4af37, transparent);
+          background: linear-gradient(90deg, transparent, #B77A35, transparent);
           opacity: .55; transition: opacity .35s; z-index: 1;
         }
-        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 22px 50px rgba(212,175,55,.20), 0 8px 22px rgba(0,0,0,.55); border-color: rgba(212,175,55,.60); }
+        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 22px 50px rgba(183,122,53,.20), 0 8px 22px rgba(0,0,0,.55); border-color: rgba(183,122,53,.60); }
         .premium-card:hover::before { opacity: 1; }
 
         .premium-card-img {
@@ -252,14 +252,14 @@
 
         .premium-img-badge {
           position: absolute; top: 11px; left: 11px; z-index: 2;
-          background: linear-gradient(135deg,#b8870b,#f7de6a,#b8870b);
-          color: #06103a; padding: 3px 11px; border-radius: 20px;
-          font-size: .65rem; font-weight: 800; font-family: 'Cinzel',serif;
+          background: linear-gradient(135deg,#b8870b,#D4A55A,#b8870b);
+          color: #FFF8F0; padding: 3px 11px; border-radius: 20px;
+          font-size: .65rem; font-weight: 800; font-family: 'Cormorant Garamond',serif;
           letter-spacing: .6px; box-shadow: 0 2px 8px rgba(0,0,0,.40);
         }
 
         .premium-card-header { padding: 16px 20px 8px; }
-        .premium-title { font-family: 'Cinzel',serif; color: #fff; font-size: 1.02rem; font-weight: 700; margin-bottom: 0; line-height: 1.3; }
+        .premium-title { font-family: 'Cormorant Garamond',serif; color: #fff; font-size: 1.02rem; font-weight: 700; margin-bottom: 0; line-height: 1.3; }
 
         .premium-body { padding: 0 20px 22px; flex: 1; display: flex; flex-direction: column; }
         .premium-desc { color: rgba(255,255,255,.55); font-size: .82rem; line-height: 1.55; margin: 8px 0 14px; }
@@ -268,28 +268,28 @@
         .premium-features li {
           font-size: .82rem; color: rgba(255,255,255,.72);
           display: flex; align-items: flex-start; gap: 8px;
-          padding: 5px 0; border-bottom: 1px solid rgba(212,175,55,.07);
+          padding: 5px 0; border-bottom: 1px solid rgba(183,122,53,.07);
         }
         .premium-features li:last-child { border-bottom: none; }
-        .premium-features li i { color: #d4af37; font-size: .72rem; margin-top: 3px; flex-shrink: 0; }
+        .premium-features li i { color: #B77A35; font-size: .72rem; margin-top: 3px; flex-shrink: 0; }
 
         .btn-acessar-premium {
-          background: linear-gradient(135deg,#b8870b 0%,#f7de6a 50%,#b8870b 100%);
-          background-size: 200% auto; color: #06103a; border: none; font-weight: 800;
+          background: linear-gradient(135deg,#b8870b 0%,#D4A55A 50%,#b8870b 100%);
+          background-size: 200% auto; color: #FFF8F0; border: none; font-weight: 800;
           padding: 13px 20px; border-radius: 30px; font-size: .88rem; width: 100%;
-          transition: all .3s; font-family: 'Cinzel',serif; text-decoration: none;
+          transition: all .3s; font-family: 'Cormorant Garamond',serif; text-decoration: none;
           display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;
         }
-        .btn-acessar-premium:hover { background-position: right center; color: #06103a; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(212,175,55,.45); }
+        .btn-acessar-premium:hover { background-position: right center; color: #FFF8F0; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(183,122,53,.45); }
         .btn-comprar-premium {
-          background: rgba(212,175,55,.07); color: #d4af37;
-          border: 1.5px solid rgba(212,175,55,.40); font-weight: 700;
+          background: rgba(183,122,53,.07); color: #B77A35;
+          border: 1.5px solid rgba(183,122,53,.40); font-weight: 700;
           padding: 13px 20px; border-radius: 30px; font-size: .88rem; width: 100%;
-          transition: all .3s; font-family: 'Cinzel',serif; text-decoration: none;
+          transition: all .3s; font-family: 'Cormorant Garamond',serif; text-decoration: none;
           display: flex; align-items: center; justify-content: center; gap: 8px;
         }
-        .btn-comprar-premium:hover { background: rgba(212,175,55,.14); border-color: rgba(212,175,55,.75); color: #f7de6a; transform: translateY(-1px); }
-        .lock-info { font-size: .72rem; color: rgba(212,175,55,.42); text-align: center; margin-top: 8px; }
+        .btn-comprar-premium:hover { background: rgba(183,122,53,.14); border-color: rgba(183,122,53,.75); color: #D4A55A; transform: translateY(-1px); }
+        .lock-info { font-size: .72rem; color: rgba(183,122,53,.42); text-align: center; margin-top: 8px; }
 
         @media(max-width:575px){
           .premium-card-img { aspect-ratio:3/2; }
@@ -317,14 +317,14 @@
                             <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/oracoes-especiais"><i class="fas fa-dove me-2"></i>Orações Especiais</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/musicas-dos-anjos"><i class="fas fa-music me-2"></i>Músicas</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/audiolivro"><i class="fas fa-headphones me-2"></i>Áudiolivro</a></li>
-                            <li class="nav-item"><hr style="border-color:rgba(212,175,55,.25);margin:4px 8px"></li>
+                            <li class="nav-item"><hr style="border-color:rgba(183,122,53,.25);margin:4px 8px"></li>
                             <li class="nav-item">
                               <a class="nav-link nav-premium" id="nav-poder-dos-arcanjos"
                                  href="https://pay.hub.la/WeAcNLV7Hhl9S4NRIUV6"
                                  data-produto="poder-dos-arcanjos"
                                  data-url-compra="https://pay.hub.la/WeAcNLV7Hhl9S4NRIUV6"
                                  data-url-acesso="../poder-dos-arcanjos/"
-                                 style="color:rgba(212,175,55,.75)">
+                                 style="color:rgba(183,122,53,.75)">
                                 <i class="fas fa-lock me-2" id="nav-icon-poder-dos-arcanjos"></i>Arcanjos
                               </a>
                             </li>
@@ -334,7 +334,7 @@
                                  data-produto="30-oracoes-sao-francisco"
                                  data-url-compra="https://pay.hub.la/i8LXH2dOBuL6wEZIz5v5"
                                  data-url-acesso="../30-oracoes-sao-francisco/"
-                                 style="color:rgba(212,175,55,.75)">
+                                 style="color:rgba(183,122,53,.75)">
                                 <i class="fas fa-lock me-2" id="nav-icon-30-oracoes-sao-francisco"></i>S. Francisco
                               </a>
                             </li>
@@ -344,7 +344,7 @@
                                  data-produto="musicas-dos-anjos-premium"
                                  data-url-compra="https://pay.hub.la/CFdJHqyqxBjY98hvXjC2"
                                  data-url-acesso="../musicas-dos-anjos-premium/"
-                                 style="color:rgba(212,175,55,.75)">
+                                 style="color:rgba(183,122,53,.75)">
                                 <i class="fas fa-lock me-2" id="nav-icon-musicas-dos-anjos-premium"></i>Músicas Premium
                               </a>
                             </li>
@@ -354,7 +354,7 @@
                                  data-produto="grimorio-dos-arcanjos"
                                  data-url-compra="https://pay.hub.la/NtNiitqo1uV2XbQQEtgl"
                                  data-url-acesso="../grimorio-dos-arcanjos/"
-                                 style="color:rgba(212,175,55,.75)">
+                                 style="color:rgba(183,122,53,.75)">
                                 <i class="fas fa-lock me-2" id="nav-icon-grimorio-dos-arcanjos"></i>Grimório
                               </a>
                             </li>
@@ -395,7 +395,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-10 text-center">
-                <p style="color:rgba(212,175,55,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cinzel',serif;">— ✦ BIBLIOTECA SAGRADA ✦ —</p>
+                <p style="color:rgba(183,122,53,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cormorant Garamond',serif;">— ✦ BIBLIOTECA SAGRADA ✦ —</p>
                 <h2 class="title-font golden-text display-5 mb-2 section-heading">Conteúdo Premium Exclusivo</h2>
                 <p class="text-white fs-5 mb-5" style="max-width:580px;margin:0 auto 3rem;">Materiais sagrados para aprofundar sua vida espiritual. Cada produto desbloqueado automaticamente após a compra.</p>
               </div>
@@ -611,7 +611,7 @@
                     <div class="col-md-5 text-center mb-4 mb-md-0">
                         <img src="images/nossa-senhora-desatadora.jpg" alt="Nossa Senhora Desatadora de Nós"
                              class="img-fluid rounded shadow"
-                             style="max-width:280px; border:4px solid #d4af37; border-radius:16px;">
+                             style="max-width:280px; border:4px solid #B77A35; border-radius:16px;">
                     </div>
                     <div class="col-md-7">
                         <div class="fact-box">
@@ -686,9 +686,9 @@
 
         <!-- Reembolso -->
         <div id="reembolso" class="container mb-4">
-            <div class="p-4" style="background:linear-gradient(135deg,#fffbe6 0%,#f8f4e3 100%);border:2.5px solid #d4af37;border-radius:16px;box-shadow:0 4px 18px rgba(212,175,55,0.08);text-align:center;max-width:520px;margin:0 auto;">
-                <div style="font-size:2rem;color:#d4af37;margin-bottom:10px;"><i class="fas fa-shield-alt"></i></div>
-                <h3 class="mb-2" style="color:#222;font-family:'Cinzel',serif;font-weight:bold;font-size:1.5rem;">Não ficou satisfeito?</h3>
+            <div class="p-4" style="background:linear-gradient(135deg,#fffbe6 0%,#f8f4e3 100%);border:2.5px solid #B77A35;border-radius:16px;box-shadow:0 4px 18px rgba(183,122,53,0.08);text-align:center;max-width:520px;margin:0 auto;">
+                <div style="font-size:2rem;color:#B77A35;margin-bottom:10px;"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="mb-2" style="color:#222;font-family:'Cormorant Garamond',serif;font-weight:bold;font-size:1.5rem;">Não ficou satisfeito?</h3>
                 <p style="color:#444;font-size:1.05rem;margin-bottom:16px;">Oferecemos garantia total de satisfação. Solicite seu reembolso de forma rápida e segura.</p>
                 <a href="https://conexaoprosperidade.site/reembolso" class="btn btn-danger fw-bold px-4 py-2 pulse-border" style="font-size:1.05rem;border-radius:30px;"><i class="fas fa-undo-alt me-2"></i>Quero pedir um reembolso</a>
             </div>
@@ -752,7 +752,7 @@
             if (navEl) {
               if (acesso) {
                 navEl.href = navEl.dataset.urlAcesso;
-                navEl.style.color = '#d4af37';
+                navEl.style.color = '#B77A35';
                 if (navIcon) { navIcon.className = 'fas fa-unlock me-2'; }
               } else {
                 navEl.href = navEl.dataset.urlCompra;

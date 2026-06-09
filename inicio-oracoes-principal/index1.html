@@ -4,19 +4,19 @@
     <title>Novena de Nossa Senhora Desatadora de Nós</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Merriweather:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0; padding: 0;
-            font-family: 'Lato', sans-serif;
+            font-family: 'Merriweather', sans-serif;
             background: linear-gradient(160deg, #0d1f50 0%, #0a1640 50%, #0e1e4a 100%);
             background-attachment: fixed;
             color: white;
             min-height: 100vh;
             font-size: 18px;
         }
-        .title-font { font-family: 'Cinzel', serif; }
-        .golden-text { color: #d4af37; }
+        .title-font { font-family: 'Cormorant Garamond', serif; }
+        .golden-text { color: #B77A35; }
 
         .overlay-pattern {
             background-image: url('https://www.transparenttextures.com/patterns/crosses.png');
@@ -33,7 +33,7 @@
         }
         .navbar-brand { font-size: 17px; font-weight: bold; }
         .nav-link { font-size: 15px; margin: 0 2px; transition: all 0.3s ease; padding: 8px 10px; }
-        .nav-link:hover { color: #d4af37 !important; }
+        .nav-link:hover { color: #B77A35 !important; }
 
         .navbar-collapse {
             background-color: rgba(8, 18, 55, 0.99);
@@ -49,14 +49,14 @@
             width: 260px; height: 260px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid #d4af37;
-            box-shadow: 0 0 40px rgba(212,175,55,0.45), 0 0 80px rgba(212,175,55,0.15);
+            border: 4px solid #B77A35;
+            box-shadow: 0 0 40px rgba(183,122,53,0.45), 0 0 80px rgba(183,122,53,0.15);
             margin: 0 auto 30px;
             animation: glow-saint 4s ease-in-out infinite;
         }
         @keyframes glow-saint {
-            0%,100% { box-shadow: 0 0 30px rgba(212,175,55,0.40), 0 0 60px rgba(212,175,55,0.12); }
-            50% { box-shadow: 0 0 50px rgba(212,175,55,0.65), 0 0 100px rgba(212,175,55,0.22); }
+            0%,100% { box-shadow: 0 0 30px rgba(183,122,53,0.40), 0 0 60px rgba(183,122,53,0.12); }
+            50% { box-shadow: 0 0 50px rgba(183,122,53,0.65), 0 0 100px rgba(183,122,53,0.22); }
         }
         .hero-image-container img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
@@ -73,46 +73,46 @@
         .quote-box::before {
             content: '"';
             position: absolute; top: 2px; left: 10px;
-            font-size: 72px; color: rgba(212,175,55,0.18);
+            font-size: 72px; color: rgba(183,122,53,0.18);
             font-family: Georgia, serif; line-height: 1;
         }
 
         /* Buttons */
         .btn-primary {
-            background: linear-gradient(135deg, #b8870b 0%, #f7de6a 50%, #b8870b 100%);
+            background: linear-gradient(135deg, #b8870b 0%, #D4A55A 50%, #b8870b 100%);
             background-size: 200% auto;
-            color: #06103a; border: none; font-weight: bold;
-            box-shadow: 0 4px 18px rgba(212,175,55,0.35);
+            color: #FFF8F0; border: none; font-weight: bold;
+            box-shadow: 0 4px 18px rgba(183,122,53,0.35);
             transition: all 0.35s; padding: 15px 28px;
-            font-size: 19px; border-radius: 30px; font-family: 'Cinzel', serif;
+            font-size: 19px; border-radius: 30px; font-family: 'Cormorant Garamond', serif;
         }
         .btn-primary:hover, .btn-primary:focus {
             background-position: right center;
-            box-shadow: 0 7px 28px rgba(212,175,55,0.55);
-            transform: translateY(-3px); color: #06103a;
+            box-shadow: 0 7px 28px rgba(183,122,53,0.55);
+            transform: translateY(-3px); color: #FFF8F0;
         }
         .btn-outline-light {
             border: 2px solid rgba(255,255,255,0.65);
             padding: 10px 20px; transition: all 0.3s; font-size: 17px; border-radius: 25px;
         }
-        .btn-outline-light:hover { background: rgba(212,175,55,0.25); border-color: #d4af37; color: #d4af37; }
+        .btn-outline-light:hover { background: rgba(183,122,53,0.25); border-color: #B77A35; color: #B77A35; }
 
         /* Day Cards */
         .day-card {
             background: rgba(8, 18, 50, 0.90);
-            border: 2.5px solid rgba(212,175,55,0.65);
+            border: 2.5px solid rgba(183,122,53,0.65);
             border-radius: 16px; padding: 25px;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 16px rgba(0,0,0,0.30); height: 100%; margin-bottom: 20px;
         }
-        .day-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(212,175,55,0.28); border-color: rgba(212,175,55,0.9); }
+        .day-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(183,122,53,0.28); border-color: rgba(183,122,53,0.9); }
         .day-badge {
-            background: #d4af37; color: #06103a;
+            background: #B77A35; color: #FFF8F0;
             padding: 7px 16px; border-radius: 20px; font-weight: bold;
             font-size: 19px; display: inline-block; margin-bottom: 14px;
         }
-        .day-icon { font-size: 56px; color: #d4af37; text-shadow: 0 0 12px rgba(212,175,55,0.5); margin-bottom: 14px; }
-        .day-title { font-family: 'Cinzel', serif; color: #d4af37; font-size: 22px; font-weight: bold; margin-bottom: 14px; }
+        .day-icon { font-size: 56px; color: #B77A35; text-shadow: 0 0 12px rgba(183,122,53,0.5); margin-bottom: 14px; }
+        .day-title { font-family: 'Cormorant Garamond', serif; color: #B77A35; font-size: 22px; font-weight: bold; margin-bottom: 14px; }
         .day-description {
             color: #e6e6e6; font-size: 17px; line-height: 1.55;
             background: rgba(8,18,50,0.65); padding: 14px; border-radius: 10px; margin-bottom: 18px;
@@ -121,7 +121,7 @@
         /* Fact Boxes */
         .fact-box {
             background: rgba(12, 26, 70, 0.80);
-            border-left: 4px solid #d4af37;
+            border-left: 4px solid #B77A35;
             padding: 20px; margin-bottom: 20px;
             border-radius: 0 12px 12px 0;
         }
@@ -131,39 +131,39 @@
         /* Instruction Cards */
         .instruction-card {
             background: rgba(12, 26, 70, 0.70);
-            border: 1px solid rgba(212,175,55,0.45);
+            border: 1px solid rgba(183,122,53,0.45);
             border-radius: 16px; padding: 24px; height: 100%;
             transition: transform 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.20);
         }
-        .instruction-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(212,175,55,0.20); border-color: rgba(212,175,55,0.70); }
-        .instruction-icon { font-size: 38px; color: #d4af37; margin-bottom: 18px; }
-        .benefit-icon { font-size: 38px; color: #d4af37; margin-bottom: 18px; text-shadow: 0 0 12px rgba(212,175,55,0.5); }
+        .instruction-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(183,122,53,0.20); border-color: rgba(183,122,53,0.70); }
+        .instruction-icon { font-size: 38px; color: #B77A35; margin-bottom: 18px; }
+        .benefit-icon { font-size: 38px; color: #B77A35; margin-bottom: 18px; text-shadow: 0 0 12px rgba(183,122,53,0.5); }
 
         /* Audio CTA */
         .audio-cta-container {
             background: rgba(8, 18, 50, 0.90);
-            border: 2.5px solid rgba(212,175,55,0.65);
+            border: 2.5px solid rgba(183,122,53,0.65);
             border-radius: 16px; box-shadow: 0 5px 18px rgba(0,0,0,0.28);
             padding: 30px; margin: 40px auto; max-width: 900px;
         }
 
         /* Dividers */
         .section-divider { display: flex; align-items: center; margin: 45px 0; }
-        .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, rgba(212,175,55,0.65), transparent); }
-        .divider-icon { font-size: 26px; color: #d4af37; margin: 0 18px; }
+        .divider-line { flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, rgba(183,122,53,0.65), transparent); }
+        .divider-icon { font-size: 26px; color: #B77A35; margin: 0 18px; }
 
         section { padding: 55px 0; }
         .section-heading { position: relative; display: inline-block; margin-bottom: 38px; }
         .section-heading::after {
             content: ""; position: absolute; bottom: -14px; left: 50%;
             transform: translateX(-50%); width: 90px; height: 3px;
-            background: #d4af37; border-radius: 3px;
+            background: #B77A35; border-radius: 3px;
         }
 
         /* Footer */
         .site-footer {
             background-color: rgba(8, 18, 55, 0.97);
-            border-top: 2px solid rgba(212,175,55,0.45);
+            border-top: 2px solid rgba(183,122,53,0.45);
             padding: 28px 0; margin-top: 48px;
         }
         .site-footer p { font-size: 16px; }
@@ -171,16 +171,16 @@
         /* Back to top */
         .back-to-top {
             position: fixed; bottom: 20px; right: 20px;
-            background: rgba(212,175,55,0.92); color: #06103a;
+            background: rgba(183,122,53,0.92); color: #FFF8F0;
             width: 56px; height: 56px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 26px; box-shadow: 0 2px 12px rgba(0,0,0,0.30);
             z-index: 1000; cursor: pointer; transition: all 0.3s; opacity: 0;
         }
-        .back-to-top:hover { background: #d4af37; transform: translateY(-3px); }
+        .back-to-top:hover { background: #B77A35; transform: translateY(-3px); }
 
-        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,0.4); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212,175,55,0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,175,55,0); } }
-        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 #d4af37; } 70% { box-shadow: 0 0 0 6px rgba(212,175,55,0.25); } 100% { box-shadow: 0 0 0 0 #d4af37; } }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(183,122,53,0.4); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(183,122,53,0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(183,122,53,0); } }
+        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 #B77A35; } 70% { box-shadow: 0 0 0 6px rgba(183,122,53,0.25); } 100% { box-shadow: 0 0 0 0 #B77A35; } }
         .pulse-border { animation: pulse-border 1.8s infinite; }
 
         .temas-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 10px; margin-bottom: 18px; max-width: 420px; margin-left: auto; margin-right: auto; }
@@ -203,7 +203,7 @@
         }
 
         /* Knot ribbon decorative */
-        .knot-ornament { color: rgba(212,175,55,0.55); letter-spacing: 6px; font-size: 0.85rem; }
+        .knot-ornament { color: rgba(183,122,53,0.55); letter-spacing: 6px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -369,7 +369,7 @@
                     <div class="col-md-5 text-center mb-4 mb-md-0">
                         <img src="images/nossa-senhora-desatadora.jpg" alt="Nossa Senhora Desatadora de Nós"
                              class="img-fluid rounded shadow"
-                             style="max-width:280px; border:4px solid #d4af37; border-radius:16px;">
+                             style="max-width:280px; border:4px solid #B77A35; border-radius:16px;">
                     </div>
                     <div class="col-md-7">
                         <div class="fact-box">
@@ -444,9 +444,9 @@
 
         <!-- Reembolso -->
         <div id="reembolso" class="container mb-4">
-            <div class="p-4" style="background:linear-gradient(135deg,#fffbe6 0%,#f8f4e3 100%);border:2.5px solid #d4af37;border-radius:16px;box-shadow:0 4px 18px rgba(212,175,55,0.08);text-align:center;max-width:520px;margin:0 auto;">
-                <div style="font-size:2rem;color:#d4af37;margin-bottom:10px;"><i class="fas fa-shield-alt"></i></div>
-                <h3 class="mb-2" style="color:#222;font-family:'Cinzel',serif;font-weight:bold;font-size:1.5rem;">Não ficou satisfeito?</h3>
+            <div class="p-4" style="background:linear-gradient(135deg,#fffbe6 0%,#f8f4e3 100%);border:2.5px solid #B77A35;border-radius:16px;box-shadow:0 4px 18px rgba(183,122,53,0.08);text-align:center;max-width:520px;margin:0 auto;">
+                <div style="font-size:2rem;color:#B77A35;margin-bottom:10px;"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="mb-2" style="color:#222;font-family:'Cormorant Garamond',serif;font-weight:bold;font-size:1.5rem;">Não ficou satisfeito?</h3>
                 <p style="color:#444;font-size:1.05rem;margin-bottom:16px;">Oferecemos garantia total de satisfação. Solicite seu reembolso de forma rápida e segura.</p>
                 <a href="https://conexaoprosperidade.site/reembolso" class="btn btn-danger fw-bold px-4 py-2 pulse-border" style="font-size:1.05rem;border-radius:30px;"><i class="fas fa-undo-alt me-2"></i>Quero pedir um reembolso</a>
             </div>

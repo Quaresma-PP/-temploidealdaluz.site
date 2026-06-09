@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Painel Admin — Conexão Prosperidade</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Merriweather', sans-serif;
       background: linear-gradient(160deg, #0d1f50 0%, #0a1640 50%, #0e1e4a 100%);
       background-attachment: fixed;
       color: #fff;
@@ -19,14 +19,14 @@
     /* HEADER */
     .admin-header {
       background: rgba(8,18,55,.97);
-      border-bottom: 2px solid rgba(212,175,55,.45);
+      border-bottom: 2px solid rgba(183,122,53,.45);
       padding: 14px 24px;
       display: flex; align-items: center; justify-content: space-between;
       position: sticky; top: 0; z-index: 100;
     }
     .admin-header h1 {
-      font-family: 'Cinzel', serif;
-      color: #d4af37;
+      font-family: 'Cormorant Garamond', serif;
+      color: #B77A35;
       font-size: 1.2rem;
       font-weight: 700;
     }
@@ -37,16 +37,16 @@
     }
     .btn-logout {
       background: none;
-      border: 1.5px solid rgba(212,175,55,.4);
-      color: rgba(212,175,55,.8);
+      border: 1.5px solid rgba(183,122,53,.4);
+      color: rgba(183,122,53,.8);
       padding: 7px 16px;
       border-radius: 20px;
       font-size: .82rem;
       cursor: pointer;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Merriweather', sans-serif;
       transition: all .2s;
     }
-    .btn-logout:hover { background: rgba(212,175,55,.1); color: #d4af37; }
+    .btn-logout:hover { background: rgba(183,122,53,.1); color: #B77A35; }
 
     /* LOADING */
     #loading {
@@ -55,8 +55,8 @@
     }
     .spinner {
       width: 44px; height: 44px;
-      border: 3px solid rgba(212,175,55,.2);
-      border-top-color: #d4af37;
+      border: 3px solid rgba(183,122,53,.2);
+      border-top-color: #B77A35;
       border-radius: 50%;
       animation: spin .8s linear infinite;
     }
@@ -74,7 +74,7 @@
     }
     .stat-card {
       background: rgba(8,18,50,.92);
-      border: 1px solid rgba(212,175,55,.25);
+      border: 1px solid rgba(183,122,53,.25);
       border-radius: 16px;
       padding: 20px 18px;
       position: relative;
@@ -83,19 +83,19 @@
     .stat-card::before {
       content: '';
       position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      background: linear-gradient(90deg, transparent, #B77A35, transparent);
     }
     .stat-icon { font-size: 1.6rem; margin-bottom: 10px; opacity: .75; }
     .stat-num {
-      font-family: 'Cinzel', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
       font-weight: 700;
-      color: #d4af37;
+      color: #B77A35;
       line-height: 1;
       margin-bottom: 6px;
     }
     .stat-label { font-size: .78rem; color: rgba(255,255,255,.5); line-height: 1.4; }
-    .stat-card.total { border-color: rgba(212,175,55,.55); }
+    .stat-card.total { border-color: rgba(183,122,53,.55); }
     .stat-card.total .stat-num { font-size: 2.4rem; }
 
     /* FILTROS */
@@ -106,52 +106,52 @@
     .search-box {
       flex: 1; min-width: 220px;
       background: rgba(255,255,255,.07);
-      border: 1.5px solid rgba(212,175,55,.25);
+      border: 1.5px solid rgba(183,122,53,.25);
       border-radius: 12px;
       color: #fff;
       padding: 10px 16px;
       font-size: .92rem;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Merriweather', sans-serif;
       outline: none;
       transition: border-color .2s;
     }
     .search-box::placeholder { color: rgba(255,255,255,.3); }
-    .search-box:focus { border-color: rgba(212,175,55,.6); }
+    .search-box:focus { border-color: rgba(183,122,53,.6); }
     .filter-select {
       background: rgba(255,255,255,.07);
-      border: 1.5px solid rgba(212,175,55,.25);
+      border: 1.5px solid rgba(183,122,53,.25);
       border-radius: 12px;
       color: #fff;
       padding: 10px 14px;
       font-size: .88rem;
-      font-family: 'Lato', sans-serif;
+      font-family: 'Merriweather', sans-serif;
       outline: none;
       cursor: pointer;
       transition: border-color .2s;
     }
     .filter-select option { background: #0a1640; }
-    .filter-select:focus { border-color: rgba(212,175,55,.6); }
+    .filter-select:focus { border-color: rgba(183,122,53,.6); }
     .result-count { font-size: .82rem; color: rgba(255,255,255,.4); margin-left: auto; }
 
     /* TABLE */
     .table-wrap {
       background: rgba(8,18,50,.92);
-      border: 1px solid rgba(212,175,55,.20);
+      border: 1px solid rgba(183,122,53,.20);
       border-radius: 16px;
       overflow: hidden;
     }
     table { width: 100%; border-collapse: collapse; }
-    thead { background: rgba(212,175,55,.08); }
+    thead { background: rgba(183,122,53,.08); }
     th {
       padding: 14px 18px;
       text-align: left;
-      font-family: 'Cinzel', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: .75rem;
       font-weight: 600;
-      color: rgba(212,175,55,.8);
+      color: rgba(183,122,53,.8);
       letter-spacing: .8px;
       text-transform: uppercase;
-      border-bottom: 1px solid rgba(212,175,55,.15);
+      border-bottom: 1px solid rgba(183,122,53,.15);
     }
     td {
       padding: 13px 18px;
@@ -160,7 +160,7 @@
       border-bottom: 1px solid rgba(255,255,255,.05);
     }
     tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(212,175,55,.04); }
+    tr:hover td { background: rgba(183,122,53,.04); }
 
     .produto-badge {
       display: inline-block;
@@ -174,7 +174,7 @@
     .badge-arcanjos     { background: rgba(255,107,53,.15);  color: #ff9b65; border: 1px solid rgba(255,107,53,.3); }
     .badge-francisco    { background: rgba(53,199,133,.15);  color: #5fd9a3; border: 1px solid rgba(53,199,133,.3); }
     .badge-musicas      { background: rgba(180,100,255,.15); color: #d09fff; border: 1px solid rgba(180,100,255,.3); }
-    .badge-grimorio     { background: rgba(212,175,55,.15);  color: #d4af37; border: 1px solid rgba(212,175,55,.3); }
+    .badge-grimorio     { background: rgba(183,122,53,.15);  color: #B77A35; border: 1px solid rgba(183,122,53,.3); }
 
     .status-ativo   { color: #5fd9a3; font-size: .82rem; }
     .status-inativo { color: rgba(255,255,255,.35); font-size: .82rem; }
@@ -192,12 +192,12 @@
       margin-bottom: 14px; font-size: .78rem; color: rgba(255,255,255,.35);
     }
     .btn-refresh {
-      background: none; border: 1px solid rgba(212,175,55,.3);
-      color: rgba(212,175,55,.7); padding: 5px 12px; border-radius: 16px;
-      font-size: .78rem; cursor: pointer; font-family: 'Lato', sans-serif;
+      background: none; border: 1px solid rgba(183,122,53,.3);
+      color: rgba(183,122,53,.7); padding: 5px 12px; border-radius: 16px;
+      font-size: .78rem; cursor: pointer; font-family: 'Merriweather', sans-serif;
       transition: all .2s; display: flex; align-items: center; gap: 6px;
     }
-    .btn-refresh:hover { background: rgba(212,175,55,.1); color: #d4af37; }
+    .btn-refresh:hover { background: rgba(183,122,53,.1); color: #B77A35; }
 
     @media (max-width: 600px) {
       .main { padding: 16px 12px 48px; }

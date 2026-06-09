@@ -6,16 +6,46 @@
     { "source": "/inicio-oracoes-principal", "destination": "/inicio-oracoes-principal/", "permanent": false },
     { "source": "/poder-dos-arcanjos", "destination": "/poder-dos-arcanjos/", "permanent": false },
     { "source": "/grimorio-dos-arcanjos", "destination": "/grimorio-dos-arcanjos/", "permanent": false },
+    { "source": "/30-oracoes-sao-francesa", "destination": "/30-oracoes-sao-francisco/", "permanent": false },
     { "source": "/30-oracoes-sao-francisco", "destination": "/30-oracoes-sao-francisco/", "permanent": false },
-    { "source": "/musicas-dos-anjos-premium", "destination": "/musicas-dos-anjos-premium/", "permanent": false }
+    { "source": "/musicas-dos-anjos-premium", "destination": "/musicas-dos-anjos-premium/", "permanent": false },
+    { "source": "/musicas-dos-anjos", "destination": "/musicas-dos-anjos/", "permanent": false },
+    { "source": "/jornada-de-7-dias", "destination": "/jornada-de-7-dias/", "permanent": false },
+    { "source": "/oracoes-especiais", "destination": "/oracoes-especiais/", "permanent": false },
+    { "source": "/instrucoes", "destination": "/instrucoes/", "permanent": false },
+    { "source": "/audiolivro", "destination": "/audiolivro/", "permanent": false },
+    { "source": "/admin", "destination": "/admin/", "permanent": false },
+    { "source": "/reembolso", "destination": "/reembolso/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia1", "destination": "/jornada-de-7-dias/dia1/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia2", "destination": "/jornada-de-7-dias/dia2/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia3", "destination": "/jornada-de-7-dias/dia3/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia4", "destination": "/jornada-de-7-dias/dia4/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia5", "destination": "/jornada-de-7-dias/dia5/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia6", "destination": "/jornada-de-7-dias/dia6/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia7", "destination": "/jornada-de-7-dias/dia7/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia8", "destination": "/jornada-de-7-dias/dia8/", "permanent": false },
+    { "source": "/jornada-de-7-dias/dia9", "destination": "/jornada-de-7-dias/dia9/", "permanent": false },
+    { "source": "/oracoes-especiais/curas", "destination": "/oracoes-especiais/curas/", "permanent": false },
+    { "source": "/oracoes-especiais/emprego", "destination": "/oracoes-especiais/emprego/", "permanent": false },
+    { "source": "/oracoes-especiais/relacionamentos", "destination": "/oracoes-especiais/relacionamentos/", "permanent": false },
+    { "source": "/oracoes-especiais/prosperidade", "destination": "/oracoes-especiais/prosperidade/", "permanent": false },
+    { "source": "/oracoes-especiais/paz-mental", "destination": "/oracoes-especiais/paz-mental/", "permanent": false },
+    { "source": "/oracoes-especiais/protecao-viagens", "destination": "/oracoes-especiais/protecao-viagens/", "permanent": false },
+    { "source": "/oracoes-especiais/quebrar-masorte", "destination": "/oracoes-especiais/quebrar-masorte/", "permanent": false },
+    { "source": "/oracoes-especiais/criancas-familia", "destination": "/oracoes-especiais/criancas-familia/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/api/webhook/", "destination": "/api/webhook" },
+    { "source": "/api/login/", "destination": "/api/login" },
+    { "source": "/api/admin/", "destination": "/api/admin" }
   ],
   "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+        { "key": "Access-Control-Allow-Methods", "value": "POST, GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
       ]
     }
   ]

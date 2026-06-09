@@ -78,6 +78,7 @@ async function enviarEmailAcesso(email, nomeCliente, produtoId) {
 }
 
 const TODOS_PRODUTOS = [
+  'novena-principal',
   'poder-dos-arcanjos',
   '30-oracoes-sao-francisco',
   'musicas-dos-anjos-premium',

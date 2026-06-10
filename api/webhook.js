@@ -17,6 +17,17 @@ const PRODUTO_MAP = {
   'NtNiitqo1uV2XbQQEtgl': 'grimorio-dos-arcanjos',
   'NtNiitqo1uV2XbQQEtgI': 'grimorio-dos-arcanjos',     // variação I/l
   'ji7HQCwQADUSC7DhuRst': 'grimorio-dos-arcanjos',     // cópia
+
+  // Novena - outras ofertas/variações
+  'liP6lbWyRSxTlFcprUNS': 'novena-principal',          // 240
+  '6oxjiChogjr9rPWaW235': 'novena-principal',          // 220
+  'ww4OLcEuaD0mwaIpWKIx': 'novena-principal',          // Glenn Facebook 197
+  '9ZgNCVIIDa3mLIPfLtZI': 'novena-principal',          // Glenn Facebook 97
+  'VTVcnia3NOvniDvLfiRz': 'novena-principal',          // 147
+
+  // Oração sagrada dos 4 arcanjos - outras ofertas/variações
+  'HcWiIv1KGRRpewddIK42': 'poder-dos-arcanjos',        // Glenn Facebook
+  'yLWlpDV6QznUJag5kUrv': 'poder-dos-arcanjos',        // upsell 167
 };
 
 const PRODUTO_NOME = {

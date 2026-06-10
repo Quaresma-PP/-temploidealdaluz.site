@@ -38,17 +38,46 @@ function logout() {
 }
 
 // Proteção de página: chama na página protegida
-function protegerPagina(produtoId) {
+async function protegerPagina(produtoId) {
   const content = document.getElementById('conteudo-premium');
   const wall = document.getElementById('premium-wall');
   if (!content || !wall) return;
-  if (temAcesso(produtoId)) {
+
+  const liberar = () => {
     content.style.display = 'block';
     wall.style.display = 'none';
     const emailEl = document.getElementById('email-logado');
     if (emailEl) emailEl.textContent = getEmailLogado() || '';
-  } else {
-    content.style.display = 'none';
-    wall.style.display = 'block';
+  };
+
+  if (temAcesso(produtoId)) {
+    liberar();
+    return;
   }
+
+  // Token atual não tem esse produto: pode ter comprado um upsell depois
+  // do login. Tenta atualizar o token consultando o acesso atual.
+  const email = getEmailLogado();
+  if (email) {
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.token) {
+          localStorage.setItem(AUTH_KEY, data.token);
+          if (temAcesso(produtoId)) {
+            liberar();
+            return;
+          }
+        }
+      }
+    } catch (_) {}
+  }
+
+  content.style.display = 'none';
+  wall.style.display = 'block';
 }

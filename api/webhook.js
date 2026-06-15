@@ -28,6 +28,7 @@ const PRODUTO_MAP = {
   // Oração sagrada dos 4 arcanjos - outras ofertas/variações
   'HcWiIv1KGRRpewddIK42': 'poder-dos-arcanjos',        // Glenn Facebook
   'yLWlpDV6QznUJag5kUrv': 'poder-dos-arcanjos',        // upsell 167
+  'df5CeL8kvoEetL3oxAvM': 'poder-dos-arcanjos',        // variação não mapeada
 };
 
 const PRODUTO_NOME = {

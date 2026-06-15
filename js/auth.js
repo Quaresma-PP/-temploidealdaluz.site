@@ -37,6 +37,28 @@ function logout() {
   window.location.href = '/login/';
 }
 
+// Consulta o acesso atual no servidor e atualiza o token salvo.
+// Útil quando a pessoa compra um upsell depois de já estar logada.
+async function atualizarToken() {
+  const email = getEmailLogado();
+  if (!email) return false;
+  try {
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.token) {
+        localStorage.setItem(AUTH_KEY, data.token);
+        return true;
+      }
+    }
+  } catch (_) {}
+  return false;
+}
+
 // Proteção de página: chama na página protegida
 async function protegerPagina(produtoId) {
   const content = document.getElementById('conteudo-premium');
@@ -57,25 +79,9 @@ async function protegerPagina(produtoId) {
 
   // Token atual não tem esse produto: pode ter comprado um upsell depois
   // do login. Tenta atualizar o token consultando o acesso atual.
-  const email = getEmailLogado();
-  if (email) {
-    try {
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.token) {
-          localStorage.setItem(AUTH_KEY, data.token);
-          if (temAcesso(produtoId)) {
-            liberar();
-            return;
-          }
-        }
-      }
-    } catch (_) {}
+  if (await atualizarToken() && temAcesso(produtoId)) {
+    liberar();
+    return;
   }
 
   content.style.display = 'none';

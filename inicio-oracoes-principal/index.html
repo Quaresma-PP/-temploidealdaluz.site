@@ -718,7 +718,7 @@
         btn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
         // Atualiza botões premium conforme acesso do usuário
-        (function atualizarBotoesPremium() {
+        (async function atualizarBotoesPremium() {
           const token = localStorage.getItem('conexao_token');
           const produtos = ['poder-dos-arcanjos','30-oracoes-sao-francisco','musicas-dos-anjos-premium','grimorio-dos-arcanjos'];
 
@@ -726,6 +726,9 @@
             document.getElementById('premium-login-cta').style.display = 'block';
             return;
           }
+
+          // Atualiza o token caso a pessoa tenha comprado um upsell depois do login
+          await atualizarToken();
 
           produtos.forEach(function(id) {
             // card buttons

@@ -48,6 +48,14 @@ const PRODUTO_MAP = {
 
   // Corrente de oração e milagres (entrega via WhatsApp)
   'sPSbXKEBLqu6VXjArjB8': 'corrente-oracao-milagres',  // Glenn Facebook Recorrência 39.90
+
+  // Recorrência - lote extra
+  '99S2EIDKDZHc4nuPUCfo': '30-oracoes-sao-francisco',  // Glenn Facebook Recorrência
+  'YezHy7jqHgSXj9b62fqx': 'musicas-dos-anjos-premium', // Glenn Facebook Recorrência
+  'bN29XGhnotvhy3mjPo8o': 'musicas-dos-anjos-premium', // Glenn Facebook Recorrência
+  'o4XxUNqPSYFA6thoPzJg': 'poder-dos-arcanjos',        // Glenn Facebook Recorrência
+  '1W89YGfRD4QFzoRAIGrx': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência
+  'zCxQawxlxUoDtkx19y8n': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência
 };
 
 const PRODUTO_NOME = {

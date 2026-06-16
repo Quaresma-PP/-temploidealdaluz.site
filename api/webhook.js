@@ -29,6 +29,25 @@ const PRODUTO_MAP = {
   'HcWiIv1KGRRpewddIK42': 'poder-dos-arcanjos',        // Glenn Facebook
   'yLWlpDV6QznUJag5kUrv': 'poder-dos-arcanjos',        // upsell 167
   'df5CeL8kvoEetL3oxAvM': 'poder-dos-arcanjos',        // variação não mapeada
+  '3TTnMTnVgHpQldYN6pzu': 'poder-dos-arcanjos',        // Glenn Facebook Recorrência 127
+
+  // Novena - Recorrência
+  'Oh7elagTB5VGCWcyJl2S': 'novena-principal',          // Glenn Facebook Recorrência 197
+  'zHchXsYUfwS0sMyB7wn6': 'novena-principal',          // Glenn Facebook Recorrência 97
+
+  // Músicas dos Anjos - Recorrência
+  'wMD1OC2tRzAu46TEigth': 'musicas-dos-anjos-premium', // Glenn Facebook Recorrência 69
+  'W80fE4AQkncSQOgcWhLc': 'musicas-dos-anjos-premium', // Glenn Facebook Recorrência 19
+
+  // 30 Orações - Recorrência
+  'ol3Lxl9rtfkffE4h29Lw': '30-oracoes-sao-francisco',  // Glenn Facebook Recorrência 29.90
+
+  // Grimório dos Arcanjos - Recorrência
+  'BpzsTijdxiSnifY7RLDZ': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência 67.90
+  'ZCooGALeHY0AtGnjTT0E': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência 27.90
+
+  // Corrente de oração e milagres (entrega via WhatsApp)
+  'sPSbXKEBLqu6VXjArjB8': 'corrente-oracao-milagres',  // Glenn Facebook Recorrência 39.90
 };
 
 const PRODUTO_NOME = {

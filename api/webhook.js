@@ -56,6 +56,17 @@ const PRODUTO_MAP = {
   'o4XxUNqPSYFA6thoPzJg': 'poder-dos-arcanjos',        // Glenn Facebook Recorrência
   '1W89YGfRD4QFzoRAIGrx': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência
   'zCxQawxlxUoDtkx19y8n': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência
+
+  // [ Carlos Facebook ] - libera acesso a TODOS os produtos
+  'Fs3G49OPDC932PatHYFk': 'all',                       // Novena 197
+  '81ywZFOKb2HrgQRlwQs5': 'all',                       // Novena (Cópia) 97
+  'QVoL6N9a5krRHfYjZTlQ': 'all',                       // Recorrência Músicas dos Anjos 69
+  'WQPif5fnKWhPBNuv5KWU': 'all',                       // Recorrência Músicas dos Anjos 19
+  'DlaPJrKNapFXuvb9Ugoi': 'all',                       // Recorrência 30 Orações 29.90
+  '6ZqmTVpQW9wb00c8CcNe': 'all',                       // Recorrência Oração 4 Arcanjos 167
+  'ef4KBQPgtagH2EQFB2S6': 'all',                       // Recorrência Grimório 27.90
+  'xCQdVaE60jtjcrDFbKCF': 'all',                       // Recorrência Grimório 67.90
+  'f10vtph8mna1ozCPUYP9': 'all',                       // teste Recorrência Corrente de oração 39.90
 };
 
 const PRODUTO_NOME = {

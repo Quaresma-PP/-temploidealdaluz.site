@@ -23,7 +23,8 @@ const PRODUTO_MAP = {
   '6oxjiChogjr9rPWaW235': 'novena-principal',          // 220
   'ww4OLcEuaD0mwaIpWKIx': 'novena-principal',          // Glenn Facebook 197
   '9ZgNCVIIDa3mLIPfLtZI': 'novena-principal',          // Glenn Facebook 97
-  'VTVcnia3NOvniDvLfiRz': 'novena-principal',          // 147
+  'VTVcnia3NOvniDvLfiRz': 'novena-principal',          // 147 de 220
+  '7FNx8UFTxOkWP17fDovE': 'novena-principal',          // 147 de 240
 
   // Oração sagrada dos 4 arcanjos - outras ofertas/variações
   'HcWiIv1KGRRpewddIK42': 'poder-dos-arcanjos',        // Glenn Facebook
@@ -38,13 +39,22 @@ const PRODUTO_MAP = {
   // Músicas dos Anjos - Recorrência
   'wMD1OC2tRzAu46TEigth': 'musicas-dos-anjos-premium', // Glenn Facebook Recorrência 69
   'W80fE4AQkncSQOgcWhLc': 'musicas-dos-anjos-premium', // Glenn Facebook Recorrência 19
+  '69WaXkxk43YqQ4NkfSIe': 'musicas-dos-anjos-premium', // Rian1 69
+  'rH3WNbstKILhQRhRiKIp': 'musicas-dos-anjos-premium', // Rian2 19
+  'r3ntjUzIgQpmlJC0zcLC': 'musicas-dos-anjos-premium', // Glenn - ARC Rafael 69
+  'Gsx5VnyFYJfQYrYoYcw1': 'musicas-dos-anjos-premium', // Glenn - ARC Rafael 19
 
   // 30 Orações - Recorrência
   'ol3Lxl9rtfkffE4h29Lw': '30-oracoes-sao-francisco',  // Glenn Facebook Recorrência 29.90
+  'dlHdT1VfpwB9OKI54SS1': '30-oracoes-sao-francisco',  // Rian
+  'npMiGw184lBnHYos0NkG': '30-oracoes-sao-francisco',  // Glenn Facebook
+  'NZwngFhhfJi7Mm1vure1': '30-oracoes-sao-francisco',  // Glenn - ARC Rafael Cópia
 
   // Grimório dos Arcanjos - Recorrência
   'BpzsTijdxiSnifY7RLDZ': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência 67.90
   'ZCooGALeHY0AtGnjTT0E': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência 27.90
+  'g5H8shk4I5nXXnKC6yfY': 'grimorio-dos-arcanjos',     // Glenn Facebook 67.90
+  'SzWgfihymNu96dXChKOk': 'grimorio-dos-arcanjos',     // Glenn Facebook 27.90
 
   // Corrente de oração e milagres (entrega via WhatsApp)
   'sPSbXKEBLqu6VXjArjB8': 'corrente-oracao-milagres',  // Glenn Facebook Recorrência 39.90

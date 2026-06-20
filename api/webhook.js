@@ -58,7 +58,7 @@ const PRODUTO_MAP = {
   'zCxQawxlxUoDtkx19y8n': 'grimorio-dos-arcanjos',     // Glenn Facebook Recorrência
 
   // [ Carlos Facebook ] - libera acesso a TODOS os produtos
-  'Fs3G49OPDC932PatHYFk': 'all',                       // Novena 197
+  'Fs3G49OPDC932Pa1HYFk': 'all',                       // Novena 197
   '81ywZFOKb2HrgQRlwQs5': 'all',                       // Novena (Cópia) 97
   'QVoL6N9a5krRHfYjZTlQ': 'all',                       // Recorrência Músicas dos Anjos 69
   'WQPif5fnKWhPBNuv5KWU': 'all',                       // Recorrência Músicas dos Anjos 19
